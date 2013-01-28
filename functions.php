@@ -1,4 +1,5 @@
 <?php 
+
 add_action( 'after_setup_theme', 'et_setup_theme' );
 if ( ! function_exists( 'et_setup_theme' ) ){
 	function et_setup_theme(){
@@ -6,7 +7,15 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		$themename = 'Lucid';
 		$shortname = 'lucid';
 		$et_store_options_in_one_row = true;
-	
+		
+		require_once(TEMPLATEPATH . '/classes/class.postCategoria.php');
+
+		require_once(TEMPLATEPATH . '/classes/class.postNoticia.php');
+
+		require_once(TEMPLATEPATH . '/classes/class.postPulso.php');
+
+		require_once(TEMPLATEPATH . '/classes/class.postCursos.php');
+
 		require_once(TEMPLATEPATH . '/epanel/custom_functions.php'); 
 
 		require_once(TEMPLATEPATH . '/includes/functions/comments.php'); 
@@ -268,7 +277,7 @@ if ( ! function_exists( 'et_get_the_author_posts_link' ) ){
 		$link = sprintf(
 			'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
 			get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-			esc_attr( sprintf( __( 'Posts by %s', $themename ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'Postado por: %s', $themename ), get_the_author() ) ),
 			get_the_author()
 		);
 		return apply_filters( 'the_author_posts_link', $link );

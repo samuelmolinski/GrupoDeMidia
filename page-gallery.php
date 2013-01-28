@@ -64,7 +64,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 									<span class="overlay"></span>
 									
 									<a class="zoom-icon fancybox" title="<?php the_title(); ?>" rel="gallery" href="<?php echo($thumbnail['fullpath']); ?>"><?php esc_html_e('Zoom in','Lucid'); ?></a>
-									<a class="more-icon" href="<?php the_permalink(); ?>"><?php esc_html_e('Read more','Lucid'); ?></a>
+									<a class="more-icon" href="<?php the_permalink(); ?>"><?php esc_html_e('Saiba mais >>','Lucid'); ?></a>
 								</div> <!-- end .et_pt_item_image -->
 							</div> <!-- end .et_pt_gallery_entry -->
 							
@@ -81,7 +81,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					</div> <!-- end #et_pt_gallery -->
 					
 					<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-					<?php edit_post_link(esc_attr__('Edit this page','Lucid')); ?>
+					<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 				</div> 	<!-- end .post_content -->
 			</article> <!-- end .entry -->
 		<?php endwhile; // end of the loop. ?>

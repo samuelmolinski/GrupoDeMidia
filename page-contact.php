@@ -70,8 +70,8 @@ Template Name: Contact Page
 
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
-		
+		<!--<?php get_template_part('includes/breadcrumbs', 'page'); ?> -->
+		<h1 class="title"><?php the_title(); ?></h1>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 				<?php 
@@ -90,7 +90,7 @@ Template Name: Contact Page
 				<?php } ?>
 				
 				<div class="post_content clearfix">
-					<h1 class="title"><?php the_title(); ?></h1>
+					
 					
 					<?php the_content(); ?>
 					
