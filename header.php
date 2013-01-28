@@ -18,9 +18,13 @@
 	<?php elegant_keywords(); ?>
 	<?php elegant_canonical(); ?>
 
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+
 	<?php do_action('et_head_meta'); ?>
-	
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/style.css" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<!--[if lt IE 9]>
@@ -33,33 +37,23 @@
 
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-	<?php do_action('et_header_top'); ?>
-	<header id="main-header">
-		<div class="container">
-			<!--<?php do_action('et_header_menu'); ?>
-			<nav id="top-menu">
-				<?php
-					$menuClass = 'nav';
-					if ( et_get_option('lucid_disable_toptier') == 'on' ) $menuClass .= ' et_disable_top_tier';
-					$primaryNav = '';
-					if (function_exists('wp_nav_menu')) {
-						$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false ) );
-					}
-					if ($primaryNav == '') { ?>
-						<ul class="<?php echo $menuClass; ?>">
-							<?php if (et_get_option('lucid_home_link') == 'on') { ?>
-								<li <?php if (is_home()) echo('class="current_page_item"') ?>><a href="<?php echo home_url(); ?>"><?php esc_html_e('Home','Lucid') ?></a></li>
-							<?php }; ?>
+<body <?php body_class(); ?>>		
+	
+	<div class="container">
+			<header id="main-header">	
 
-							<?php show_page_menu($menuClass,false,false); ?>
-							<?php show_categories_menu($menuClass,false); ?>
-						</ul>
-					<?php }
-					else echo($primaryNav);
+			<div id="logo-area"<?php if ( 'on' == $use_header_banner ) echo ' class="header_banner clearfix"'; ?>>
+			<a href="<?php echo esc_url( home_url() ); ?>">
+				<?php 
+					$color_scheme = et_get_option( 'lucid_color_scheme', 'Orange' );
+					$color_scheme = ( 'Orange' == $color_scheme ) ? '' : '-' . strtolower( $color_scheme );
+					$logo = ( ( $user_logo = et_get_option('lucid_logo') ) && '' != $user_logo ) ? $user_logo : get_template_directory_uri() . "/images/logo{$color_scheme}.png"; 
 				?>
-			</nav> -->
-			
+				<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
+			</a> 
+
+			<a href="<?php echo get_option('Home'); ?>/wp-admin"><div class="login"> >>Login do Mídia </div></a>
+
 			<?php
 				$social_icons = '';
 				$et_rss_url = '' != et_get_option('lucid_rss_url') ? et_get_option('lucid_rss_url') : get_bloginfo('rss2_url');
@@ -72,35 +66,26 @@
 					foreach ($social_icons as $icon) {
 						echo "<a href='" . esc_url( $icon['url'] ) . "' target='_blank'><img alt='" . esc_attr( $icon['alt'] ) . "' src='" . esc_url( $icon['image'] ) . "' /></a>";
 					}
-					echo '</div> <!-- end #social-icons -->';
+					
 				}
-			?>
-			
+			?> 
+
 			<div id="search">
 				<div id="search-form">
 					<form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
 						<input type="text" value="<?php esc_attr_e('Busca no Site...', 'Lucid'); ?>" name="s" id="searchinput" />
 						<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
 					</form>
-				</div> <!-- end #search-form -->
-			</div> <!-- end #search -->
-		</div> <!-- end .container -->
-	</header> <!-- end #main-header -->
+				</div> 
+			</div> 
 	
 	<?php
 		$use_header_banner = et_get_option( 'lucid_468_header_enable', 'false' );
 	?>
-	
-	<div class="container">
-		<div id="logo-area"<?php if ( 'on' == $use_header_banner ) echo ' class="header_banner clearfix"'; ?>>
-			<a href="<?php echo esc_url( home_url() ); ?>">
-				<?php 
-					$color_scheme = et_get_option( 'lucid_color_scheme', 'Orange' );
-					$color_scheme = ( 'Orange' == $color_scheme ) ? '' : '-' . strtolower( $color_scheme );
-					$logo = ( ( $user_logo = et_get_option('lucid_logo') ) && '' != $user_logo ) ? $user_logo : get_template_directory_uri() . "/images/logo{$color_scheme}.png"; 
-				?>
-				<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
-			</a>
+
+		</header> <!-- end #main-header -->
+
+
 			
 			<?php if ( 'on' == $use_header_banner ){ ?>
 				<div id="top_banner">

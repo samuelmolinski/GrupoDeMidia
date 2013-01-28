@@ -49,8 +49,7 @@
 				if ($footerNav == '') show_page_menu($menuID);
 				else echo($footerNav);
 			?>
-		
-
+			
 			<p id="copyright"><?php printf( __('Designed by %s | Powered by %s', 'Lucid'), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
 		</div> <!-- end .container -->	
 	</div> <!-- end #footer-bottom -->	

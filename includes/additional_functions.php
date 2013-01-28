@@ -35,7 +35,7 @@ function lucid_display_options($callback_args) {
 			<label for="et_fs_video" style="color: #000; font-weight: bold;"> <?php esc_html_e('Video url:',$themename); ?> </label>
 			<input type="text" style="width: 30em;" value="<?php echo esc_url($et_fs_video); ?>" id="et_fs_video" name="et_fs_video" size="67" />
 			<br />
-			<small style="position: relative; top: 8px;"><?php esc_html_e('You can put Youtube or Vimeo link here.', $themename); ?> ex: <code><?php echo htmlspecialchars("http://www.youtube.com/watch?v=WkuHbkaieZ4");?></code></small>
+			<small style="position: relative; top: 8px;"><?php esc_html_e('Você pode colocar link do Youtube ou vídeo aqui.', $themename); ?> ex: <code><?php echo htmlspecialchars("http://www.youtube.com/watch?v=WkuHbkaieZ4");?></code></small>
 		</div>
 	</div> <!-- #et_custom_settings -->
 	

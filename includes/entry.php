@@ -12,7 +12,7 @@
 		
 		if ( $index_postinfo ){
 			echo '<p class="meta-info">';
-			et_postinfo_meta( $index_postinfo, et_get_option('lucid_date_format'), esc_html__('0 comments','Lucid'), esc_html__('1 comment','Lucid'), '% ' . esc_html__('comments','Lucid') );
+			et_postinfo_meta( $index_postinfo, et_get_option('lucid_date_format'), esc_html__('0 comentário','Lucid'), esc_html__('1 comentário','Lucid'), '% ' . esc_html__('comentários','Lucid') );
 			echo '</p>';
 		}
 	?>	
@@ -31,6 +31,6 @@
 			if ( 'on' == et_get_option('lucid_blog_style') ) the_content('');
 			else echo '<p>' . truncate_post(170,false) . '</p>';
 		?>
-		<a href="<?php the_permalink(); ?>" class="more"><?php esc_html_e( 'Read More', 'Lucid' ); ?></a>
+		<a href="<?php the_permalink(); ?>" class="more"><?php esc_html_e( 'Saiba mais', 'Lucid' ); ?></a>
 	</div> <!-- end .post_content -->
 </article> <!-- end .entry -->

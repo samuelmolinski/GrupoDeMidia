@@ -62,7 +62,7 @@
 		.et_shortcodes_controls_arrows .et_sc_nav_prev span { left: 30px; }
 
 .et-simple-slider { background: #fff; border: 1px solid #e7e7e7; margin: 10px 0; position: relative; }
-	.et-simple-slider h1, .et-simple-slider h2, .et-simple-slider h3, .et-simple-slider h4, .et-simple-slider h5, .et-simple-slider h6 { font-family: Century Gothic, Arial, sans-serif; color: #333333; }
+	.et-simple-slider h1, .et-simple-slider h2, .et-simple-slider h3, .et-simple-slider h4, .et-simple-slider h5, .et-simple-slider h6 { font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; color: #333333; }
 	.et-simple-slides { overflow: hidden; margin: 30px 30px 20px; }
 		.et-simple-slider div.et-slide { display: none; width:100% !important; }
 		
@@ -232,7 +232,7 @@ ul.et_shortcodes_mobile_nav { margin: 0 !important; padding: 0 !important; list-
 					.pricing-table ul.pricing li.x-mark span { background-position: -74px -20px; }
 					
 			.pricing-content-bottom { border-top: 1px solid #fff; border-bottom: 1px solid #e7e7e7; -webkit-box-shadow: inset 1px 0 0 0 #fff; -moz-box-shadow: inset 1px 0 0 0 #fff; box-shadow: inset 1px 0 0 0 #fff; padding: 20px 5px 43px; text-align: center; }
-					span.et-price { font-size: 48px; color: #94c65c; text-shadow: 0 1px 0 #fff; font-family: Georgia, serif; }
+					span.et-price { font-size: 48px; color: #94c65c; text-shadow: 0 1px 0 #fff; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; }
 						span.et-price sup { font-size: 24px; bottom: 13px; left: 1px; }
 						span.et-price span.dollar-sign { font-size: 36px; }
 			.pricing-table a.icon-button { margin: 0; padding-left: 15px; position: absolute; bottom: -13px; left: 50%; }
@@ -258,7 +258,7 @@ ul.et_shortcodes_mobile_nav { margin: 0 !important; padding: 0 !important; list-
 
 .et-dropcap { font-size: 48px; float: left; display:block; margin:0 7px 0 0; line-height: 1; }
 
-.et_quote { padding-left: 57px; min-height: 40px; font-family: Georgia, serif; font-size: 14px; font-style: italic; position: relative; line-height: 1.5; margin-bottom: 10px; }
+.et_quote { padding-left: 57px; min-height: 40px;font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; font-size: 14px; font-style: italic; position: relative; line-height: 1.5; margin-bottom: 10px; }
 	.et_quote .et_quote_sign { background: url(../images/shortcodes-sprite.png) no-repeat -206px -20px; position: absolute; top: 0; left: 0; display: block; width: 40px; height: 34px; }
 	.quote-center .et_quote_sign { background-position: -251px -2px; width: 20px; height: 16px; top: 3px; }
 	.quote-center .et_quote_additional_sign { background: url(../images/shortcodes-sprite.png) no-repeat -251px -22px; position: absolute; top: 3px; right: 13px; display: block; width: 20px; height: 16px; }

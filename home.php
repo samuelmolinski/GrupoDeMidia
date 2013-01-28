@@ -38,8 +38,8 @@
 		
 		<?php if ( $video_posts_query->have_posts() ){ ?>	
 			<div id="recent-videos">
-				<h3 class="main-title"><?php esc_html_e( 'Recent videos', 'Lucid' ); ?></h3>
-				<a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" class="more"><?php esc_html_e( 'More', 'Lucid' ); ?></a>
+				<h3 class="main-title"><?php esc_html_e( 'Vídeos Recentes', 'Lucid' ); ?></h3>
+				<a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
 				<div id="video-slider-section">
 					<div id="video-content" class="flexslider">
 						<ul class="slides">
@@ -100,52 +100,6 @@
 		<?php } ?>
 	<?php } ?>
 		
-	<?php if ( have_posts() ){ ?>
-		<div id="recent-articles">
-			<h3 class="main-title"><?php esc_html_e( 'Artigos mais recentes', 'Lucid' ); ?></h3>
-			
-			<div id="articles-content">
-			<?php while ( have_posts() ) : the_post(); ?>
-			<?php 
-				$index_postinfo = et_get_option('lucid_postinfo1');
-				
-				$thumb = '';
-				$width = apply_filters('et_blog_image_width',128);
-				$height = apply_filters('et_blog_image_height',128);
-				$classtext = '';
-				$titletext = get_the_title();
-				$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Blogimage');
-				$thumb = $thumbnail["thumb"];
-			?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'article clearfix' ); ?>>
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
-							<span class="overlay"></span>
-						</a>
-					</div> 	<!-- end .thumb -->
-					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					
-				<?php 
-					if ( $index_postinfo ){
-						echo '<p class="meta-info">';
-						et_postinfo_meta( $index_postinfo, et_get_option('lucid_date_format'), esc_html__('0 Comentário','Lucid'), esc_html__('1 Comentário','Lucid'), '% ' . esc_html__('Comentários','Lucid') );
-						echo '</p>';
-					}
-					
-					if ( 'on' == et_get_option('lucid_blog_style') ) the_content('');
-					else echo '<p>' . truncate_post( 110, false ) . '</p>'; 
-				?>
-				</article> 	<!-- end .article -->
-			<?php endwhile; ?>
-			</div> <!-- end #articles-content -->
-		</div> <!-- end #recent-articles -->
-		
-		<?php 
-			if( function_exists('wp_pagenavi') ) wp_pagenavi();
-			else get_template_part('includes/navigation','home');
-		?>
-	<?php } ?>
 	</div> <!-- end #left-area -->
 	
 	<?php get_sidebar(); ?>
