@@ -9,7 +9,7 @@
 	
 <?php if(function_exists('bcn_display')) { bcn_display(); } 
 		  else { ?>
-				<h1 class="title"><?php esc_html_e('Notícia','Lucid') ?> - 	<span>	
+				<h1 class="title"><?php esc_html_e('','Lucid') ?> - 	<span>	
 				<?php if( is_tag() ) { ?>
 					<?php esc_html_e('Posts com a tag ','Lucid') ?><span class="raquo">&quot;</span><?php single_tag_title(); echo('&quot;'); ?>
 				<?php } elseif (is_day()) { ?>

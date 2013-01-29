@@ -8,7 +8,7 @@
 			$thumb = '';
 			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
 			$width = apply_filters('et_blog_image_width',630);
-			if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
+				if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
 			$height = apply_filters('et_blog_image_height',250);
 			$classtext = '';
 			$titletext = get_the_title();
@@ -25,7 +25,7 @@
 
 						$video_embed = preg_replace('/<embed /','<embed wmode="transparent" ',$video_embed);
 						$video_embed = preg_replace('/<\/object>/','<param name="wmode" value="transparent" /></object>',$video_embed); 
-						$video_embed = preg_replace("/height=\"[0-9]*\"/", "height=215", $video_embed);
+						$video_embed = preg_replace("/height=\"[0-9]*\"/", "height=250", $video_embed);
 						$video_embed = preg_replace("/width=\"[0-9]*\"/", "width={$width}", $video_embed);
 				
 						echo $video_embed;

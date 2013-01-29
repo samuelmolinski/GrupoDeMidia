@@ -40,50 +40,51 @@
 <body <?php body_class(); ?>>		
 	
 	<div class="container">
-			<header id="main-header">	
+			<header id="main-header">
 
-			<div id="logo-area"<?php if ( 'on' == $use_header_banner ) echo ' class="header_banner clearfix"'; ?>>
-			<a href="<?php echo esc_url( home_url() ); ?>">
-				<?php 
-					$color_scheme = et_get_option( 'lucid_color_scheme', 'Orange' );
-					$color_scheme = ( 'Orange' == $color_scheme ) ? '' : '-' . strtolower( $color_scheme );
-					$logo = ( ( $user_logo = et_get_option('lucid_logo') ) && '' != $user_logo ) ? $user_logo : get_template_directory_uri() . "/images/logo{$color_scheme}.png"; 
-				?>
-				<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
-			</a> 
+				
 
-			<a href="<?php echo get_option('Home'); ?>/wp-admin"><div class="login"> >>Login do Mídia </div></a>
+				<div id="logo-area"<?php if ( 'on' == $use_header_banner ) echo ' class="header_banner clearfix"'; ?>>
+					<a href="<?php echo esc_url( home_url() ); ?>">
+						<?php 
+							$color_scheme = et_get_option( 'lucid_color_scheme', 'Orange' );
+							$color_scheme = ( 'Orange' == $color_scheme ) ? '' : '-' . strtolower( $color_scheme );
+							$logo = ( ( $user_logo = et_get_option('lucid_logo') ) && '' != $user_logo ) ? $user_logo : get_template_directory_uri() . "/images/logo{$color_scheme}.png"; 
+						?>
+						<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
+					</a> 
+						
+					<!--<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> >>Login do Mídia </a></div>-->
 
+					<?php
+						$social_icons = '';
+						$et_rss_url = '' != et_get_option('lucid_rss_url') ? et_get_option('lucid_rss_url') : get_bloginfo('rss2_url');
+						if ( 'on' == et_get_option('lucid_show_twitter_icon') ) $social_icons['twitter'] = array('image' => get_bloginfo('template_directory') . '/images/twitter.png', 'url' => et_get_option('lucid_twitter_url'), 'alt' => 'Twitter' );
+						if ( 'on' == et_get_option('lucid_show_rss_icon') ) $social_icons['rss'] = array('image' => get_bloginfo('template_directory') . '/images/rss.png', 'url' => $et_rss_url, 'alt' => 'Rss' );
+						if ( 'on' == et_get_option('lucid_show_facebook_icon') ) $social_icons['facebook'] = array('image' => get_bloginfo('template_directory') . '/images/facebook.png', 'url' => et_get_option('lucid_facebook_url'), 'alt' => 'Facebook' );
+						$social_icons = apply_filters('et_social_icons', $social_icons);
+						if ( !empty($social_icons) ) {
+							echo '<div id="social-icons">';
+							foreach ($social_icons as $icon) {
+								echo "<a href='" . esc_url( $icon['url'] ) . "' target='_blank'><img alt='" . esc_attr( $icon['alt'] ) . "' src='" . esc_url( $icon['image'] ) . "' /></a>";
+							}
+							
+						}
+					?> 
+
+					<div id="search">
+						<div id="search-form">
+							<form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
+								<input type="text" value="<?php esc_attr_e('Busca no Site...', 'Lucid'); ?>" name="s" id="searchinput" />
+								<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
+							</form>
+						</div> 
+					</div>
 			<?php
-				$social_icons = '';
-				$et_rss_url = '' != et_get_option('lucid_rss_url') ? et_get_option('lucid_rss_url') : get_bloginfo('rss2_url');
-				if ( 'on' == et_get_option('lucid_show_twitter_icon') ) $social_icons['twitter'] = array('image' => get_bloginfo('template_directory') . '/images/twitter.png', 'url' => et_get_option('lucid_twitter_url'), 'alt' => 'Twitter' );
-				if ( 'on' == et_get_option('lucid_show_rss_icon') ) $social_icons['rss'] = array('image' => get_bloginfo('template_directory') . '/images/rss.png', 'url' => $et_rss_url, 'alt' => 'Rss' );
-				if ( 'on' == et_get_option('lucid_show_facebook_icon') ) $social_icons['facebook'] = array('image' => get_bloginfo('template_directory') . '/images/facebook.png', 'url' => et_get_option('lucid_facebook_url'), 'alt' => 'Facebook' );
-				$social_icons = apply_filters('et_social_icons', $social_icons);
-				if ( !empty($social_icons) ) {
-					echo '<div id="social-icons">';
-					foreach ($social_icons as $icon) {
-						echo "<a href='" . esc_url( $icon['url'] ) . "' target='_blank'><img alt='" . esc_attr( $icon['alt'] ) . "' src='" . esc_url( $icon['image'] ) . "' /></a>";
-					}
-					
-				}
-			?> 
+				$use_header_banner = et_get_option( 'lucid_468_header_enable', 'false' );
+			?>
 
-			<div id="search">
-				<div id="search-form">
-					<form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
-						<input type="text" value="<?php esc_attr_e('Busca no Site...', 'Lucid'); ?>" name="s" id="searchinput" />
-						<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
-					</form>
-				</div> 
-			</div> 
-	
-	<?php
-		$use_header_banner = et_get_option( 'lucid_468_header_enable', 'false' );
-	?>
-
-		</header> <!-- end #main-header -->
+				</header> <!-- end #main-header -->
 
 
 			
