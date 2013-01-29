@@ -40,8 +40,8 @@
 			while ( $featured_query->have_posts() ) : $featured_query->the_post();
 				$category = get_the_category();
 				
-				$info[$i]['date'] = get_the_time( '1' ) ;//. '<span>' . get_the_time( 'd' ) . '</span>'
-				$info[$i]['title'] = ( $custom_title = get_post_meta( $post->ID, 'featured_title', true ) ) && '' != $custom_title ? $custom_title : apply_filters( 'the_title', get_the_title() );
+				$info[$i]['date'] = get_the_time( 'd' ) .'<span>' . get_the_time( 'D' ) . '</span>';
+				$info[$i]['title'] = ( $custom_title = get_post_meta( $post->ID, 'featured_title', true ) ) && '' != $custom_title ? $custom_title : apply_filters( 'the_title', get_the_title() );;
 				$info[$i]['postinfo'] = __( 'Postado em: ', 'Lucid' ) . $category[0]->cat_name;
 			?>
 				<li class="slide">					

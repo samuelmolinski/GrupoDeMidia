@@ -18,7 +18,7 @@ function css_browser_selector(u) {
         h = document.documentElement,
         b = [
         	(!(/opera|webtv/i.test(ua)) && /msie\s(\d)/.test(ua)) ? ('ie ie' + RegExp.$1) : 
-        	is('firefox/2') ? g + ' ff2' : 
+        	is('firefox/2') ? g + ' 0' : 
         	is('firefox/3.5') ? g + ' ff3 ff3_5' : 
         	is('firefox/3.6') ? g + ' ff3 ff3_6' : 
         	is('firefox/3') ? g + ' ff3' : 

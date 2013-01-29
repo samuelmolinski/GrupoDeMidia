@@ -101,26 +101,39 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	position: relative;
 }
 
-.container #logo-area {
+#logo-area {
+	position: relative;
+	margin: 0 auto;
 
+}
+#logo-area > a{
+	display: block;
+	margin: 0 auto;
+	width: 117px;
 }
 
 #login{
-
+	position: absolute;
+	right: 3px;
+	top: 45px;
+	font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow";
 }
 
 #social-icons { 
-	float: right;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 80px;
 }	
 
 #social-icons a {
-	float:right
+	float: left;
 	margin: 10px 0 0 0;
 	padding: 0 10px 0 0 ;
 }
 
 #search {
-	float: left;
+	float:left;
 	padding: 0;
 	margin: 0 0 0 20px;
 }	
@@ -224,8 +237,8 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	.entry:before { content: ''; position: absolute; height: 8px; bottom: -8px; left: 0; background: url(../images/middle-shadow.png) no-repeat top center; width: 100%; }
 		.entry .meta-info { background-color: #f9f9f9; border: 1px solid #fff; border-bottom: none; font-size: 16px; color: #b8b8b8; text-shadow: 1px 1px 0 #fff; font-weight: lighter; padding: 19px 28px; }
 			.entry .meta-info a { text-decoration: none; color: #888888; }
-		.entry .post-thumbnail { position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%;}
-			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }	
+		.entry .post-thumbnail { position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100% }
+			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }
 		.entry h2.title, h1.title { font-size: 48px; margin: 0 20px 20px 0; color: #FFA500; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
 			.entry h2.title a { text-decoration: none; color: #ffa500; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"  }
 			.entry h2.title a:hover { color: #111; }
@@ -244,10 +257,10 @@ article.post ol, .comment-content ol, article.page ol { list-style-type: decimal
 	.post ul li ul, .post ul li ol, .comment-content ul li ul, .comment-content ul li ol, article.page ul li ul, article.page ul li ol { padding: 2px 0px 2px 20px; }
 	.post ol li ul, .post ol li ol, .comment-content ol li ul, .comment-content ol li ol, article.page ol li ul, article.page ol li ol  { padding: 2px 0px 2px 35px; }
 	
-article.post p, .comment-content p, article.page p { padding-bottom: 17px; }
+article.post p, .comment-content p, article.page p { padding-bottom: 0.4em; }
 
 #breadcrumbs {display: inline; }
-	#breadcrumbs a {display: inline; text-decoration: none;}
+	#breadcrumbs a {display: inline; text-decoration: none; font-size: 30px; color:#FFA500;}
 	#breadcrumbs a:hover { }
 	
 /*------------------------------------------------*/
@@ -316,8 +329,8 @@ span.menu_slide { display: none; }
 *********************************/ 
 .flexslider {width: 100%; margin: 0; padding: 0;}
 .flexslider .slides > li { display: none; } /* Hide the slides before the JS is loaded. Avoids image jumping */
-img { max-width: 100%; height: auto;}
-.flexslider  img { display: block; width: auto; }
+img { max-width: 100%;}
+.flexslider  img { display: block; }
 
 /* Clearfix for the .slides element */
 .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
@@ -594,7 +607,10 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 #left-area .wp-pagenavi .current, #left-area .wp-pagenavi a:hover { background: #fff; }
 #left-area .wp-pagenavi .pages { border: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; padding-left: 0; background: none; }
 
-a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#cats-menu li a:hover, ul#page-menu li a:hover, div#slider-control div.featitem h2 a  { text-decoration: none; }
+a.readmore{text-decoration: none; text-transform: uppercase;}
+a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#cats-menu li a:hover, ul#page-menu li a:hover, div#slider-control div.featitem h2 a  { text-decoration: none; text-transform:uppercase; }
+
+a.readmore-curso{ float:left; padding: 0 3em 0 0; text-transform:uppercase;}
 
 .foursixeight { margin: 0px 0px 15px 84px;}
 
@@ -697,9 +713,10 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 
 @media only screen and ( max-width: 767px ) {
 	.container { width: 440px; }
+		#social-icons { float: right; display: none; }
+		#login{display: none}
+		#search { border-left: none; float: left; padding: 11px 15px 11px 0; display: none }
 		#top-menu, #second-menu, span.post-meta, #switcher .meta-info, #sidebar, #bottom-menu, #main-footer { display: none; }
-		#social-icons { float: right; }
-		#search { border-left: none; float: left; border-right: 1px solid #e5e5e5; padding: 11px 15px 11px 0; }
 		#featured_section { margin-bottom: 30px; }
 			#switcher-container:after, .category-box:after, #video-slider-section:before, #articles-content:before, .widget:after, .post:before { background-size: contain; }
 				#switcher li { width: 145px!important; }
@@ -752,9 +769,12 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 195px !important; }
 }
 
-@media only screen and ( max-width: 479px ) {
+@media only screen and ( max-width: 479px ){
 	.container { width: 280px; }
-		#top-menu, #second-menu, span.post-meta, #switcher .meta-info, #sidebar, #bottom-menu, #main-footer, #social-icons, #search, #switcher-container, #video-switcher, .article .thumb, .post .meta-info { display: none; }
+		#login{display: none;}
+		#social-icons { float: right; display: none; }
+		#search { border-left: none; float: left; padding: 11px 15px 11px 0; display: none }
+		#top-menu, #second-menu, span.post-meta, #switcher .meta-info, #sidebar, #bottom-menu, #main-footer, #switcher-container, #video-switcher, .article .thumb, .post .meta-info { display: none; }
 		#featured_section { margin-bottom: 30px; }
 			.category-box:after, #video-slider-section:before, #articles-content:before, .widget:after, .post:before { background-size: contain; }
 			#recent-categories, #recent-videos, .recent-category { margin-bottom: 30px; }			

@@ -8,13 +8,10 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		$shortname = 'lucid';
 		$et_store_options_in_one_row = true;
 		
-		require_once(TEMPLATEPATH . '/classes/class.postCategoria.php');
 
-		require_once(TEMPLATEPATH . '/classes/class.postNoticia.php');
+		require_once(TEMPLATEPATH . '/custom_post/class.noticia.php');
 
-		require_once(TEMPLATEPATH . '/classes/class.postPulso.php');
-
-		require_once(TEMPLATEPATH . '/classes/class.postCursos.php');
+		require_once(TEMPLATEPATH . '/custom_post/class.curso.php');
 
 		require_once(TEMPLATEPATH . '/epanel/custom_functions.php'); 
 
