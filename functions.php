@@ -1,5 +1,7 @@
 <?php 
 
+require_once(TEMPLATEPATH . '/m_toolbox/m_toolbox.php');
+
 add_action( 'after_setup_theme', 'et_setup_theme' );
 if ( ! function_exists( 'et_setup_theme' ) ){
 	function et_setup_theme(){
@@ -185,7 +187,8 @@ function et_color_schemes_styles(){
 function et_load_lucid_scripts(){
 	if ( !is_admin() ){
 		$template_dir = get_template_directory_uri();
-		
+
+		wp_enqueue_script('css_browser_selector', $template_dir . '/m_toolbox/js/css_browser_selector.js', array(), '1.0', true);
 		wp_enqueue_script('superfish', $template_dir . '/js/superfish.js', array('jquery'), '1.0', true);
 		wp_enqueue_script('flexslider', $template_dir . '/js/jquery.flexslider-min.js', array('jquery'), '1.0', true);
 		wp_enqueue_script('fitvids', $template_dir . '/js/jquery.fitvids.js', array('jquery'), '1.0', true);

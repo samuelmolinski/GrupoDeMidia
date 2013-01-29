@@ -435,6 +435,11 @@ html[xmlns] .slides {display: block;}
 /*---------------------[Forms]--------------------*/
 /*------------------------------------------------*/
 #newsletter {
+	margin-bottom: 30px;
+	.cf_info {
+		margin: 25px 0 -24px 120px;
+		height: 16px;
+	}
 	.cform {
 		width:100%;
 		border: none;
@@ -448,13 +453,13 @@ html[xmlns] .slides {display: block;}
 				display: block;
 				float: left;
 				clear: both;
-			}
 
-				li {
+				&>li {
 					float:left;
-					margin-right: 11px;
+					margin-right: 14px;
+					margin-top: 5px;
 				}
-
+			}
 					input{
 						border: #cccccc;
 						background: #FFFFFF;			
@@ -465,13 +470,21 @@ html[xmlns] .slides {display: block;}
 						padding: 9px 15px;
 						margin: 0;
 					}
+					input[type=submit] {
+						background-color: #fff9ed;
+						color: #f9c15b;
+						font-size: 24px;
+						font-weight: 600;
+						padding: 3px 15px;
+					}
 					label {
 						display: inline-block;
 						padding: 9px 15px;
 					}
 					label[for=cf_field_3], label[for=cf_field_4],label[for=cf_field_5] {display: none;}
+
 		.cf-sb {
-			margin-top: 33px;
+			margin-top: 38px;
 			float: left;
 		}
 	}
@@ -497,8 +510,8 @@ html[xmlns] .slides {display: block;}
 			width: 135px;
 			margin-left: -15px;
 			position: relative;
-			z-index: -1;
-			padding: 9px 15px 9px 20px;
+			z-index: 0;
+			padding:10px 15px 8px 20px;
 		}
 }		
 	#li--2 {
@@ -508,9 +521,50 @@ html[xmlns] .slides {display: block;}
 		label[for=cf_field_2] {
 			background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
 			width: 133px;
+			position: relative;
+			z-index: 1;
 		}
 	}
+#twitter {
+	width: 48%;
+	margin-right: 4%;
+	float: left;
+	.twitterHeader {
+		position: relative;
+		width: 100%;
+		height: 54px;
+		img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.title {
+			width: 100%;
+			margin-top: 26px;
+			background-color: #dff7ff;
+			float: left;
+			text-align: center;
+			padding: 6px 0;
+		}
+	}
+	.twtr-widget .twtr-widget-profile, .twtr-doc {
+		width: 100% !important;
+	}
+}
+#facebook {
+	width: 48%;
+	float: left;
+}
 
+.fb_iframe_widget {
+	width: 100%;
+	&>span {
+		width: 100% !important;
+		iframe {
+			width: 100% !important;
+		}
+	}
+}
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
@@ -709,6 +763,12 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon, #et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { top: 99px !important; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon { left: 140px !important; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 178px !important; }
+	#li--4 {clear: left;}
+	.cf-sb {
+		position: absolute;
+		top: 36px;
+		right: 215px;
+	}
 }
 
 @media only screen and ( max-width: 767px ) {
@@ -767,6 +827,21 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon, #et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { top: 109px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon { left: 155px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 195px !important; }
+
+	.cf-sb {
+		position: absolute;
+		top: 73px;
+		right: 123px;
+	}
+
+	#li--3 {
+		clear: left;
+	}
+	#li--5 {clear: left; }
+	#twitter, #facebook {
+		width: 100%;	
+		margin: auto;	
+	}
 }
 
 @media only screen and ( max-width: 479px ){
@@ -812,4 +887,70 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 	.entry .et_portfolio_small .et_pt_portfolio_item { width: 262px !important; margin-left: -15px !important; }
 	
 	.et_portfolio_small .et_pt_portfolio_item { margin-left: -15px !important; width: 254px !important; }
-}
+
+
+	.cf-sb {
+		position: absolute;
+		top: 184px;
+		right: 0;
+	}
+
+	#newsletter {
+		.cf-ol {
+			display: block;
+			float: left;
+			clear: both;
+			margin-bottom: 50px;
+
+			&>li {
+				float: left;
+				clear: left;
+				margin-top: 5px;
+
+				input {
+					padding-left: 1em;
+					padding-right: 1em;	
+					width: 253px;				
+				}
+			}
+		}		
+	}
+
+	#li--2 {
+		clear: left;
+		height: auto;
+		width: auto;
+
+		label {
+			float: left;
+			margin-bottom: 5px;
+		}
+
+		#cf_field_2 {
+			float: left;
+			margin: 0;
+			width: 253px;
+			padding: 9px 14px;
+		}
+	}
+	#twitter, #facebook {
+		width: 100%;		
+		margin: auto;	
+	}
+	#twitter {
+		.twitterHeader {
+
+			.title {
+				height: 41px;
+				width: 226px;
+				float: right;
+				margin: 0;
+				a {
+					display: block;
+					width: 120px;
+					margin: auto;
+				}
+			}
+		}
+	}
+}}
