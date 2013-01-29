@@ -5,6 +5,13 @@
 		
 		</div> <!-- end .container -->
 	</div> <!-- end #main-area -->
+	<div id="preFooter" class="container clearfix">
+		<div id="newsletter" class="container"><?php insert_cform('Newsletter'); ?></div>
+		<div id="twitter"></div>
+		<div id="facebook"></div>
+	</div>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.jqtransform.js"></script>
+	<script type="text/javascript">jQuery('#li--4').jqTransform({imgPath:'<?php bloginfo('template_url'); ?>/jqtransformplugin/img/'});</script>
 	<footer id="main-footer">
 	<?php if ( $any_widget_area_active ) { ?>
 		<div id="footer-divider"></div>
@@ -28,15 +35,15 @@
 		</div> <!-- end .container -->
 		<?php if ( 'on' == et_get_option( 'lucid_728_enable', 'false' ) ){ ?>
 			<div id="bottom-advertisment">
-				<div class="container">			
+				<div class="container">
 					<?php 
 						if ( ( $lucid_728_adsense = et_get_option('lucid_728_adsense') ) && '' != $lucid_728_adsense ) echo( $lucid_728_adsense );
 						else { ?>
 						   <a href="<?php echo esc_url(et_get_option('lucid_728_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_728_image')); ?>" /></a>
 					<?php } ?>
-				</div> <!-- end .container -->	
+				</div> <!-- end .container -->
 			</div>
-		<?php } ?>		
+		<?php } ?>
 	</footer> <!-- end #main-footer -->
 	
 	<div id="footer-bottom">	

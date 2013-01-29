@@ -367,13 +367,92 @@ html[xmlns] .slides {display: block;}
 				#bottom-menu li { display: inline-block; }
 					#bottom-menu a { font-size: 14px; color: #FFF; text-decoration: none; padding: 0 5px; display: block; }
 					#bottom-menu .active  { font-weight: bold; }
-					
-					
-					
 			p#copyright { float: right; font-size:12px; color:#4b4b4b; margin-top: -4px; }	
 				p#copyright a { color:#4b4b4b; font-weight: bold; }
 #footer-bottom .container { padding-bottom: 16px; }
-	
+					
+
+
+/*------------------------------------------------*/
+/*---------------------[Forms]--------------------*/
+/*------------------------------------------------*/
+#newsletter {
+	.cform {
+		width:100%;
+		border: none;
+		background: none;
+
+		.cf-fs1 {
+			display: block;
+			float: left;
+		}
+			.cf-ol {
+				display: block;
+				float: left;
+				clear: both;
+			}
+
+				li {
+					float:left;
+					margin-right: 11px;
+				}
+
+					input{
+						border: #cccccc;
+						background: #FFFFFF;			
+						-moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+						-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+						box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+						display: inline-block;
+						padding: 9px 15px;
+						margin: 0;
+					}
+					label {
+						display: inline-block;
+						padding: 9px 15px;
+					}
+					label[for=cf_field_3], label[for=cf_field_4],label[for=cf_field_5] {display: none;}
+		.cf-sb {
+			margin-top: 33px;
+			float: left;
+		}
+	}
+	.cf-fs1 {
+		legend {
+			background-color: #ffa500;
+			-moz-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			-webkit-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			border: 1px solid #ff8c00;
+			font-family: "PT Sans Narrow","PT Sans Caption","PT Sans";
+			display: inline-block;
+			font-size: 16px;
+			text-transform: uppercase;
+			color: #fff;
+			text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+			margin-bottom: -1px;
+			padding: 8px 11px;
+		}
+	}
+	.reqtxt, .emailreqtxt, .linklove, .cf_hidden { display: none; }
+		#cf_field_2 {
+			width: 135px;
+			margin-left: -15px;
+			position: relative;
+			z-index: -1;
+			padding: 9px 15px 9px 20px;
+		}
+}		
+	#li--2 {
+		width: 320px;
+		height: 39px;
+
+		label[for=cf_field_2] {
+			background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
+			width: 133px;
+		}
+	}
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
