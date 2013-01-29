@@ -25,6 +25,7 @@
 
 	<?php do_action('et_head_meta'); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/jqtransform.css" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<!--[if lt IE 9]>
