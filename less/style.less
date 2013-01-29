@@ -90,21 +90,66 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 /*---------------[MAIN LAYOUT INFO]---------------*/
 /*------------------------------------------------*/
 
-#main-header {  position: relative; margin:30px 0 20px 0; }	
-/*#main-header:before { content: ''; position: absolute; height: 7px; bottom: -7px; left: 0; background: url(../images/shadow.png) no-repeat top center; width: 100%; }*/
-.container { margin: 0 auto; width: 960px; position: relative; clear: both }
+#main-header {
+	position: relative;
+	margin: 20px 0;
+}
 
-.login{	position: relative;	float: right; top: 50px; padding: 0 50px 0 0; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
+.container {
+	margin: 0 auto;
+	width: 960px;
+	position: relative;
+}
 
-#social-icons {  float:right; position: relative; bottom: 0; right: 0; margin: 0 20px 0 0; }	
-#social-icons a { float: left; margin: 10px 0 0 0; padding: 0 10px 0 0 }
+.container #logo-area {
 
-#search { float: left; padding: 0; margin: 0 0 0 20px;  }	
-#search-form { height: 35px; border:1px solid #e5e5e5; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background-color: #fff; -webkit-box-shadow: 1px 1px 0 #fff; -moz-box-shadow: 1px 1px 0 #fff; box-shadow: 1px 1px 0 #fff; }
-#search-form #searchinput { background: none; border: none; float: right; margin: 9px 14px 0 7px; width: 108px; padding-left: 6px; font-size: 12px; color: #4b4b4b; font-weight: lighter; }
-#search-form #searchsubmit { margin-top: 12px; margin-right: 12px; }
-	
-.container #logo-area {text-align: center; clear:both;}
+}
+
+#login{
+
+}
+
+#social-icons { 
+	float: right;
+}	
+
+#social-icons a {
+	float:right
+	margin: 10px 0 0 0;
+	padding: 0 10px 0 0 ;
+}
+
+#search {
+	float: left;
+	padding: 0;
+	margin: 0 0 0 20px;
+}	
+#search-form {
+		height: 35px;
+		border:1px solid #e5e5e5;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		background-color: #fff;
+		-webkit-box-shadow: 1px 1px 0 #fff;
+		-moz-box-shadow: 1px 1px 0 #fff;
+		box-shadow: 1px 1px 0 #fff;
+	}
+	#search-form #searchinput {
+			background: none;
+			border: none;
+			float: right;
+			margin: 9px 14px 0 7px;
+			width: 108px;
+			padding-left: 6px;
+			font-size: 12px;
+			color: #4b4b4b;
+			font-weight: lighter;
+		}
+		#search-form #searchsubmit {
+			margin-top: 12px;
+			margin-right: 12px;
+		}
 
 #secondary-menu { border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; position: relative; }
 #secondary-menu:before { content: ''; position: absolute; height: 7px; bottom: -7px; left: 0; background: url(../images/shadow.png) no-repeat top center; width: 100%; z-index: 1; }
@@ -175,11 +220,11 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 					.article p { margin-top: -7px; }
 			
 #main-area  { padding-top: 58px; }	
-	.entry { border: 1px solid #e5e5e5; background-color: #fff; position: relative; margin-bottom: 30px; }		
+	.entry { border: 1px solid #e5e5e5; background-color: #fff; position: relative; margin-bottom: 30px; width: 100%; }		
 	.entry:before { content: ''; position: absolute; height: 8px; bottom: -8px; left: 0; background: url(../images/middle-shadow.png) no-repeat top center; width: 100%; }
 		.entry .meta-info { background-color: #f9f9f9; border: 1px solid #fff; border-bottom: none; font-size: 16px; color: #b8b8b8; text-shadow: 1px 1px 0 #fff; font-weight: lighter; padding: 19px 28px; }
 			.entry .meta-info a { text-decoration: none; color: #888888; }
-		.entry .post-thumbnail { position: relative; line-height: 0; float: left;}
+		.entry .post-thumbnail { position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%;}
 			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }	
 		.entry h2.title, h1.title { font-size: 48px; margin: 0 20px 20px 0; color: #FFA500; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
 			.entry h2.title a { text-decoration: none; color: #ffa500; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"  }
@@ -271,7 +316,7 @@ span.menu_slide { display: none; }
 *********************************/ 
 .flexslider {width: 100%; margin: 0; padding: 0;}
 .flexslider .slides > li { display: none; } /* Hide the slides before the JS is loaded. Avoids image jumping */
-img { max-width: 100%; height: auto; width: auto;}
+img { max-width: 100%; height: auto;}
 .flexslider  img { display: block; width: auto; }
 
 /* Clearfix for the .slides element */
@@ -363,7 +408,7 @@ html[xmlns] .slides {display: block;}
 			.footer-widget p { line-height: 28px; }
 	#bottom-advertisment { border-top: 1px solid #eee; }
 		#bottom-advertisment .container { text-align: center; margin-bottom: 60px; padding-top: 58px; }	
-			#bottom-menu { float: left; background:#ffa500; padding:20px 40px; width:880px; text-transform:uppercase }
+			#bottom-menu { float: left; background:#ffa500; padding:20px 40px; width:960px; text-transform:uppercase }
 				#bottom-menu li { display: inline-block; }
 					#bottom-menu a { font-size: 14px; color: #FFF; text-decoration: none; padding: 0 5px; display: block; }
 					#bottom-menu .active  { font-weight: bold; }
@@ -612,7 +657,7 @@ body.et_left_sidebar #left-area { float: right; margin-left: 30px; margin-right:
 #all-tabs > div { display: none; }
 #all-tabs > div:first-child { display: block; }
 
-.container .header_banner { text-align: left !important; }
+.container .header_banner { text-align:left !important; }
 .container .header_banner #logo { float: left; }
 .container .header_banner #top_banner { float: right; margin-top: 20px; }
 
@@ -681,7 +726,7 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 		.footer-widget { width: 191px; padding-left: 30px; }
 			.footer-widget li { padding-right: 25px; } 
 		#bottom-menu, p#copyright  { float: none; text-align: center; }
-		#bottom-menu { margin-bottom: 40px; padding: 20px; width: 708px;}
+		#bottom-menu { margin-bottom: 40px; }
 		p#copyright { margin-bottom: 25px; }
 		#video-switcher li.active_video:last-child { padding-right: 11px; }
 		

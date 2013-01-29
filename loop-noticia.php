@@ -1,24 +1,3 @@
-<?php
-/*
-Template Name: Template Notícias
-*/
-?>
-<?php 
-
-$et_ptemplate_settings = array();
-$et_ptemplate_settings = maybe_unserialize( get_post_meta($post->ID,'et_ptemplate_settings',true) );
-
-$fullwidth = isset( $et_ptemplate_settings['et_fullwidthpage'] ) ? (bool) $et_ptemplate_settings['et_fullwidthpage'] : false;
-
-$et_ptemplate_blogstyle = isset( $et_ptemplate_settings['et_ptemplate_blogstyle'] ) ? (bool) $et_ptemplate_settings['et_ptemplate_blogstyle'] : false;
-
-$et_ptemplate_showthumb = isset( $et_ptemplate_settings['et_ptemplate_showthumb'] ) ? (bool) $et_ptemplate_settings['et_ptemplate_showthumb'] : false;
-
-$blog_cats = isset( $et_ptemplate_settings['et_ptemplate_blogcats'] ) ? (array) $et_ptemplate_settings['et_ptemplate_blogcats'] : array();
-$et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_perpage'] ) ? (int) $et_ptemplate_settings['et_ptemplate_blog_perpage'] : 5;
-?>
-
-<?php get_header(); ?>
 <h1 class="title"><?php the_title(); ?></h1>
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 		<div id="left-area">
@@ -26,8 +5,8 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 					<?php 
 						$thumb = '';
-						$width = apply_filters('et_blog_image_width',630);
-						$height = apply_filters('et_blog_image_height',210);
+						$width = apply_filters('et_blog_image_width',285);
+						$height = apply_filters('et_blog_image_height',215);
 						$classtext = '';
 						$titletext = get_the_title();
 						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
@@ -116,4 +95,3 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 	
 	<?php if ( ! $fullwidth ) get_sidebar(); ?>
 </div> 	<!-- end #content-area -->
-<?php get_footer(); ?>

@@ -2,7 +2,7 @@
 
 <div id="content-area" class="clearfix">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'index'); ?>
+		<?php //get_template_part('includes/breadcrumbs', 'index'); ?>
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php get_template_part('includes/entry', 'index'); ?>
