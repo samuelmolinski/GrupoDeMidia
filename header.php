@@ -9,7 +9,7 @@
 <html id="ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#" >
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -40,6 +40,17 @@
 </head>
 <body <?php body_class(); ?>>		
 	
+    <div id="fb-root"></div>
+    <!-- <script src="https://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/pt_BR" type="text/javascript"></script> -->
+	<script>
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div class="container">
 			<header id="main-header">	
 

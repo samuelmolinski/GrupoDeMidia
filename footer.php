@@ -6,9 +6,62 @@
 		</div> <!-- end .container -->
 	</div> <!-- end #main-area -->
 	<div id="preFooter" class="container clearfix">
-		<div id="newsletter" class="container"><?php insert_cform('Newsletter'); ?></div>
-		<div id="twitter"></div>
-		<div id="facebook"></div>
+		<div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div>
+		<div id="twitter">
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+				 
+			<!-- <a href="https://twitter.com/grupodemidia" class="twitter-follow-button" data-show-count="true">{l s='Siga'} @{l s='grupodemidia'}</a> -->
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<div class="twitterHeader">
+				<img src="<?php bloginfo('template_url'); ?>/images/twitter-layout-bird.png" />
+				<div class="title">siga-nos no twitter<a class=''>@grupodemidia</a></div>
+			</div>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  //type: 'faves',
+			  //type: 'search',
+			  type: 'profile',
+			  rpp: 3,
+			  interval: 8000,
+			  title: '',
+			  subject: '',
+			  //search: 'from:passeiorevest',
+			  width: 415,
+			  height: 170,
+			  theme: {
+			    shell: {
+			      background: 'transparent',
+			      color: '#696469'
+			    },
+			    tweets: {
+			      background: 'transparent',
+			      color: '#efefef',
+			      links: '#dbd5a6'
+			    }
+			  },
+			  features: {
+			    scrollbar: false,
+			    loop: true,
+			    live: true,
+			    hashtags: true,
+			    timestamp: true,
+			    avatars: true,
+			    behavior: 'default'
+			  }
+			}).render().setUser('grupodemidia').start();
+			</script>				
+		</div>
+		<div id="facebook">
+			<!-- https://www.facebook.com/photo.php?fbid=270688569658996&set=a.127585053969349.19158.127584683969386&type=1 -->
+		    <!-- <script src="https://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/pt_BR" type="text/javascript"></script> -->
+
+		    <!-- <script type="text/javascript">FB.init("270688569658996");</script>
+		    <fb:fan profile_id="270688569658996" connections="6" width="415" height="200" css="" stream="false"></fb:fan> -->
+		    <fb:like-box href="http://www.facebook.com/GrupoDeMidiaRJ" style="width:100%;" show_faces="true" stream="false" header="true"></fb:like-box>
+
+		</div>
+		<?php //d($footer_sidebars); ?>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.jqtransform.js"></script>
 	<script type="text/javascript">jQuery('#li--4').jqTransform({imgPath:'<?php bloginfo('template_url'); ?>/jqtransformplugin/img/'});</script>
@@ -56,8 +109,6 @@
 				if ($footerNav == '') show_page_menu($menuID);
 				else echo($footerNav);
 			?>
-			
-			<p id="copyright"><?php printf( __('Designed by %s | Powered by %s', 'Lucid'), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
 		</div> <!-- end .container -->	
 	</div> <!-- end #footer-bottom -->	
 	
