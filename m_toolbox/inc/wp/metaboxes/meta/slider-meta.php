@@ -16,13 +16,13 @@ global $wpalchemy_media_access;
 		</p>
 
         <?php $metabox->the_field('title'); ?>
-        <label for="<?php $metabox->the_name(); ?>">Subtitlo:</label>
+        <label for="<?php $metabox->the_name(); ?>">Description:</label>
         <p><textarea id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>" ><?php $metabox->the_value(); ?></textarea></p>
 
 
 		<?php $metabox -> the_group_close(); ?>
 		<?php endwhile; ?>
-		<p style="padding:8px; border-top: 1px solid #DFDFDF;"><a href="#" class="docopy-docs button">Mais</a><a href="#" class="dodelete-docs button">Apagar Tudo</a></p>
+		<p style="padding:8px; border-top: 1px solid #DFDFDF;"><a href="#" class="docopy-docs button">Add</a><a href="#" class="dodelete-docs button">Remove All</a></p>
 	</div>
 </div>
 <div class="clear"></div>
