@@ -90,8 +90,8 @@ Template Name: Template Cursos e Eventos
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>
-									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Detalhes >>'); ?></span></a>
-									<a href="<?php echo $meta['cursoURL']; ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição >> '); ?></span></a>
+									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a>
+									<a href="<?php echo $meta['cursoURL']; ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;

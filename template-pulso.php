@@ -81,7 +81,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 							<p class="et_pt_blogmeta">
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>
-									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Saiba mais >>'); ?></span></a>
+									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Saiba mais &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;

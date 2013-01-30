@@ -40,9 +40,11 @@
 			while ( $featured_query->have_posts() ) : $featured_query->the_post();
 				$category = get_the_category();
 				
-				$info[$i]['date'] = get_the_time( 'd' ) .'<span>' . get_the_time( 'D' ) . '</span>';
-				$info[$i]['title'] = ( $custom_title = get_post_meta( $post->ID, 'featured_title', true ) ) && '' != $custom_title ? $custom_title : apply_filters( 'the_title', get_the_title() );;
-				$info[$i]['postinfo'] = __( 'Postado em: ', 'Lucid' ) . $category[0]->cat_name;
+				$info[$i]['number'] = count($featured_num);
+				//$info[$i]['date'] = get_the_time( 'd' ) .'<span>' . get_the_time( 'D' ) . '</span>';
+				//$info[$i]['title'] = ( $custom_title = get_post_meta( $post->ID, 'featured_title', true ) ) && '' != $custom_title ? $custom_title : apply_filters( 'the_title', get_the_title() );
+				$info[$i]['content'] =  get_custom_excerpt(40);
+				//$info[$i]['postinfo'] = __( 'Postado em: ', 'Lucid' ) . $category[0]->cat_name;
 			?>
 				<li class="slide">					
 					<a href="<?php echo esc_url( get_permalink() ); ?>">							
@@ -50,6 +52,7 @@
 							$width = apply_filters( 'slider_image_width', 960 );
 							$height = apply_filters( 'slider_image_height', 360 );
 							$title = get_the_title();
+							//$content = get_custom_excerpt(50);
 							$thumbnail = get_thumbnail($width,$height,'',$title,$title,false,'Featured');
 							$thumb = $thumbnail["thumb"];
 							
@@ -71,9 +74,9 @@
 				<?php for ( $i = 1; $i <= $featured_num; $i++ ) { ?>
 					<li<?php if ( 1 == $i ) echo ' class="active-slide"'; if ( 3 == $i ) echo ' class="last"'; ?>>
 						<div class="switcher-content">
-							<span class="post-meta"><?php echo $info[$i]['date']; ?></span>
-							<h2><?php echo esc_html( $info[$i]['title'] ); ?></h2>
-							<p class="meta-info"><?php echo esc_html( $info[$i]['postinfo'] ); ?></p>
+							<span class="post-meta"><?php echo $info[$i]['number']; ?></span>
+							<h2><?php echo esc_html( $info[$i]['content'] ); ?></h2>
+							<p class="meta-info"><?php //echo esc_html( $info[$i]['postinfo'] ); ?></p>
 						</div> <!-- end .switcher-content -->
 					</li>
 				<?php } ?>

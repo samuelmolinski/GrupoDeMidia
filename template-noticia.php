@@ -81,7 +81,7 @@ Template Name: Template Notícia
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>
-									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Saiba mais >>'); ?></span></a>
+									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Saiba mais &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;
