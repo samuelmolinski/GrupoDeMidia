@@ -237,7 +237,18 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	.entry:before { content: ''; position: absolute; height: 8px; bottom: -8px; left: 0; background: url(../images/middle-shadow.png) no-repeat top center; width: 100%; }
 		.entry .meta-info { background-color: #f9f9f9; border: 1px solid #fff; border-bottom: none; font-size: 16px; color: #b8b8b8; text-shadow: 1px 1px 0 #fff; font-weight: lighter; padding: 19px 28px; }
 			.entry .meta-info a { text-decoration: none; color: #888888; }
-		.entry .post-thumbnail { position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%; }
+		.entry .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%; }
+
+		.entry.noticia .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
+		.entry.curso .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
+
+		#post-thumb > img{
+			 line-height: 0;
+			 float: left;
+			 margin: 0 0 1em 0;
+			 width: 285px; 
+			}
+
 			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }
 		.entry h2.title, h1.title { font-size: 48px; margin: 0 20px 20px 0; color: #FFA500; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
 			.entry h2.title a { text-decoration: none; color: #ffa500; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"  }
@@ -429,12 +440,18 @@ html[xmlns] .slides {display: block;}
 				p#copyright a { color:#4b4b4b; font-weight: bold; }
 #footer-bottom .container { padding-bottom: 16px; }
 					
+					
 
 
 /*------------------------------------------------*/
 /*---------------------[Forms]--------------------*/
 /*------------------------------------------------*/
 #newsletter {
+	margin-bottom: 30px;
+	.cf_info {
+		margin: 25px 0 -24px 120px;
+		height: 16px;
+	}
 	.cform {
 		width:100%;
 		border: none;
@@ -448,13 +465,13 @@ html[xmlns] .slides {display: block;}
 				display: block;
 				float: left;
 				clear: both;
-			}
 
-				li {
+				&>li {
 					float:left;
-					margin-right: 11px;
+					margin-right: 14px;
+					margin-top: 5px;
 				}
-
+			}
 					input{
 						border: #cccccc;
 						background: #FFFFFF;			
@@ -465,13 +482,21 @@ html[xmlns] .slides {display: block;}
 						padding: 9px 15px;
 						margin: 0;
 					}
+					input[type=submit] {
+						background-color: #fff9ed;
+						color: #f9c15b;
+						font-size: 24px;
+						font-weight: 600;
+						padding: 3px 15px;
+					}
 					label {
 						display: inline-block;
 						padding: 9px 15px;
 					}
 					label[for=cf_field_3], label[for=cf_field_4],label[for=cf_field_5] {display: none;}
+
 		.cf-sb {
-			margin-top: 33px;
+			margin-top: 38px;
 			float: left;
 		}
 	}
@@ -497,8 +522,8 @@ html[xmlns] .slides {display: block;}
 			width: 135px;
 			margin-left: -15px;
 			position: relative;
-			z-index: -1;
-			padding: 9px 15px 9px 20px;
+			z-index: 0;
+			padding:10px 15px 8px 20px;
 		}
 }		
 	#li--2 {
@@ -508,9 +533,50 @@ html[xmlns] .slides {display: block;}
 		label[for=cf_field_2] {
 			background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
 			width: 133px;
+			position: relative;
+			z-index: 1;
 		}
 	}
+#twitter {
+	width: 48%;
+	margin-right: 4%;
+	float: left;
+	.twitterHeader {
+		position: relative;
+		width: 100%;
+		height: 54px;
+		img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.title {
+			width: 100%;
+			margin-top: 26px;
+			background-color: #dff7ff;
+			float: left;
+			text-align: center;
+			padding: 6px 0;
+		}
+	}
+	.twtr-widget .twtr-widget-profile, .twtr-doc {
+		width: 100% !important;
+	}
+}
+#facebook {
+	width: 48%;
+	float: left;
+}
 
+.fb_iframe_widget {
+	width: 100%;
+	&>span {
+		width: 100% !important;
+		iframe {
+			width: 100% !important;
+		}
+	}
+}
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
@@ -709,6 +775,12 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon, #et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { top: 99px !important; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon { left: 140px !important; }
 			#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 178px !important; }
+	#li--4 {clear: left;}
+	.cf-sb {
+		position: absolute;
+		top: 36px;
+		right: 215px;
+	}
 }
 
 @media only screen and ( max-width: 767px ) {
@@ -767,6 +839,21 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon, #et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { top: 109px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon { left: 155px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 195px !important; }
+		
+	.cf-sb {
+		position: absolute;
+		top: 73px;
+		right: 123px;
+	}
+
+	#li--3 {
+		clear: left;
+	}
+	#li--5 {clear: left; }
+	#twitter, #facebook {
+		width: 100%;	
+		margin: auto;	
+	}
 }
 
 @media only screen and ( max-width: 479px ){
