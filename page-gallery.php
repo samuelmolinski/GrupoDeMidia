@@ -19,7 +19,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 	<div id="left-area">
 		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
 		
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>			
+		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 				<?php 
 					$thumb = '';
@@ -90,7 +90,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 				</div> 	<!-- end .post_content -->
 			</article> <!-- end .entry -->
-		<?php endwhile; // end of the loop. ?>
+		<?php endwhile; }// end of the loop. ?>
 	</div> <!-- end #left-area -->
 	
 	<?php if ( ! $fullwidth ) get_sidebar(); ?>
