@@ -18,8 +18,6 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
 		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
-
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
