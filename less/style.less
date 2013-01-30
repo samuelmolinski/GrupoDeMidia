@@ -239,23 +239,17 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 			.entry .meta-info a { text-decoration: none; color: #888888; }
 		.entry .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%; }
 
-		.entry.noticia .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
-		.entry.curso .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
-
-		#post-thumb > img{
-			 line-height: 0;
-			 float: left;
-			 margin: 0 0 1em 0;
-			 width: 285px; 
-			}
+		.entry.noticia .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px; max-width: 89%; padding: 1.5em 0 }
+		.entry.curso .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px; max-width: 89%; padding: 1.5em 0}
 
 			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }
 		.entry h2.title, h1.title { font-size: 48px; margin: 0 20px 20px 0; color: #FFA500; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
 			.entry h2.title a { text-decoration: none; color: #ffa500; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"  }
 			.entry h2.title a:hover { color: #111; }
-			.entry h3.title { font-size: 24px; margin:30px 20px 0 15px; color: #42484a; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
+			.entry h3.title { font-size: 24px; margin:30px 20px 20px 15px; color: #42484a; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
+				.title-curso > span{ position: relative; float:right; padding: .2em 1.5em; margin: 0 1em; background: #FFA500; color: #FFF; text-transform: uppercase }
 
-		.post_content { padding:50px 15px 15px 15px; text-align: justify; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; line-height: 150%;}
+		.post_content { padding:50px 15px 15px 15px; text-align: justify; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; line-height: 100%;}
 			.post_content a.more { position: relative; top: 0; padding-right: 14px; float: right; }
 			
 .category-box .recent_even { background: #fff; }
@@ -737,8 +731,11 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 				#switcher li { width: 241px!important; }
 					.switcher-content { padding: 32px 22px 22px 87px; }
 						span.post-meta { left: 22px; }
+						.post_content{padding: 20px 15px 15px 15px}
 		.recent-category { width: 222px; }	
 			h3.main-title { font-size: 14px; }
+			.entry h3.title{margin: 60px 15px 0 15px}
+			.title-curso{position: absolute; top: 1.5em; font-size: 14px; right: 1em; padding: 0;}
 				.category-box .thumb { margin-bottom: 11px; }
 				.category-box h3 { font-size: 14px; }
 		#left-area { width: 476px; }
@@ -798,12 +795,15 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 				.recent-category { float: none; margin-right: 0; width: 440px; }	
 					.category-box:after { background: url(../images/shadow3.png) no-repeat center top; }
 					h3.main-title, .article .meta-info, .article p { font-size: 14px; }
+					.entry h3.title {margin: 50px 0 0 15px}
+					.title-curso{position: absolute; top: 1.5em; font-size: 10px; right: 1em;}
 						.category-box p.meta-info { font-size: 12px; }
 			#left-area { width: 440px; }
 				#video-switcher li { width: 89px; }
 				.article h4 { padding-top: 5px; font-size: 20px; }
 				.article p { margin-top: -10px; }
 				.post .meta-info { font-size: 13px; }	
+				.post_content{padding: 20px 15px 15px 15px}
 			p#copyright  { float: none; text-align: center; margin: 30px 0; }
 			
 	.mobile_nav { display: block; }
@@ -872,8 +872,11 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 				.article {  padding: 22px 22px 22px 32px; }
 					.article h4 { padding-top: 5px; font-size: 20px; padding-bottom: 20px; }
 					.article p, .article .meta-info { font-size: 16px; }
-					.article p { margin-top: -10px; }	
+					.article p { margin-top: -10px; }
+
 					.post h2.title { font-size: 24px; }	
+
+						.title-curso{position: absolute; top: 1.5em; font-size: 8px; right: 1em;}
 			p#copyright  { float: none; text-align: center; margin: 30px 0; }
 			
 	.children { padding-left: 0; }
