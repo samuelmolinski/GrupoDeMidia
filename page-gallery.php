@@ -43,10 +43,9 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					<?php the_content(); ?>
 					
 					<div id="et_pt_gallery" class="clearfix responsive">
-						<?php $gallery_query = ''; 
-						if ( !empty($gallery_cats) ) $gallery_query = '&cat=' . implode(",", $gallery_cats);
-						else echo '<!-- gallery category is not selected -->'; ?>
 						<?php 
+							$count = 0; global $mb_galeria;
+							$gallery_query = '&post_type=' . 'galeria';
 							$et_paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
 						?>
 						
@@ -64,12 +63,19 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 									<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'portfolio'); ?>
 									<span class="overlay"></span>
 									
-									<a class="zoom-icon fancybox" title="<?php the_title(); ?>" rel="gallery" href="<?php echo($thumbnail['fullpath']); ?>"><?php esc_html_e('Zoom in','Lucid'); ?></a>
-									<a class="more-icon" href="<?php the_permalink(); ?>"><?php esc_html_e('Saiba mais >>','Lucid'); ?></a>
+									<a class="zoom-icon fancybox" title="<?php the_title(); ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo($thumbnail['fullpath']); ?>"><?php esc_html_e('Zoom in','Lucid'); ?></a>
+									<?php 
+										$mb_galeria->the_meta();
+										$meta = $mb_galeria->meta;
+
+										foreach ($meta['docs'] as $key => $doc) {  ?>
+											 <a class="fancybox hidden" title="<?php echo $doc['title']; ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo $doc['imgurl']; ?>"></a>
+									<?php } ?>
 								</div> <!-- end .et_pt_item_image -->
+								<h4><?php the_title(); ?></h4>
 							</div> <!-- end .et_pt_gallery_entry -->
 							
-						<?php endwhile; ?>
+						<?php $count++; endwhile; ?>
 							<div class="page-nav clearfix">
 								<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); }
 								else { ?>

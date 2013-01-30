@@ -14,6 +14,8 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		require_once(TEMPLATEPATH . '/custom_post/class.noticia.php');
 
 		require_once(TEMPLATEPATH . '/custom_post/class.curso.php');
+		
+		require_once(TEMPLATEPATH . '/custom_post/class.galeria.php');
 
 		require_once(TEMPLATEPATH . '/custom_post/class.gallery.php');
 
