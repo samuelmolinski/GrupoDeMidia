@@ -25,7 +25,7 @@ Template Name: Template Cursos e Eventos
 
 				<?php $loop = new WP_Query( array( 'post_type' => 'curso', 'posts_per_page' => 5 ) ) ;?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-						<h3 class="title"><a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição >> '); ?></span></a>
+						
 					<?php 
 						$thumb = '';
 						$width = apply_filters('et_blog_image_width',630);
