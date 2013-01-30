@@ -52,7 +52,14 @@ Template Name: Template Cursos e Eventos
 					
 					<!-- start of Loop -->
 					<?php query_posts( array( 'post_type' => 'curso' ) );?>
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php 
+						global $mb_curso;
+
+						if (have_posts()) : while (have_posts()) : the_post(); 
+
+						$mb_curso->the_meta();
+						$meta = $mb_curso->meta;
+					?>
 
 					<?php 
 						$thumb = '';
@@ -82,7 +89,7 @@ Template Name: Template Cursos e Eventos
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>
 									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Detalhes >>'); ?></span></a>
-									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição >> '); ?></span></a>
+									<a href="<?php echo $meta['cursoURL']; ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição >> '); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;
