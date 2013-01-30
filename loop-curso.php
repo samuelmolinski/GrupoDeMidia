@@ -1,9 +1,23 @@
+<?php query_posts( array('post_type' => 'curso')); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-		<h3 class="title"><?php the_title(); ?></h3> <div class="title-curso"><span>Fazer Inscrição</span></div>
+
+		
+		<?php 
+			global $mb_curso;
+
+			$mb_curso->the_meta();
+			$meta = $mb_curso->meta;
+		 ?>
+
+		<h3 class="title"><?php the_title(); ?></h3> 
+		<a href="<?php echo $meta['cursoURL']; ?>" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+
 		<?php
+
 			global $wp_embed;
 			$thumb = '';
 			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
