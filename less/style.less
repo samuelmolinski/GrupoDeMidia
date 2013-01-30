@@ -237,7 +237,18 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	.entry:before { content: ''; position: absolute; height: 8px; bottom: -8px; left: 0; background: url(../images/middle-shadow.png) no-repeat top center; width: 100%; }
 		.entry .meta-info { background-color: #f9f9f9; border: 1px solid #fff; border-bottom: none; font-size: 16px; color: #b8b8b8; text-shadow: 1px 1px 0 #fff; font-weight: lighter; padding: 19px 28px; }
 			.entry .meta-info a { text-decoration: none; color: #888888; }
-		.entry .post-thumbnail { position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100% }
+		.entry .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 0 1em 0; width: 100%; }
+
+		.entry.noticia .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
+		.entry.curso .post-thumbnail{ position: relative; line-height: 0; float: left; margin: 0 1em 1em ; width: 285px; height: 215px }
+
+		#post-thumb > img{
+			 line-height: 0;
+			 float: left;
+			 margin: 0 0 1em 0;
+			 width: 285px; 
+			}
+
 			.entry .post-thumbnail .overlay { position: absolute; -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3); box-shadow: inset 0 0 10px rgba(0,0,0,0.3); left: 0; top: 0; width: 100%; height: 100%; }
 		.entry h2.title, h1.title { font-size: 48px; margin: 0 20px 20px 0; color: #FFA500; text-transform: uppercase; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow" }
 			.entry h2.title a { text-decoration: none; color: #ffa500; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"  }
@@ -428,6 +439,7 @@ html[xmlns] .slides {display: block;}
 			p#copyright { float: right; font-size:12px; color:#4b4b4b; margin-top: -4px; }	
 				p#copyright a { color:#4b4b4b; font-weight: bold; }
 #footer-bottom .container { padding-bottom: 16px; }
+					
 					
 
 
@@ -827,7 +839,7 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon, #et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { top: 109px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_more_icon { left: 155px !important; }
 		#et_pt_portfolio_gallery.et_portfolio_large .et_portfolio_zoom_icon { left: 195px !important; }
-
+		
 	.cf-sb {
 		position: absolute;
 		top: 73px;

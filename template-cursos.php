@@ -19,10 +19,13 @@ Template Name: Template Cursos e Eventos
 
 <?php get_header(); ?>
 	<h1 class="title"><?php the_title(); ?></h1>
+
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
+
 				<?php $loop = new WP_Query( array( 'post_type' => 'curso', 'posts_per_page' => 5 ) ) ;?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+						<h3 class="title"><a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição >> '); ?></span></a>
 					<?php 
 						$thumb = '';
 						$width = apply_filters('et_blog_image_width',630);
@@ -71,7 +74,6 @@ Template Name: Template Cursos e Eventos
 						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext);
 						$thumb = $thumbnail["thumb"]; 
 					?>
-							
 					<?php if ( $thumb <> '' && !$et_ptemplate_showthumb ) { ?>
 						<div class="et_pt_thumb alignleft">
 							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
