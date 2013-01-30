@@ -58,7 +58,7 @@ function create_post_type_galeria() {
      */
     register_taxonomy( 'galeria_category', array( 'galeria' ), array(
         'hierarchical'         => true,
-        'label'                => __( 'Curso Category' ),
+        'label'                => __( 'Galeria Category' ),
         'labels'               => array( // Labels customizadas
 	    'name'                 => _x( 'Categories', 'taxonomy general name' ),
 	    'singular_name'        => _x( 'Category', 'taxonomy singular name' ),
