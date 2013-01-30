@@ -49,6 +49,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 							$gallery_query = '&post_type=' . 'galeria';
 							$et_paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
 						?>
+						<?php query_posts("showposts=$et_ptemplate_gallery_perpage&paged=" . $et_paged . $gallery_query); ?>
 						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
