@@ -66,7 +66,7 @@
 						<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
 					</a> 
 						
-					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> >>Login do Mídia </a></div>
+					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> &raquo;Login do Mídia </a></div>
 
 					<?php
 						$social_icons = '';

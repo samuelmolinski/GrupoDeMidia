@@ -30,7 +30,7 @@
 			.et_pt_item_image span.overlay { background:url("images/item-overlay.png") no-repeat; height:136px; left:3px; position:absolute; top:3px; width:207px; }
 			.et_pt_item_image a.zoom-icon, .et_pt_item_image a.more-icon { display:block; height:61px; position:absolute; text-indent:-9999px; top:41px; width:61px; visibility: hidden; }
 			.et_pt_item_image a.zoom-icon { background:url("images/zoom-icon.png") no-repeat; left:31px; }
-			.et_pt_item_image a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }
+			.et_pt_item_image a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }''
 	#et_pt_gallery .page-nav { clear: both; }
 
 .input { border: 1px solid #d4d2d2 !important; border-radius: 8px  !important; -webkit-border-radius: 8px !important; -moz-border-radius: 8px !important; color: #303030 !important; padding: 7px !important; margin: 0px !important; }

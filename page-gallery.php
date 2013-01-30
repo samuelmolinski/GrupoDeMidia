@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Gallery Page
+Template Name: Galeria de Fotos
 */
 ?>
 <?php 
@@ -18,6 +18,8 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
 		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
+
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
@@ -47,7 +49,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 							$gallery_query = '&post_type=' . 'galeria';
 							$et_paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
 						?>
-						<?php query_posts("showposts=$et_ptemplate_gallery_perpage&paged=" . $et_paged . $gallery_query); ?>
+						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
 							<?php $width = 207;
