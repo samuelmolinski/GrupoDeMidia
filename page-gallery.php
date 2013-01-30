@@ -17,11 +17,11 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
+		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) { while (have_posts()) : the_post(); ?>
 		
-			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php //post_class('entry clearfix'); ?>>
 				<?php 
 					$thumb = '';
 					$width = apply_filters('et_blog_image_width',630);
@@ -37,18 +37,18 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					</div> 	<!-- end .post-thumbnail -->
 				<?php } ?>
 				
-				<div class="post_content clearfix">
+				<div class="">
 					<h1 class="title"><?php the_title(); ?></h1>
 					
 					<?php the_content(); ?>
 					
-					<div id="et_pt_gallery" class="clearfix responsive">
+					<div id="et_pt_gallery" class=" responsive">
 						<?php 
 							$count = 0; global $mb_galeria;
 							$gallery_query = '&post_type=' . 'galeria';
 							$et_paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
 						?>
-						
+						<?php query_posts("showposts=$et_ptemplate_gallery_perpage&paged=" . $et_paged . $gallery_query); ?>
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
 							<?php $width = 207;
@@ -72,7 +72,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 											 <a class="fancybox hidden" title="<?php echo $doc['title']; ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo $doc['imgurl']; ?>"></a>
 									<?php } ?>
 								</div> <!-- end .et_pt_item_image -->
-								<h4><?php the_title(); ?></h4>
+								<div class="title-foto"><?php the_title(); ?></div>
 							</div> <!-- end .et_pt_gallery_entry -->
 							
 						<?php $count++; endwhile; ?>
@@ -91,7 +91,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 				</div> 	<!-- end .post_content -->
 			</article> <!-- end .entry -->
-		<?php endwhile; ?>
+		<?php endwhile; }?>
 	</div> <!-- end #left-area -->
 	
 	<?php if ( ! $fullwidth ) get_sidebar(); ?>
