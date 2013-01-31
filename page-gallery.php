@@ -17,11 +17,10 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
-
-		<?php if (have_posts()) { while (have_posts()) : the_post(); ?>
-		
-			<article id="post-<?php the_ID(); ?>" <?php //post_class('entry clearfix'); ?>>
+		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
+			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 				<?php 
 					$thumb = '';
 					$width = apply_filters('et_blog_image_width',630);
@@ -37,18 +36,19 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					</div> 	<!-- end .post-thumbnail -->
 				<?php } ?>
 				
-				<div class="">
+				<div class="post_content clearfix">
 					<h1 class="title"><?php the_title(); ?></h1>
 					
 					<?php the_content(); ?>
 					
-					<div id="et_pt_gallery" class=" responsive">
+					<div id="et_pt_gallery" class="clearfix responsive">
 						<?php 
 							$count = 0; global $mb_galeria;
 							$gallery_query = '&post_type=' . 'galeria';
 							$et_paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
 						?>
 						<?php query_posts("showposts=$et_ptemplate_gallery_perpage&paged=" . $et_paged . $gallery_query); ?>
+						
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
 							<?php $width = 207;
@@ -91,7 +91,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 				</div> 	<!-- end .post_content -->
 			</article> <!-- end .entry -->
-		<?php endwhile; }?>
+		<?php endwhile; }// end of the loop. ?>
 	</div> <!-- end #left-area -->
 	
 	<?php if ( ! $fullwidth ) get_sidebar(); ?>

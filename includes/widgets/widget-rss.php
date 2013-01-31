@@ -1,0 +1,64 @@
+<?php
+
+class rssPostWidget extends WP_Widget
+{ 
+    function rssPostWidget(){
+      $widget_ops = array( 'description' => 'Custom rss feed' );
+      $control_ops = array( 'width' => 400, 'height' => 300 );
+      parent::WP_Widget( false, $name='ET Grupo De Midia - rss', $widget_ops, $control_ops );
+    }
+
+  /* Displays the Widget in the front-end */
+    function widget( $args, $instance ){
+    extract($args);
+    $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? 'Grupo De Midia - Gallery' : esc_html( $instance['title'] ) );
+    $imagePath = empty( $instance['imagePath'] ) ? '' : esc_url( $instance['imagePath'] );
+    $aboutText = empty( $instance['aboutText'] ) ? '' : $instance['aboutText'];
+
+    $rss = mLoadXml('http://www.blogpulso.com.br/feed/');
+
+    echo $before_widget;
+
+    if ( $title )
+      echo $before_title . $title . $after_title; ?>
+    <div class="clearfix">
+      <?php d( $rss )?>
+    </div> <!-- end about me section -->
+  <?php
+    echo $after_widget;
+  }
+
+  /*Saves the settings. */
+    function update( $new_instance, $old_instance ){
+    $instance = $old_instance;
+    $instance['title'] = strip_tags( $new_instance['title'] );
+    $instance['imagePath'] = esc_url( $new_instance['imagePath'] );
+    $instance['aboutText'] = current_user_can('unfiltered_html') ? $new_instance['aboutText'] : stripslashes( wp_filter_post_kses( addslashes($new_instance['aboutText']) ) );
+
+    return $instance;
+  }
+
+  /*Creates the form for the widget in the back-end. */
+  function form( $instance ){
+    //Defaults
+    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Grupo De Midia', 'imagePath'=>'', 'aboutText'=>'' ) );
+
+    $title = esc_attr( $instance['title'] );
+    $imagePath = esc_url( $instance['imagePath'] );
+    $aboutText = esc_textarea( $instance['aboutText'] );
+
+    # Title
+    echo '<p><label for="' . $this->get_field_id('title') . '">' . 'Title:' . '</label><input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . $title . '" /></p>';
+    # Image
+    echo '<p><label for="' . $this->get_field_id('imagePath') . '">' . 'Image:' . '</label><textarea cols="20" rows="2" class="widefat" id="' . $this->get_field_id('imagePath') . '" name="' . $this->get_field_name('imagePath') . '" >'. $imagePath .'</textarea></p>';
+    # About Text
+    echo '<p><label for="' . $this->get_field_id('aboutText') . '">' . 'Text:' . '</label><textarea cols="20" rows="5" class="widefat" id="' . $this->get_field_id('aboutText') . '" name="' . $this->get_field_name('aboutText') . '" >'. $aboutText .'</textarea></p>';
+  }
+
+}// end AboutMeWidget class
+
+function rssPostWidget() {
+  register_widget('rssPostWidget');
+}
+
+add_action('widgets_init', 'rssPostWidget');

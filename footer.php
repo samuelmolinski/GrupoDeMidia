@@ -4,7 +4,6 @@
 ?>
 		
 		</div> <!-- end .container -->
-	</div> <!-- end #main-area -->
 	<div id="preFooter" class="container clearfix">
 		<div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div>
 		<div id="twitter">
@@ -28,7 +27,7 @@
 			  subject: '',
 			  //search: 'from:passeiorevest',
 			  width: 415,
-			  height: 170,
+			  height: 210,
 			  theme: {
 			    shell: {
 			      background: 'transparent',
@@ -36,8 +35,8 @@
 			    },
 			    tweets: {
 			      background: 'transparent',
-			      color: '#efefef',
-			      links: '#dbd5a6'
+			      color: '#777777',
+			      links: '#000000'
 			    }
 			  },
 			  features: {
@@ -62,7 +61,19 @@
 
 		</div>
 		<?php //d($footer_sidebars); ?>
+
+		<div class="container clearfix">
+			<?php
+				$menuID = 'bottom-menu';
+				$footerNav = '';
+
+				if (function_exists('wp_nav_menu')) $footerNav = wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'fallback_cb' => '', 'menu_id' => $menuID, 'menu_class' => 'bottom-nav', 'echo' => false, 'depth' => '1' ) );
+				if ($footerNav == '') show_page_menu($menuID);
+				else echo($footerNav);
+			?>
+		</div> <!-- end .container -->
 	</div>
+	</div> <!-- end #main-area -->
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.jqtransform.js"></script>
 	<script type="text/javascript">jQuery('#li--4').jqTransform({imgPath:'<?php bloginfo('template_url'); ?>/jqtransformplugin/img/'});</script>
 	<footer id="main-footer">
@@ -99,18 +110,11 @@
 		<?php } ?>
 	</footer> <!-- end #main-footer -->
 	
-	<div id="footer-bottom">	
+	<div id="footer-bottom">
 		<div class="container clearfix">
-			<?php
-				$menuID = 'bottom-menu';
-				$footerNav = '';
-
-				if (function_exists('wp_nav_menu')) $footerNav = wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'fallback_cb' => '', 'menu_id' => $menuID, 'menu_class' => 'bottom-nav', 'echo' => false, 'depth' => '1' ) );
-				if ($footerNav == '') show_page_menu($menuID);
-				else echo($footerNav);
-			?>
-		</div> <!-- end .container -->	
-	</div> <!-- end #footer-bottom -->	
+			<p>Grupo de Mídia do Rio de Janeiro  Tel: (21) 3392-1478 - endereço   XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXX   RIO DE JANEIRO - RJ </p>
+		</div> <!-- end .container -->
+	</div> <!-- end #footer-bottom -->
 	
 	<?php wp_footer(); ?>
 </body>
