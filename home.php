@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php if ( 'on' == et_get_option('lucid_featured', 'on') && is_home() ) get_template_part( 'includes/featured', 'home' ); ?>
+
 
 <?php
 	$recent_sidebars = array('recent-area-1','recent-area-2','recent-area-3');
@@ -38,7 +38,7 @@
 		
 		<?php if ( $video_posts_query->have_posts() ){ ?>	
 			<div id="recent-videos">
-				<h3 class="main-title"><?php esc_html_e( 'Vídeos Recentes', 'Lucid' ); ?></h3>
+				<h3 class="main-title"><?php esc_html_e( 'Vídeos', 'Lucid' ); ?></h3>
 				<a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
 				<div id="video-slider-section">
 					<div id="video-content" class="flexslider">
@@ -102,7 +102,7 @@
 		
 	</div> <!-- end #left-area -->
 	
-	<?php get_sidebar(); ?>
+	<?php get_sidebar(''); ?>
 </div> <!-- end #content-area -->
 	
 <?php get_footer(); ?>

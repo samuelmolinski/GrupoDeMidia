@@ -17,10 +17,10 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(' clearfix'); ?>>
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
-			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(' clearfix'); ?>>
 				<?php 
 					$thumb = '';
 					$width = apply_filters('et_blog_image_width',630);
@@ -35,9 +35,8 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 						<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
 					</div> 	<!-- end .post-thumbnail -->
 				<?php } ?>
-				
+				<h1 class="title"><?php the_title(); ?></h1>
 				<div class="post_content clearfix">
-					<h1 class="title"><?php the_title(); ?></h1>
 					
 					<?php the_content(); ?>
 					

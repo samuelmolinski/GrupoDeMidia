@@ -5,8 +5,10 @@ if ( function_exists('register_sidebar') ) {
 		'id' => 'sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div> <!-- end .widget -->',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="main-title">',
+		'after_title' => '</h3>',
+		'before_more' => '<div class="more">',
+		'after_more' => '</div>'
 	) );
 	
 	register_sidebar( array(

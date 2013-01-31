@@ -1,3 +1,4 @@
+<h1 class="title"><?php the_title(); ?></h1>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 		<?php 
@@ -16,7 +17,7 @@
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			<h1 class="title"><?php the_title(); ?></h1>
+			
 			
 			<?php the_content(); ?>
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
