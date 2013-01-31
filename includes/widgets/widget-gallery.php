@@ -41,16 +41,6 @@ class galleryPostWidget extends WP_Widget
   <?php endif; 
     echo $after_widget;
   }
-  ////////////////////
-/*<div class="ngg-widget entry-content">
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/eye.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_eye.jpg" width="120" height="120" title="eye" alt="eye"></a>
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/tarj2v.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_tarj2v.jpg" width="120" height="120" title="tarj2v" alt="tarj2v"></a>
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/inson.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_inson.jpg" width="120" height="120" title="inson" alt="inson"></a>
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/tarj1.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_tarj1.jpg" width="120" height="120" title="tarj1" alt="tarj1"></a>
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/gan.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_gan.jpg" width="120" height="120" title="gan" alt="gan"></a>
-<a href="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/tarj1v.jpg" title="" class="shutterset_ngg-images-3"><img src="http://192.168.0.215/GrupoDeMidia/wp-content/gallery/teste/thumbs/thumbs_tarj1v.jpg" width="120" height="120" title="tarj1v" alt="tarj1v"></a>
-*/
-  //////////////////////
 
   /*Saves the settings. */
     function update( $new_instance, $old_instance ){
