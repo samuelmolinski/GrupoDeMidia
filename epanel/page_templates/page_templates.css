@@ -1,6 +1,7 @@
 .sitemap-col { float: left; margin: 0 2% 10px 0; width: 23%; }
 #sitemap .last { margin-right: 0px; }
 	.sitemap-col h2 { color: #111; font-size: 20px; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; border-bottom: 1px solid #e9e9e9; padding-bottom: 10px; margin-bottom: -3px; }
+	
 	.sitemap-col a { color: #464646 !important; }
 	.sitemap-col a:hover { text-decoration: none; color: #000 !important; }
 	.sitemap-col ul { list-style:none outside none; padding-left: 0px; margin-left: 0; }
@@ -23,11 +24,12 @@
 		.et_pt_blogentry a.readmore span { display:block; height: 10px; margin:-10px 0 0 0;}
 		
 
-#et_pt_gallery { padding: 15px 0px 0px 0px; margin-left: -33px; }
-	.et_pt_gallery_entry { background:url("images/item-bottom-shadow.png") no-repeat scroll left bottom transparent; float:left; margin:0 0px 32px 33px; padding-bottom:5px; position:relative; width: 213px; height: 142px; }
-		.et_pt_item_image { position:relative; top:0; height: 142px; }
-			.et_pt_item_image img.portfolio { border:3px solid #E5E5E5; }
-			.et_pt_item_image span.overlay { background:url("images/item-overlay.png") no-repeat; height:136px; left:3px; position:absolute; top:3px; width:207px; }
+#et_pt_gallery { margin-left: -18px; }
+	.et_pt_gallery_entry { float:left; margin: 30px 50px 30px 0; max-width: 260px;}
+		.et_pt_item_image { position:relative;}
+			.et_pt_item_image img.portfolio {width: 260px; height: 195px; display: block;}
+			.et_pt_item_image span.overlay { }
+			.title-foto{font-size: 20px; padding: .5em 0}
 			.et_pt_item_image a.zoom-icon, .et_pt_item_image a.more-icon { display:block; height:61px; position:absolute; text-indent:-9999px; top:41px; width:61px; visibility: hidden; }
 			.et_pt_item_image a.zoom-icon { background:url("images/zoom-icon.png") no-repeat; left:31px; }
 			.et_pt_item_image a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }''

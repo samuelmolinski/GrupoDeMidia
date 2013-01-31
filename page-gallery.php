@@ -18,7 +18,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
 		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
-		
+			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 				<?php 
@@ -72,7 +72,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 											 <a class="fancybox hidden" title="<?php echo $doc['title']; ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo $doc['imgurl']; ?>"></a>
 									<?php } ?>
 								</div> <!-- end .et_pt_item_image -->
-								<h4><?php the_title(); ?></h4>
+								<div class="title-foto"><?php the_title(); ?></div>
 							</div> <!-- end .et_pt_gallery_entry -->
 							
 						<?php $count++; endwhile; ?>
