@@ -19,7 +19,7 @@
 		echo $before_title . $title . $after_title;
 ?>
 		<a href="<?php echo esc_url( get_category_link($blog_category) ); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
-		<ul class="category-box">
+		<ul class="category-box noticaPost">
 			<?php
 			$j = 1;
 			$recent_from_query = new WP_Query( apply_filters( 'et_recent_from_args', array(
@@ -30,8 +30,8 @@
 				<li class="clearfix<?php if ( $j % 2 == 0 ) echo ' recent_even'; ?>">
 					<?php
 						$thumb = '';
-						$width = 37;
-						$height = 37;
+						$width = 60;
+						$height = 60;
 						$classtext = 'category-image';
 						$titletext = get_the_title();
 						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Recent');
@@ -45,7 +45,7 @@
 						</div> 	<!-- end .thumb -->
 					<?php } ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p class="meta-info"><?php esc_html_e('Postado','Lucid'); ?> <?php esc_html_e('por:','Lucid');?> <?php the_author_posts_link(); ?> <?php esc_html_e('em','Lucid'); ?> <?php echo get_the_category_list(', '); ?></p>
+					<p class="meta-info"><?php the_custom_excerpt(90); ?></p>
 				</li>
 			<?php
 				$j++;

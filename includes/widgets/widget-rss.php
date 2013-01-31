@@ -15,14 +15,41 @@ class rssPostWidget extends WP_Widget
     $imagePath = empty( $instance['imagePath'] ) ? '' : esc_url( $instance['imagePath'] );
     $aboutText = empty( $instance['aboutText'] ) ? '' : $instance['aboutText'];
 
-    $rss = mLoadXml('http://www.blogpulso.com.br/feed/');
-
+    //$rss = mLoadXml('http://www.blogpulso.com.br/feed/atom/');
+    $rss = mLoadXml('http://www.blogpulso.com.br/feed/', True, True);
+    //d($rss);
+    $posts = $rss->channel->xpath('item');
     echo $before_widget;
 
     if ( $title )
       echo $before_title . $title . $after_title; ?>
-    <div class="clearfix">
-      <?php d( $rss )?>
+    <div class="clearfix rssPulso category-box">
+      <ul class="">
+      <?php 
+        
+      ?>
+      <?php 
+        for ($i=0; $i < 3; $i++) { 
+          $author = (string)$posts[$i]->creator;
+          $title = (string)$posts[$i]->title;
+          $link = (string)$posts[$i]->link;
+          $description = (string)$posts[$i]->description;
+          $imgfile = ereg_replace(' ', '_', $author);
+          $img = "http://www.blogpulso.com.br/wp-content/authors/$imgfile.jpg";
+          ?>
+        <li class="clearfix">
+          <div class="thumb">
+            <a href="<?php echo $link ?>" target="_blank">
+            <img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60"></a>
+          </div><!-- end .thumb -->
+          <h3><a href="<?php echo $link ?>" target="_blank"><?php echo $title ?></a></h3>
+          <p class='meta-info'><?php the_custom_length($description, 100);?></p>
+        </li>          
+          <?php    
+        }
+      ?>
+      </ul>
+      <img src="<?php bloginfo('template_url'); ?>/images/pulse.png" class="pulseImg">
     </div> <!-- end about me section -->
   <?php
     echo $after_widget;
@@ -41,7 +68,7 @@ class rssPostWidget extends WP_Widget
   /*Creates the form for the widget in the back-end. */
   function form( $instance ){
     //Defaults
-    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Grupo De Midia', 'imagePath'=>'', 'aboutText'=>'' ) );
+    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Blog Pulso ...', 'imagePath'=>'', 'aboutText'=>'' ) );
 
     $title = esc_attr( $instance['title'] );
     $imagePath = esc_url( $instance['imagePath'] );
@@ -62,3 +89,5 @@ function rssPostWidget() {
 }
 
 add_action('widgets_init', 'rssPostWidget');
+
+
