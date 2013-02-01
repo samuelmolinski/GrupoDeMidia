@@ -20,6 +20,10 @@
 		<?php if ( '' != $thumb && 'on' == et_get_option('lucid_thumbnails') ) { ?>
 			<div class="post-thumbnail">
 				<?php
+					/*if( 'video' == get_post_format( $post->ID ) && '' != $et_video_url ) {
+						$is_video = true;
+					}*/
+					
 					if ( 'video' == get_post_format( $post->ID ) && '' != $et_video_url ){
 						$video_embed = $wp_embed->shortcode( '', $et_video_url );
 

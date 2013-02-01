@@ -1,8 +1,15 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
-	
-	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-		<h3 class="title"><?php the_title(); ?></h3>
+	<?php 
+		if(isset($_GET['event'])){
+
+			$id = $_GET['event'];
+			$event = new fsEvent($id);
+		}
+	 ?>
+	<h1 class="title"><?php echo $event->subject; ?></h1>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix event'); ?>>
 		<?php
 			global $wp_embed;
 			$thumb = '';
@@ -16,29 +23,41 @@
 			$thumb = $thumbnail["thumb"];
 			
 			$et_video_url = get_post_meta( $post->ID, '_et_lucid_video_url', true );
+
 		?>
 		<?php if ( '' != $thumb && 'on' == et_get_option('lucid_thumbnails') ) { ?>
 			<div class="post-thumbnail">
 				<?php
-					if ( 'video' == get_post_format( $post->ID ) && '' != $et_video_url ){
-						$video_embed = $wp_embed->shortcode( '', $et_video_url );
-
-						$video_embed = preg_replace('/<embed /','<embed wmode="transparent" ',$video_embed);
-						$video_embed = preg_replace('/<\/object>/','<param name="wmode" value="transparent" /></object>',$video_embed); 
-						$video_embed = preg_replace("/height=\"[0-9]*\"/", "height=250", $video_embed);
-						$video_embed = preg_replace("/width=\"[0-9]*\"/", "width={$width}", $video_embed);
-				
-						echo $video_embed;
-					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
-					}
+					d($thumb);
+					d($thumbnail["use_timthumb"]);
+					print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);					
 				?>
 			</div> 	<!-- end .post-thumbnail -->
 		<?php } ?>
 		
 		<div class="post_content clearfix">
 			
-			<?php the_content(); ?>	
+			<?php 				
+				if(($event->location)){
+					echo "<h4>Local :{$event->location}</h4>";
+				} 
+
+				if(($event->date_admin_from && $event->date_admin_to) && ($event->date_admin_from != $event->date_admin_to)){
+					echo "<h4>Data: {$event->date_admin_from} - {$event->date_admin_to}</h4>";
+				} elseif ($event->date_admin_from) {
+					echo "<h4>Data: {$event->date_admin_from}</h4>";
+				}	
+
+				if($event->time_admin_from && $event->time_admin_to) {
+					echo "<h4>Horas: {$event->time_admin_from} - {$event->time_admin_to}</h4>";
+				} elseif ($event->time_admin_from) {
+					echo "<h4>Horas:{$event->time_admin_from}</h4>";
+				}
+				
+				echo ('<div class="description" >'.wpautop($event->description).'</div>');
+				//the_content(); 
+				//d($event);
+			?>	
 
 			
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
