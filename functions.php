@@ -17,8 +17,6 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		
 		require_once(TEMPLATEPATH . '/custom_post/class.galeria.php');
 
-		require_once(TEMPLATEPATH . '/custom_post/class.agenda.php');
-
 		require_once(TEMPLATEPATH . '/epanel/custom_functions.php'); 
 
 		require_once(TEMPLATEPATH . '/includes/functions/comments.php'); 
