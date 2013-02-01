@@ -10,20 +10,35 @@ class galleryPostWidget extends WP_Widget
 
   /* Displays the Widget in the front-end */
     function widget( $args, $instance ){
-    extract($args);
-    $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? 'Grupo De Midia - Gallery' : esc_html( $instance['title'] ) );
-    $imagePath = empty( $instance['imagePath'] ) ? '' : esc_url( $instance['imagePath'] );
-    $aboutText = empty( $instance['aboutText'] ) ? '' : $instance['aboutText'];
+
 
     echo $before_widget;
 
     if ( $title )
-      echo $before_title . $title . $after_title; ?>
-    <div class="clearfix">
-      <img src="<?php echo et_new_thumb_resize( et_multisite_thumbnail($imagePath), 74, 74, '', true ); ?>" id="about-image" alt="" />
-      <?php echo( $aboutText )?>
-    </div> <!-- end about me section -->
-  <?php
+    echo $before_title . $title . $after_title;
+
+    $count = 0; global $mb_galeria;
+    $gallery_query = '&post_type=galeria&post_count=6'; ?>
+    <h3 class="entry-title main-title">Fotos •••</h3>
+    <div class="ngg-widget entry-content">
+    <?php query_posts($gallery_query);
+    if (have_posts()) : while (have_posts()) : the_post();
+
+      $width = 120;
+      $height = 120;
+      $titletext = get_the_title();
+
+      $thumbnail = get_thumbnail($width,$height,'portfolio',$titletext,$titletext,true,'Portfolio');
+      $thumb = $thumbnail["thumb"]; ?>
+      
+      
+          <a class="fancybox" title="<?php the_title(); ?>" rel="gallery" href="<?php echo($thumbnail['fullpath']); ?>">
+            <?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'portfolio'); ?>
+          </a>
+      
+    <?php $count++; endwhile; ?>
+    </div>
+  <?php endif; 
     echo $after_widget;
   }
 
