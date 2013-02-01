@@ -447,6 +447,54 @@ html[xmlns] .slides {display: block;}
 /*------------------------------------------------*/
 /*---------------------[Forms]--------------------*/
 /*------------------------------------------------*/
+article{
+	.cform {
+		.cf-ol, .cl-ul {
+			list-style: none;
+			padding: 0;
+			li {
+				label {
+					display: none;
+				}
+				textarea, input[type=text] {
+					width: 96%;
+					padding: 1em 2%;
+					box-shadow: 0 0 5px rgba(64,64,64,0.2);
+					border: none;
+					font: 16px/18px arial
+				}
+			}
+		}
+
+		input[type=submit] {
+			padding: .2em .5em;
+			font-size: 20px;
+			color: #FFFFFF;
+			background-color: #ffa500;
+			-moz-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			-webkit-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+			border: 1px solid #ff8c00;
+		}
+
+		.cf-sb {
+			text-align: right;
+		}
+	}
+	.reqtxt, .emailreqtxt, .linklove, .cf_hidden { display: none; }
+	.cf_info {
+		padding: 0 .5em;
+		line-height: 1.6em;
+		font-size: 20px;
+		color: #FFFFFF;
+		background-color: #ffa500;
+		-moz-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+		-webkit-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+		box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
+		margin: 0.5em 0;
+	}
+}
+
 #newsletter {
 	margin-bottom: 30px;
 	.cf_info {
@@ -517,6 +565,9 @@ html[xmlns] .slides {display: block;}
 			margin-bottom: -1px;
 			padding: 8px 11px;
 		}
+	}
+	#cf_field_4 {
+		display: none;
 	}
 	.reqtxt, .emailreqtxt, .linklove, .cf_hidden { display: none; }
 		#cf_field_2 {
@@ -778,6 +829,7 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 	#et-searchinput { width: auto !important; }
 	p#et_choose_posts, p#et_choose_pages, p#et_choose_date, p#et_choose_cat { float: none !important; }
 	#et-search-left { float: none !important; width: 100% !important; }
+	#bottem-menu {width: 880px;}
 }
 
 @media only screen and ( min-width: 768px ) and ( max-width: 960px ) {
@@ -808,7 +860,7 @@ html#ie7 #main-area, html#ie7 #main-area .container { z-index: 1; }
 			.widget li a { padding-right: 30px; }
 		.footer-widget { width: 191px; padding-left: 30px; }
 			.footer-widget li { padding-right: 25px; } 
-		#bottom-menu, p#copyright  { float: none; text-align: center; }
+		#bottom-menu, p#copyright  { text-align: center; width: 648px;}
 		#bottom-menu { margin-bottom: 40px; }
 		p#copyright { margin-bottom: 25px; }
 		#video-switcher li.active_video:last-child { padding-right: 11px; }
