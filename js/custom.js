@@ -15,6 +15,8 @@
 		$top_menu = $('#top-menu > ul.nav'),
 		$second_menu = $('#second-menu > ul.nav'),
 		et_is_ie7 = $('html#ie7').length;
+
+		
 		
 	$(document).ready(function(){
 		$main_menu.superfish({ 
@@ -24,7 +26,8 @@
 			autoArrows:  true,                           // disable generation of arrow mark-up 
 			dropShadows: false                            // disable drop shadows 
 		});
-		
+		jQuery('.fc-button-prev .fc-button-content').text(" ‹‹ ");
+		jQuery('.fc-button-next .fc-button-content').text(" ›› ");
 		$('article.post, article.page').fitVids();
 		
 		$('#left-area iframe').each( function(){
