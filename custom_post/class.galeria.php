@@ -48,7 +48,7 @@ function create_post_type_galeria() {
 	    'capability_type'      => 'post',
 	    'has_archive'          => true,
 	    'hierarchical'         => false,
-	    'menu_position'        => 6,
+	    'menu_position'        => 8,
 	    'supports'             => array('title','thumbnail','editor')
 	    )
     );

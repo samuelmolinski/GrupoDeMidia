@@ -4,6 +4,7 @@
 
 function lucid_settings(){
 	add_meta_box("et_post_meta", "ET Settings", "lucid_display_options", "post", "normal", "high");
+	add_meta_box("et_post_meta", "ET Settings", "lucid_display_options", "video", "normal", "high");
 	add_meta_box("et_post_meta", "ET Settings", "lucid_display_options", "page", "normal", "high");
 }
 add_action("admin_init", "lucid_settings");
@@ -19,13 +20,13 @@ function lucid_display_options($callback_args) {
 ?>
 
 	<div class="et_fs_setting" style="margin: 17px 0 22px 5px;">
-		<label for="et_left_sidebar" class="selectit"><input name="et_left_sidebar" type="checkbox" id="et_left_sidebar" <?php checked( $et_left_sidebar, 'on' ); ?>> Display Sidebar on the left</label>
+		<label for="et_left_sidebar" class="selectit"><input name="et_left_sidebar" type="checkbox" id="et_left_sidebar" <?php checked( $et_left_sidebar, 'on' ); ?>> Mostrar barra lateral à esquerda</label>
 	</div>
 	
 	<?php if ( 'page' == $callback_args->post_type ) return; ?>
 	
 	<div class="et_fs_setting" style="margin: 17px 0 22px 5px;">
-		<label for="et_full_post" class="selectit"><input name="et_full_post" type="checkbox" id="et_full_post" <?php checked( $et_full_post, 'on' ); ?>> Hide Sidebar</label>
+		<label for="et_full_post" class="selectit"><input name="et_full_post" type="checkbox" id="et_full_post" <?php checked( $et_full_post, 'on' ); ?>> Esconder Sidebar</label>
 	</div>
 	
 	<div id="et_custom_settings" style="margin: 17px 0 17px 5px;">				

@@ -26,13 +26,14 @@
 		<?php
 			$video_postsnum = (int) et_get_option( 'lucid_video_postsnum', 4 );
 			$video_posts_query = new WP_Query( apply_filters( 'et_video_post_args', array(
-						'tax_query' => array(
+						'post_type' => 'video',
+						/*'tax_query' => array(
 							array(
 								'taxonomy' => 'post_format',
 								'field' => 'slug',
 								'terms' => 'post-format-video'
 							)
-						),
+						),*/
 						'showposts' => $video_postsnum
 					) 
 				)
@@ -51,6 +52,7 @@
 								$i = 0;
 								global $wp_embed;
 							?>
+
 							<?php while ( $video_posts_query->have_posts() ) : $video_posts_query->the_post(); ?>
 								<?php 
 									$thumb = '';

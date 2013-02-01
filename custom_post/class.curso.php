@@ -48,7 +48,7 @@ function create_post_type_curso() {
 	    'capability_type'      => 'post',
 	    'has_archive'          => true,
 	    'hierarchical'         => false,
-	    'menu_position'        => 6,
+	    'menu_position'        => 7,
 	    'supports'             => array('title','editor','author','thumbnail','excerpt','comments')
 	    )
     );
