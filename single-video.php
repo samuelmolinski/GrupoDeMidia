@@ -4,9 +4,9 @@
 
 <div id="content-area" class="clearfix<?php if ( 'on' == $et_full_post ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'noticia'); ?>
+		<?php get_template_part('includes/breadcrumbs', 'video'); ?>
 		
-		<?php get_template_part('loop', 'noticia'); ?>
+		<?php get_template_part('loop', 'video'); ?>
 
 	</div> <!-- end #left_area -->
 

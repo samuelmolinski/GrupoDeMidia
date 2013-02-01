@@ -17,6 +17,8 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		
 		require_once(TEMPLATEPATH . '/custom_post/class.galeria.php');
 
+		require_once(TEMPLATEPATH . '/custom_post/class.video.php');
+
 		require_once(TEMPLATEPATH . '/epanel/custom_functions.php'); 
 
 		require_once(TEMPLATEPATH . '/includes/functions/comments.php'); 
@@ -70,8 +72,7 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 function et_register_main_menus() {
 	register_nav_menus(
 		array(
-			'primary-menu' => __( 'Primary Menu', 'Lucid' ),
-			'secondary-menu' => __( 'Secondary Menu', 'Lucid' ),
+			'secondary-menu' => __( 'Header Menu', 'Lucid' ),
 			'footer-menu' => __( 'Footer Menu', 'Lucid' )
 		)
 	);

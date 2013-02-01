@@ -21,7 +21,7 @@ Template Name: Template Vídeo
 	<h1 class="title"><?php the_title(); ?></h1>
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
-				<?php $loop = new WP_Query( array( 'post_type' => 'noticia', 'posts_per_page' => 5 ) ) ;?>
+				<?php $loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => 5 ) ) ;?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 					<?php 
 						$thumb = '';
@@ -51,7 +51,7 @@ Template Name: Template Vídeo
 					?>
 					
 					<!-- start of Loop -->
-					<?php query_posts( array( 'post_type' => 'noticia' ) );?>
+					<?php query_posts( array( 'post_type' => 'video' ) );?>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<?php 

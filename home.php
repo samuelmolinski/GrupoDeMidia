@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <?php
 	$recent_sidebars = array('recent-area-1','recent-area-2','recent-area-3');
 	if ( is_active_sidebar( $recent_sidebars[0] ) || is_active_sidebar( $recent_sidebars[1] ) || is_active_sidebar( $recent_sidebars[2] ) ) {
@@ -23,13 +21,14 @@
 		<?php
 			$video_postsnum = (int) et_get_option( 'lucid_video_postsnum', 4 );
 			$video_posts_query = new WP_Query( apply_filters( 'et_video_post_args', array(
-						'tax_query' => array(
+						'post_type' => 'video',
+						/*'tax_query' => array(
 							array(
 								'taxonomy' => 'post_format',
 								'field' => 'slug',
 								'terms' => 'post-format-video'
 							)
-						),
+						),*/
 						'showposts' => $video_postsnum
 					) 
 				)
@@ -48,6 +47,7 @@
 								$i = 0;
 								global $wp_embed;
 							?>
+
 							<?php while ( $video_posts_query->have_posts() ) : $video_posts_query->the_post(); ?>
 								<?php 
 									$thumb = '';
