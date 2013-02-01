@@ -38,7 +38,9 @@
 		
 		<div class="post_content clearfix">
 			
-			<?php the_content(); ?>				
+			<?php the_content(); ?>	
+
+			
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 

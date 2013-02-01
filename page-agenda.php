@@ -13,7 +13,7 @@ Template Name: Single Agenda
 
 				<?php //barra superior da página get_template_part('includes/breadcrumbs', 'grupo'); ?>
 
-				<?php get_template_part('loop', 'grupo'); ?>
+				<?php get_template_part('loop', 'agenda'); ?>
 			</div> <!-- end #left_area -->
 			<?php if ( 'on' != $et_full_post ) get_sidebar(); ?>
 		</div> 	<!-- end #content-area -->

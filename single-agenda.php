@@ -6,7 +6,7 @@
 	<?php get_template_part('includes/breadcrumbs', 'single'); ?>
 	<div id="left-area">
 		
-		<?php get_template_part('loop', 'single'); ?>
+		<?php get_template_part('loop', 'agenda'); ?>
 
 	</div> <!-- end #left_area -->
 

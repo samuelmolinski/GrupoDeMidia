@@ -94,11 +94,11 @@ function et_sidebar_left_class( $body_classes ){
 }
 
 function et_add_mobile_navigation(){
-	echo '<a href="#" class="mobile_nav closed">' . esc_html__( 'Menu de Páginas', 'Lucid' ) . '<span></span></a>';
+	echo '<a href="#" class="mobile_nav closed">' . esc_html__( 'Menu', 'Lucid' ) . '<span></span></a>';
 }
 
 function et_add_secondary_mobile_navigation(){
-	echo '<a href="#" class="mobile_nav closed">' . esc_html__( 'Menu de Categorias', 'Lucid' ) . '<span></span></a>';
+	echo '<a href="#" class="mobile_nav closed">' . esc_html__( 'Menu', 'Lucid' ) . '<span></span></a>';
 }
 
 function et_color_schemes_styles(){

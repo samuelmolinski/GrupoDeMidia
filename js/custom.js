@@ -26,8 +26,10 @@
 			autoArrows:  true,                           // disable generation of arrow mark-up 
 			dropShadows: false                            // disable drop shadows 
 		});
+
 		jQuery('.fc-button-prev .fc-button-content').text(" ‹‹ ");
 		jQuery('.fc-button-next .fc-button-content').text(" ›› ");
+		
 		$('article.post, article.page').fitVids();
 		
 		$('#left-area iframe').each( function(){
