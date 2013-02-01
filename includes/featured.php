@@ -55,8 +55,10 @@
 							//$content = get_custom_excerpt(50);
 							$thumbnail = get_thumbnail($width,$height,'',$title,$title,false,'Featured');
 							$thumb = $thumbnail["thumb"];
-							
-							print_thumbnail($thumb, $thumbnail["use_timthumb"], $title, $width, $height, '');
+							//d($thumb);
+							//d($thumbnail["use_timthumb"]);
+							//print_thumbnail($thumb, $thumbnail["use_timthumb"], $title, $width, $height, '');
+							the_crop_image($thumb, '&amp;w=960&amp;h=360&amp;zc=1');
 						?>
 						<span class="overlay"></span>
 					</a>

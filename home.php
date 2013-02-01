@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<?php if ( 'on' == et_get_option('lucid_featured', 'on') && is_home() ) get_template_part( 'includes/featured', 'home' ); ?>
 
 <?php
 	$recent_sidebars = array('recent-area-1','recent-area-2','recent-area-3');
@@ -19,7 +19,10 @@
 
 <div id="content-area" class="clearfix">
 	<div id="left-area">
-	<?php if ( 'on' == et_get_option('lucid_video_slider_home','on') ){ ?>
+	<?php 
+		if ( 'on' == et_get_option('lucid_video_slider_home','on') ){ 
+
+		?>
 		<?php
 			$video_postsnum = (int) et_get_option( 'lucid_video_postsnum', 4 );
 			$video_posts_query = new WP_Query( apply_filters( 'et_video_post_args', array(

@@ -59,7 +59,10 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 							
 							<div class="et_pt_gallery_entry">
 								<div class="et_pt_item_image">
-									<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'portfolio'); ?>
+									<?php 
+										//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'portfolio'); 
+										the_crop_image($thumb, '&amp;w=260&amp;h=200&amp;zc=1');
+									?>
 									<span class="overlay"></span>
 									
 									<a class="zoom-icon fancybox" title="<?php the_title(); ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo($thumbnail['fullpath']); ?>"><?php esc_html_e('Zoom in','Lucid'); ?></a>
@@ -71,7 +74,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 											 <a class="fancybox hidden" title="<?php echo $doc['title']; ?>" rel="gallery-<?php echo $count; ?>" href="<?php echo $doc['imgurl']; ?>"></a>
 									<?php } ?>
 								</div> <!-- end .et_pt_item_image -->
-								<div class="title-foto"><?php the_title(); ?></div>
+								<div class="title-foto"><?php the_custom_length(get_the_title(), 45); ?></div>
 							</div> <!-- end .et_pt_gallery_entry -->
 							
 						<?php $count++; endwhile; ?>
