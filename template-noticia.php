@@ -77,7 +77,7 @@ Template Name: Template Vídeo
 
 							<p class="et_pt_blogmeta">
 								<?php esc_html_e('Postado'); ?> <?php esc_html_e('por:'); ?> <?php the_author_posts_link(); ?> 
-								<?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')) ?> 
+								<?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')); ?> 
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>

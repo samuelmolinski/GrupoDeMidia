@@ -36,7 +36,7 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 					</div> 	<!-- end .post-thumbnail -->
 				<?php } ?>
 				<h1 class="title"><?php the_title(); ?></h1>
-				<div class="post_content clearfix">
+				<div class="post_gallery clearfix">
 					
 					<?php the_content(); ?>
 					

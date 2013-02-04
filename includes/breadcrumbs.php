@@ -2,7 +2,7 @@
 <div id="breadcrumbs" class="clearfix">
 	<?php if(function_exists('bcn_display')) { bcn_display(); } 
 		  else { ?>
-				<a href="<?php bloginfo('url'); ?>" class="breadcrumbs_home"><?php esc_html_e('','Lucid') ?></a> <span class="raquo">&raquo;</span>
+				<a href="<?php bloginfo('url'); ?>" class="breadcrumbs_home"><?php esc_html_e('','Lucid') ?></a> <span class="raquo"></span>
 				
 				<?php if( is_tag() ) { ?>
 					<?php esc_html_e('Posts Tagged ','Lucid') ?><span class="raquo">&quot;</span><?php single_tag_title(); echo('&quot;'); ?>

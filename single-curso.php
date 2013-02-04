@@ -7,7 +7,7 @@
 		<?php get_template_part('includes/breadcrumbs', 'curso'); ?>
 		
 		<?php get_template_part('loop', 'curso'); ?>
-		>
+		
 	</div> <!-- end #left_area -->
 
 	<?php if ( 'on' != $et_full_post ) get_sidebar(); ?>
