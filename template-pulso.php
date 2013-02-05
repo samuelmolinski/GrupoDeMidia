@@ -27,6 +27,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 <h1 class="title"><?php the_title(); ?></h1>
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 		<div id="left-area">
+			<?php $loop = new WP_Query( array( 'post_type' => 'postPulso', 'posts_per_page' => 5 ) ) ;?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 
 					<?php 

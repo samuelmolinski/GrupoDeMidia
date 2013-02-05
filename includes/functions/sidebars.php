@@ -7,8 +7,6 @@ if ( function_exists('register_sidebar') ) {
 		'after_widget' => '</div> <!-- end .widget -->',
 		'before_title' => '<h3 class="main-title">',
 		'after_title' => '</h3>',
-		'before_more' => '<div class="more">',
-		'after_more' => '</div>'
 	) );
 	
 	register_sidebar( array(
