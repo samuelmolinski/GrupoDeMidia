@@ -12,7 +12,7 @@
 	ul#sitemap-tags li a { background: url(images/sitemap-tag.png) no-repeat left center; }
 	ul#sitemap-authors li a { background: url(images/sitemap-author.png) no-repeat left center; }	
 
-.et_pt_blogentry {padding:0;}
+
 	h2.et_pt_title { font-size:20px; padding-bottom:0; padding-left:2px; }
 		h2.et_pt_title a { color: #7c7777; }
 		h2.et_pt_title a:hover { color: #ffa500; text-decoration: none; }
