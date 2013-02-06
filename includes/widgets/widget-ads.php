@@ -1,9 +1,9 @@
 <?php class AdvWidget extends WP_Widget
 {
     function AdvWidget(){
-		$widget_ops = array('description' => 'Displays Advertisements');
-		$control_ops = array('width' => 400, 'height' => 500);
-		parent::WP_Widget(false,$name='ET Advertisement',$widget_ops,$control_ops);
+		$widget_ops = array('description' => 'Widget Publicidade');
+		$control_ops = array('width' => 400, 'height' => 250);
+		parent::WP_Widget(false,$name='ET Publicidade',$widget_ops,$control_ops);
 	}
 
   /* Displays the Widget in the front-end */
@@ -59,7 +59,7 @@
 ?>	
 <div class="adwrap">
 <?php $i = 1; 
-while ($i <= 8):
+while ($i <= 1):
 if ($bannerPath[$i] <> '') { ?>
 <?php if ($bannerTitle[$i] == '') $bannerTitle[$i] = "advertisement";
 	  if ($bannerAlt[$i] == '') $bannerAlt[$i] = "advertisement"; ?>
@@ -125,7 +125,7 @@ endwhile; ?>
   /*Creates the form for the widget in the back-end. */
     function form($instance){
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array('title'=>'Advertisement', 'use_relpath' => false, 'new_window' => true, 'bannerOnePath'=>'', 'bannerOneUrl'=>'', 'bannerOneTitle'=>'', 'bannerOneAlt'=>'', 'bannerTwoPath'=>'', 'bannerTwoUrl'=>'', 'bannerTwoTitle'=>'', 'bannerTwoAlt'=>'','bannerThreePath'=>'', 'bannerThreeUrl'=>'','bannerThreeTitle'=>'', 'bannerThreeAlt'=>'','bannerFourPath'=>'', 'bannerFourUrl'=>'','bannerFourTitle'=>'', 'bannerFourAlt'=>'','bannerFivePath'=>'', 'bannerFiveUrl'=>'','bannerFiveTitle'=>'', 'bannerFiveAlt'=>'','bannerSixPath'=>'', 'bannerSixUrl'=>'','bannerSixTitle'=>'','bannerSixAlt'=>'', 'bannerSevenPath'=>'', 'bannerSevenUrl'=>'','bannerSevenTitle'=>'','bannerSevenAlt'=>'','bannerEightPath'=>'', 'bannerEightUrl'=>'','bannerEightTitle'=>'','bannerEightAlt'=>'') );
+		$instance = wp_parse_args( (array) $instance, array('title'=>'Advertisement •••', 'use_relpath' => false, 'new_window' => true, 'bannerOnePath'=>'', 'bannerOneUrl'=>'', 'bannerOneTitle'=>'', 'bannerOneAlt'=>'', 'bannerTwoPath'=>'', 'bannerTwoUrl'=>'', 'bannerTwoTitle'=>'', 'bannerTwoAlt'=>'','bannerThreePath'=>'', 'bannerThreeUrl'=>'','bannerThreeTitle'=>'', 'bannerThreeAlt'=>'','bannerFourPath'=>'', 'bannerFourUrl'=>'','bannerFourTitle'=>'', 'bannerFourAlt'=>'','bannerFivePath'=>'', 'bannerFiveUrl'=>'','bannerFiveTitle'=>'', 'bannerFiveAlt'=>'','bannerSixPath'=>'', 'bannerSixUrl'=>'','bannerSixTitle'=>'','bannerSixAlt'=>'', 'bannerSevenPath'=>'', 'bannerSevenUrl'=>'','bannerSevenTitle'=>'','bannerSevenAlt'=>'','bannerEightPath'=>'', 'bannerEightUrl'=>'','bannerEightTitle'=>'','bannerEightAlt'=>'') );
 
 		$title = esc_html($instance['title']);
 		$bannerPath[1] = esc_url($instance['bannerOnePath']);
@@ -177,13 +177,13 @@ endwhile; ?>
 		<label for="<?php echo $this->get_field_id('new_window'); ?>">Open in a new window</label><br /><br />
 
 		<?php	# Banner #1 Image
-		echo '<p><label for="' . $this->get_field_id('bannerOnePath') . '">' . 'Banner #1 Image:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOnePath') . '" name="' . $this->get_field_name('bannerOnePath') . '" type="text" value="' . $bannerPath[1] . '" /></p>';
+		echo '<p><label for="' . $this->get_field_id('bannerOnePath') . '">' . 'Caminho:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOnePath') . '" name="' . $this->get_field_name('bannerOnePath') . '" type="text" value="' . $bannerPath[1] . '" /></p>';
 		# Banner #1 Url
-		echo '<p><label for="' . $this->get_field_id('bannerOneUrl') . '">' . 'Banner #1 Url:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneUrl') . '" name="' . $this->get_field_name('bannerOneUrl') . '" type="text" value="' . $bannerUrl[1] . '" /></p>';
+		echo '<p><label for="' . $this->get_field_id('bannerOneUrl') . '">' . 'Url do Anuncio:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneUrl') . '" name="' . $this->get_field_name('bannerOneUrl') . '" type="text" value="' . $bannerUrl[1] . '" /></p>';
 		# Banner #1 Title
-		echo '<p><label for="' . $this->get_field_id('bannerOneTitle') . '">' . 'Banner #1 Title:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneTitle') . '" name="' . $this->get_field_name('bannerOneTitle') . '" type="text" value="' . $bannerTitle[1] . '" /></p>';
+		echo '<p><label for="' . $this->get_field_id('bannerOneTitle') . '">' . 'Título do Anuncio:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneTitle') . '" name="' . $this->get_field_name('bannerOneTitle') . '" type="text" value="' . $bannerTitle[1] . '" /></p>';
 		# Banner #1 Alt
-		echo '<p><label for="' . $this->get_field_id('bannerOneAlt') . '">' . 'Banner #1 Alt:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneAlt') . '" name="' . $this->get_field_name('bannerOneAlt') . '" type="text" value="' . $bannerAlt[1] . '" /></p>';
+		echo '<p><label for="' . $this->get_field_id('bannerOneAlt') . '">' . 'Alt:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOneAlt') . '" name="' . $this->get_field_name('bannerOneAlt') . '" type="text" value="' . $bannerAlt[1] . '" /></p>';
 		# Banner #2 Image
 		echo '<p><label for="' . $this->get_field_id('bannerTwoPath') . '">' . 'Banner #2 Image:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerTwoPath') . '" name="' . $this->get_field_name('bannerTwoPath') . '" type="text" value="' . $bannerPath[2] . '" /></p>';
 		# Banner #2 Url

@@ -38,7 +38,7 @@
 	/*Creates the form for the widget in the back-end. */
     function form( $instance ){
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title'=>'About Me', 'imagePath'=>'', 'aboutText'=>'' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title'=>'About Me •••', 'imagePath'=>'', 'aboutText'=>'' ) );
 
 		$title = esc_attr( $instance['title'] );
 		$imagePath = esc_url( $instance['imagePath'] );

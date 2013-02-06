@@ -14,7 +14,7 @@
 		 ?>
 
 		<h3 class="title"><?php the_title(); ?></h3> 
-		<a href="<?php echo $meta['cursoURL']; ?>" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+		<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
 
 		<?php
 

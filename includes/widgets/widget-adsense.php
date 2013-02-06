@@ -37,7 +37,7 @@
 	/*Creates the form for the widget in the back-end. */
 	function form( $instance ){
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title'=>'Adsense', 'adsenseCode'=>'' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title'=>'Adsense •••', 'adsenseCode'=>'' ) );
 
 		$title = esc_attr( $instance['title'] );
 		$adsenseCode = esc_textarea( $instance['adsenseCode'] );

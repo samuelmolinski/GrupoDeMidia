@@ -24,9 +24,9 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 ?>
 
 <?php get_header(); ?>
-<h1 class="title"><?php the_title(); ?></h1>
 <div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 		<div id="left-area">
+			<h1 class="title"><?php the_title(); ?></h1>
 			<?php $loop = new WP_Query( array( 'post_type' => 'postPulso', 'posts_per_page' => 5 ) ) ;?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 
@@ -88,7 +88,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">
-						<h2 class="et_pt_title"><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
+						<h2 class="et_pt_title"><a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a></h2>
 
 							<p class="et_pt_blogmeta">
 								<?php if (!$et_ptemplate_blogstyle) { ?>

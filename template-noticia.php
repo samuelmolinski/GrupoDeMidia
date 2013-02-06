@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Vídeo
+Template Name: Template Notícias
 */
 ?>
 <?php 
@@ -18,18 +18,19 @@ Template Name: Template Vídeo
 ?>
 
 <?php get_header(); ?>
-	<h1 class="title"><?php the_title(); ?></h1>
+	
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
+				<h1 class="title"><?php the_title(); ?></h1>
 				<?php $loop = new WP_Query( array( 'post_type' => 'noticia', 'posts_per_page' => 5 ) ) ;?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 					<?php 
 						$thumb = '';
-						$width = apply_filters('et_blog_image_width',285);
-						$height = apply_filters('et_blog_image_height',215);
+						$width = 285;
+						$height = 215;
 						$classtext = '';
 						$titletext = get_the_title();
-						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
+						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext, true);
 						$thumb = $thumbnail["thumb"];
 					?>
 					
@@ -54,14 +55,14 @@ Template Name: Template Vídeo
 					<?php query_posts( array( 'post_type' => 'noticia' ) );?>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<?php 
+					<?php
 						$thumb = '';
 						$width = 170;
 						$height = 125;
 						$classtext = '';
 						$titletext = get_the_title();
 
-						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext);
+						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext, false, 'Singleimage');
 						$thumb = $thumbnail["thumb"]; 
 					?>
 							

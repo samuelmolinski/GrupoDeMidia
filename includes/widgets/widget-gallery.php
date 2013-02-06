@@ -16,10 +16,12 @@ class galleryPostWidget extends WP_Widget
 
     if ( $title )
     echo $before_title . $title . $after_title;
-
+    
     $count = 0; global $mb_galeria;
     $gallery_query = '&post_type=galeria&post_count=6'; ?>
+    <a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=17'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
     <h3 class="entry-title main-title">Fotos •••</h3>
+    
     <div class="ngg-widget entry-content">
     <?php query_posts($gallery_query);
     if (have_posts()) : while (have_posts()) : the_post();
@@ -55,7 +57,7 @@ class galleryPostWidget extends WP_Widget
   /*Creates the form for the widget in the back-end. */
   function form( $instance ){
     //Defaults
-    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Grupo De Midia', 'imagePath'=>'', 'aboutText'=>'' ) );
+    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Fotos •••', 'imagePath'=>'', 'aboutText'=>'' ) );
 
     $title = esc_attr( $instance['title'] );
     $imagePath = esc_url( $instance['imagePath'] );

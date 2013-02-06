@@ -8,9 +8,18 @@ if ( function_exists('register_sidebar') ) {
 		'before_title' => '<h3 class="main-title">',
 		'after_title' => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name' => 'Sidebar Homepage',
+		'id' => 'sidebar2',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div> <!-- end .widget -->',
+		'before_title' => '<h3 class="main-title">',
+		'after_title' => '</h3>',
+	) );			
 	
 	register_sidebar( array(
-		'name' => 'Homepage Recent From Area #1',
+		'name' => 'Homepage Noticias #1',
 		'id' => 'recent-area-1',
 		'before_widget' => '<div class="recent-category_widget">',
 		'after_widget' => '</div> <!-- end .recent-category_widget -->',
@@ -19,7 +28,7 @@ if ( function_exists('register_sidebar') ) {
 	) );
 	
 	register_sidebar( array(
-		'name' => 'Homepage Recent From Area #2',
+		'name' => 'Homepage Blog Pulso #2',
 		'id' => 'recent-area-2',
 		'before_widget' => '<div class="recent-category_widget">',
 		'after_widget' => '</div> <!-- end .recent-category_widget -->',
@@ -28,7 +37,7 @@ if ( function_exists('register_sidebar') ) {
 	) );
 	
 	register_sidebar( array(
-		'name' => 'Homepage Recent From Area #3',
+		'name' => 'Homepage Conteúdo patrocinado #3',
 		'id' => 'recent-area-3',
 		'before_widget' => '<div class="recent-category_widget">',
 		'after_widget' => '</div> <!-- end .recent-category_widget -->',

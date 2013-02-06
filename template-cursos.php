@@ -18,18 +18,17 @@ Template Name: Template Cursos e Eventos
 ?>
 
 <?php get_header(); ?>
-	<h1 class="title"><?php the_title(); ?></h1>
 
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
-
+				<h1 class="title"><?php the_title(); ?></h1>
 				<?php $loop = new WP_Query( array( 'post_type' => 'curso', 'posts_per_page' => 5 ) ) ;?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 						
 					<?php 
 						$thumb = '';
-						$width = apply_filters('et_blog_image_width',630);
-						$height = apply_filters('et_blog_image_height',210);
+						$width = 285;
+						$height = 235;
 						$classtext = '';
 						$titletext = get_the_title();
 						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
@@ -91,7 +90,7 @@ Template Name: Template Cursos e Eventos
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><?php truncate_post(130);?></p>
 									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a>
-									<a href="<?php echo $meta['cursoURL']; ?>" class="readmore-curso"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
+									<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="readmore-curso"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;

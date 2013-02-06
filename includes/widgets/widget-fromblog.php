@@ -3,13 +3,13 @@
     function ETRecentFromWidget(){
 		$widget_ops = array('description' => 'Displays recent posts from any category');
 		$control_ops = array('width' => 400, 'height' => 300);
-		parent::WP_Widget(false,$name='ET Recent From Widget',$widget_ops,$control_ops);
+		parent::WP_Widget(false,$name='ET Notícias Widget',$widget_ops,$control_ops);
     }
 
   /* Displays the Widget in the front-end */
     function widget($args, $instance){
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
+		$title = apply_filters('widget_title', empty($instance['title']) ? 'Notícias ••• ' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
 		$blog_category = empty($instance['blog_category']) ? '' : (int) $instance['blog_category'];
 
@@ -18,7 +18,7 @@
 		if ( $title )
 		echo $before_title . $title . $after_title;
 ?>
-		<a href="<?php echo esc_url( get_category_link($blog_category) ); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
+		<a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=30'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
 		<ul class="category-box noticaPost">
 			<?php
 			$j = 1;
@@ -45,7 +45,7 @@
 						</div> 	<!-- end .thumb -->
 					<?php } ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p class="meta-info"><?php the_custom_excerpt(90); ?></p>
+					<p class="meta-info"><?php the_custom_excerpt(75); ?></p>
 				</li>
 			<?php
 				$j++;
@@ -68,7 +68,7 @@
   /*Creates the form for the widget in the back-end. */
     function form($instance){
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array('title'=>'Recent From ', 'posts_number'=>'7', 'blog_category'=>'') );
+		$instance = wp_parse_args( (array) $instance, array('title'=>'Notícias ••• ', 'posts_number'=>'7', 'blog_category'=>'') );
 
 		$title = esc_attr($instance['title']);
 		$posts_number = (int) $instance['posts_number'];

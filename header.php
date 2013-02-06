@@ -66,7 +66,7 @@
 						<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
 					</a> 
 						
-					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> &raquo;Login do Mídia </a></div>
+					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> &raquo;login do Mídia </a></div>
 
 					<?php
 						$social_icons = '';
@@ -87,7 +87,7 @@
 					<div id="search">
 						<div id="search-form">
 							<form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
-								<input type="text" value="<?php esc_attr_e('Busca no Site...', 'Lucid'); ?>" name="s" id="searchinput" />
+								<input type="text" value="<?php esc_attr_e('Busca no Site', 'Lucid'); ?>" name="s" id="searchinput" />
 								<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
 							</form>
 						</div> 

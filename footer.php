@@ -27,7 +27,7 @@
 			  subject: '',
 			  //search: 'from:passeiorevest',
 			  width: 415,
-			  height: 210,
+			  height: 235,
 			  theme: {
 			    shell: {
 			      background: 'transparent',

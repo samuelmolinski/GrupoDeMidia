@@ -23,6 +23,7 @@ class rssPostWidget extends WP_Widget
 
     if ( $title )
       echo $before_title . $title . $after_title; ?>
+    <a href="<?php echo esc_url('http://192.168.0.223/wordpress/?page_id=24'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
     <div class="clearfix rssPulso category-box">
       <ul class="">
       <?php 
@@ -68,7 +69,7 @@ class rssPostWidget extends WP_Widget
   /*Creates the form for the widget in the back-end. */
   function form( $instance ){
     //Defaults
-    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Blog Pulso ...', 'imagePath'=>'', 'aboutText'=>'' ) );
+    $instance = wp_parse_args( (array) $instance, array( 'title'=>'Blog Pulso •••', 'imagePath'=>'', 'aboutText'=>'' ) );
 
     $title = esc_attr( $instance['title'] );
     $imagePath = esc_url( $instance['imagePath'] );

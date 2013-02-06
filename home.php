@@ -42,8 +42,8 @@
 		
 		<?php if ( $video_posts_query->have_posts() ){ ?>	
 			<div id="recent-videos">
-				<h3 class="main-title"><?php esc_html_e( 'Vídeos', 'Lucid' ); ?></h3>
-				<a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
+				<h3 class="main-title"><?php esc_html_e( 'Vídeos •••', 'Lucid' ); ?></h3>
+				<a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=447' ); ?>" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
 				<div id="video-slider-section">
 					<div id="video-content" class="flexslider">
 						<ul class="slides">
@@ -107,7 +107,7 @@
 		
 	</div> <!-- end #left-area -->
 	
-	<?php get_sidebar(''); ?>
+	<?php get_sidebar('home'); ?>
 </div> <!-- end #content-area -->
 	
 <?php get_footer(); ?>
