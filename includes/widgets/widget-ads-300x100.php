@@ -2,8 +2,10 @@
 {
     function AdvWidget(){
 		$widget_ops = array('description' => 'Widget Publicidade 300x100');
-		$control_ops = array('width' => 400, 'height' => 100);
+		$control_ops = array('width' => 300, 'height' => 100);
+
 		parent::WP_Widget(false,$name='ET Publicidade - 300x100',$widget_ops,$control_ops);
+
 	}
 
   /* Displays the Widget in the front-end */
@@ -64,9 +66,9 @@ endwhile; ?>
 		echo '<p><label for="' . $this->get_field_id('title') . '">' . 'Title:' . '</label><input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . $title . '" /></p>'; ?>
 		
 		<input class="checkbox" type="checkbox" <?php checked($instance['use_relpath'], true) ?> id="<?php echo $this->get_field_id('use_relpath'); ?>" name="<?php echo $this->get_field_name('use_relpath'); ?>" />
-		<label for="<?php echo $this->get_field_id('use_relpath'); ?>">Use Relative Image Paths</label><br />
+		<label for="<?php echo $this->get_field_id('use_relpath'); ?>">Usar um caminho relativo da imagem</label><br />
 		<input class="checkbox" type="checkbox" <?php checked($instance['new_window'], true) ?> id="<?php echo $this->get_field_id('new_window'); ?>" name="<?php echo $this->get_field_name('new_window'); ?>" />
-		<label for="<?php echo $this->get_field_id('new_window'); ?>">Open in a new window</label><br /><br />
+		<label for="<?php echo $this->get_field_id('new_window'); ?>">Abrir em uma nova janela</label><br /><br />
 
 		<?php	# Banner #1 Image
 		echo '<p><label for="' . $this->get_field_id('bannerOnePath') . '">' . 'Caminho:' . '</label><input class="widefat" id="' . $this->get_field_id('bannerOnePath') . '" name="' . $this->get_field_name('bannerOnePath') . '" type="text" value="' . $bannerPath[1] . '" /></p>';

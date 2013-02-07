@@ -155,7 +155,6 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 #search-form #searchinput {
 	background: none;
 	border: none;
-	float: right;
 	margin: 9px 14px 0 7px;
 	width: 108px;
 	padding-left: 6px;
@@ -165,7 +164,6 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 }
 #search-form #searchsubmit {
 	margin-top: -16px;
-	margin-top: 12px;
 	margin-right: 12px;
 }
 
@@ -644,11 +642,6 @@ label[for=cf_field_2] {
 		height: 100%;
 		text-align: center;
 		padding: 18px 0;
-		margin-top: 26px;
-		background-color: #dff7ff;
-		float: left;
-		text-align: center;
-		padding: 6px 0;
 }
 }
 .twtr-widget .twtr-widget-profile, .twtr-doc {
@@ -711,7 +704,6 @@ label[for=cf_field_2] {
 	li {
 		height: 60px;
 		padding: 21.7px 10px 20px;
-		height: 92px;
 	}
 }
 .ngg-widget {
@@ -760,6 +752,16 @@ a {
 
 body.home #sidebar { padding-top: 0; }
 
+.textwidget{
+	width: 100%;
+	height: 100%;
+	}
+	.textwidget#big iframe{
+		height: 250px !important;
+		}
+	.textwidget#small iframe{
+		height: 100px !important;
+		}
 /*------------------------------------------------*/
 /*------------[CAPTIONS AND ALIGNMENTS]-----------*/
 /*------------------------------------------------*/
@@ -807,6 +809,20 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 #wp-calendar #prev a, #wp-calendar #next a { font-size: 9pt; }
 #wp-calendar #next a { padding-right: 10px; text-align: right; }
 #wp-calendar #prev a { padding-left: 10px; text-align: left; }
+
+.evento{
+margin: 2em  0 0;
+}
+.evento > h3{
+	font-family: "PT Sans";
+	color: #FFA500;
+	font-weight: 100;
+}
+.evento > h4{
+	font-family: "PT Sans Capiton";
+	color:#FFA500;
+	font-style: italic;
+}
 
 /*------------------------------------------------*/
 /*-------------------[PAGE NAVI]------------------*/
@@ -858,10 +874,10 @@ body.et_left_sidebar #left-area { float: right; margin-left: 30px; margin-right:
 #sidebar .widget_recent_comments li { padding: 15px 20px; background: none !important; }
 
 .advwrap { margin-left: 0; max-height: 100%; max-width: 100%; }
-.advwrap img { margin: 0; height: 100px !important; width: 100%; }
+.advwrap img { margin: 0; height: 100px !important; width:100% !important  }
 
-.adswrap { margin-left: 0; max-height: 100%; max-width: 100%; }
-.adswrap img { margin: 0; height: 250px !important; width: 100%; }
+.adswrap { margin-left: 0; max-width: 100%; max-height: 100%; }
+.adswrap img { margin: 0; height: 250px !important; width: 100% !important; }
 
 html#ie7 ul.nav li a:hover span.main_text { color: #fff !important; }
 html#ie7 #main-header, html#ie7 #secondary-menu { z-index: 2; }
@@ -940,8 +956,6 @@ right: 215px;
 }
 
 @media only screen and ( max-width: 767px ) {
-	
-.et_pt_blogentry {padding: 0 0 30px;}
 .container { width: 440px; }
 #social-icons { float: right; display: none; }
 #login{display: none}
@@ -1019,8 +1033,6 @@ p#copyright  { float: none; text-align: center; margin: 30px 0; }
 }
 
 @media only screen and ( max-width: 479px ){
-.et_pt_title {clear: left;}
-.et_pt_blogentry {padding: 0 0 30px;}
 .container { width: 280px; }
 #login{display: none;}
 #social-icons { float: right; display: none; }
@@ -1040,6 +1052,11 @@ h3.main-title { font-size: 14px; }
 .article p { margin-top: -10px; }
 
 .post h2.title { font-size: 24px; }	
+
+.fc-header-title h2{
+	font-size: 15px;
+	margin: 0 0 0 -10px;
+}
 
 p#copyright  { float: none; text-align: center; margin: 30px 0; }
 

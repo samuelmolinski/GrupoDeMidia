@@ -36,29 +36,36 @@
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			
-			<?php 				
-				if(($event->location)){
-					echo "<h4>Local :{$event->location}</h4>";
-				} 
-
-				if(($event->date_admin_from && $event->date_admin_to) && ($event->date_admin_from != $event->date_admin_to)){
-					echo "<h4>Data: {$event->date_admin_from} - {$event->date_admin_to}</h4>";
-				} elseif ($event->date_admin_from) {
-					echo "<h4>Data: {$event->date_admin_from}</h4>";
-				}	
-
-				if($event->time_admin_from && $event->time_admin_to) {
-					echo "<h4>Horas: {$event->time_admin_from} - {$event->time_admin_to}</h4>";
-				} elseif ($event->time_admin_from) {
-					echo "<h4>Horas:{$event->time_admin_from}</h4>";
-				}
-				
+			<?php 
 				echo ('<div class="description" >'.wpautop($event->description).'</div>');
 				//the_content(); 
 				//d($event);
-			?>	
+			 ?>
+			<div class="evento">
+				<?php
 
+					if(($event->location)){
+						echo "<h3>Local: {$event->location}</h3>";
+					} 
+				?>
+
+				<?php
+
+					if(($event->date_admin_from && $event->date_admin_to) && ($event->date_admin_from != $event->date_admin_to)){
+						echo "<h4>Data: {$event->date_admin_from} - {$event->date_admin_to}</h4>";
+					} elseif ($event->date_admin_from) {
+						echo "<h4>Data: {$event->date_admin_from}</h4>";
+					}
+				?>
+
+				<?php
+					if($event->time_admin_from && $event->time_admin_to) {
+						echo "<h4>Horas: {$event->time_admin_from} - {$event->time_admin_to}</h4>";
+					} elseif ($event->time_admin_from) {
+						echo "<h4>Horas: {$event->time_admin_from}</h4>";
+					}
+				?>	
+			</div>
 			
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>

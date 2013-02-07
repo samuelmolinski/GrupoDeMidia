@@ -21,7 +21,7 @@
 			global $wp_embed;
 			$thumb = '';
 			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
-			$width = apply_filters('et_blog_image_width',630);
+			$width = apply_filters('et_blog_image_width',285);
 				if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
 			$height = apply_filters('et_blog_image_height',250);
 			$classtext = '';
