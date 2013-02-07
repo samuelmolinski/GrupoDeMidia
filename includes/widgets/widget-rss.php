@@ -23,6 +23,7 @@ class rssPostWidget extends WP_Widget
 
     if ( $title )
       echo $before_title . $title . $after_title; ?>
+    <!-- Alterar o link abaixo para o caminho correto -->
     <a href="<?php echo esc_url('http://192.168.0.223/wordpress/?page_id=24'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
     <div class="clearfix rssPulso category-box">
       <ul class="">

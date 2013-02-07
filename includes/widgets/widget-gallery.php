@@ -19,6 +19,7 @@ class galleryPostWidget extends WP_Widget
     
     $count = 0; global $mb_galeria;
     $gallery_query = '&post_type=galeria&post_count=6'; ?>
+    <!-- Alterar o link abaixo para o caminho correto -->
     <a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=17'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
     <h3 class="entry-title main-title">Fotos •••</h3>
     

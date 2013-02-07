@@ -508,6 +508,7 @@ input[type=submit] {
 	-webkit-box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
 	box-shadow: inset 0 0 10px rgba(255,140,0,0.1);
 	border: 1px solid #ff8c00;
+	cursor: pointer;
 }
 
 .cf-sb {
@@ -543,6 +544,7 @@ input[type=submit] {
 	display: block;
 	float: left;
 }
+
 .cf-ol {
 	display: block;
 	float: left;
@@ -572,7 +574,7 @@ input[type=submit] {
 	font-weight: 600;
 	padding: 5px 15px 1px;
 	cursor: pointer;
-	width: 90px
+	width: 90px;
 }
 label {
 	display: inline-block;
@@ -603,6 +605,9 @@ legend {
 	padding: 8px 11px;
 }
 }
+article.cf-fs1 legend{
+	display: none;
+}
 #cf_field_4 {
 	display: none;
 }
@@ -619,13 +624,24 @@ legend {
 	width: 320px;
 	height: 39px;
 
-label[for=cf_field_2] {
-	background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
-	width: 133px;
-	position: relative;
-	z-index: 1;
+	label[for=cf_field_2] {
+		background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
+		width: 133px;
+		position: relative;
+		z-index: 1;
+	}
 }
-}
+article #li--2 {
+	width: 100%;
+	height: 100%;
+
+	label[for=cf_field_2] {
+		background: url(../images/newsletter-label-bg-cadastre.png) no-repeat;
+		width: 133px;
+		position: relative;
+		z-index: 1;
+	}
+} 
 #twitter {
 	width: 48%;
 	margin-right: 4%;

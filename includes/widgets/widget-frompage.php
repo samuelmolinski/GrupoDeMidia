@@ -1,9 +1,9 @@
-<?php class ETRecentFromWidget extends WP_Widget
+<?php class ETRecentFromWidget2 extends WP_Widget
 {
-    function ETRecentFromWidget(){
+    function ETRecentFromWidget2(){
 		$widget_ops = array('description' => 'Displays recent posts from any category');
 		$control_ops = array('width' => 400, 'height' => 300);
-		parent::WP_Widget(false,$name='ET Notícias Widget',$widget_ops,$control_ops);
+		parent::WP_Widget(false,$name='ET Notícias Widget 2',$widget_ops,$control_ops);
     }
 
   /* Displays the Widget in the front-end */
@@ -24,7 +24,7 @@
 			$j = 1;
 			$recent_from_query = new WP_Query( apply_filters( 'et_recent_from_args', array(
 				'post_type' => 'noticia',
-				'showposts' => (int) $posts_number,
+				'showposts' => (int) $posts_number
 				/*'cat' => $blog_category*/
 			) ) );
 			if ($recent_from_query->have_posts()) : while ($recent_from_query->have_posts()) : $recent_from_query->the_post(); ?>
@@ -96,8 +96,8 @@
 
 }// end ETRecentFromWidget class
 
-function ETRecentFromWidgetInit() {
-  register_widget('ETRecentFromWidget');
+function ETRecentFromWidget2Init() {
+  register_widget('ETRecentFromWidget2');
 }
 
-add_action('widgets_init', 'ETRecentFromWidgetInit');
+add_action('widgets_init', 'ETRecentFromWidget2Init');
