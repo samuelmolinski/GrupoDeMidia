@@ -44,7 +44,7 @@
 			<div id="recent-videos">
 				<h3 class="main-title"><?php esc_html_e( 'Vídeos •••', 'Lucid' ); ?></h3>
 				<!-- Alterar o link abaixo para o caminho correto -->
-				<a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=447' ); ?>" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
+				<a href="<?php echo get_option('Home'); ?>/videos/" class="more"><?php esc_html_e( 'Mais', 'Lucid' ); ?></a>
 				<div id="video-slider-section">
 					<div id="video-content" class="flexslider">
 						<ul class="slides">

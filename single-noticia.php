@@ -10,7 +10,7 @@
 
 	</div> <!-- end #left_area -->
 
-	<?php if ( 'on' != $et_full_post ) get_sidebar(); ?>
+	<?php get_sidebar('noticia'); ?>
 </div> 	<!-- end #content-area -->
 	
 <?php get_footer(); ?>

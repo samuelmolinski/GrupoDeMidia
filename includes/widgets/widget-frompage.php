@@ -18,14 +18,13 @@
 		if ( $title )
 		echo $before_title . $title . $after_title;
 ?>		<!-- Alterar o link abaixo para o caminho correto -->
-		<a href="<?php echo esc_url( 'http://192.168.0.223/wordpress/?page_id=30'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
+		<a href="<?php echo get_option('Home'); ?>/noticia" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
 		<ul class="category-box noticaPost">
 			<?php
 			$j = 1;
 			$recent_from_query = new WP_Query( apply_filters( 'et_recent_from_args', array(
 				'post_type' => 'noticia',
-				'showposts' => (int) $posts_number
-				/*'cat' => $blog_category*/
+				'showposts' => (int) $posts_number,
 			) ) );
 			if ($recent_from_query->have_posts()) : while ($recent_from_query->have_posts()) : $recent_from_query->the_post(); ?>
 				<li class="clearfix<?php if ( $j % 2 == 0 ) echo ' recent_even'; ?>">
@@ -40,13 +39,11 @@
 					?>
 					<?php if ( '' != $thumb ){ ?>
 						<div class="thumb">
-							<a href="<?php the_permalink(); ?>">
-								<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
-							</a>
+							<a href="<?php the_permalink(); ?>"><span class="overlay"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></span></a>
 						</div> 	<!-- end .thumb -->
 					<?php } ?>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 35); ?></a></h3>
-					<p class="meta-info"><?php the_custom_excerpt(75); ?></p>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 30); ?></a></h3>
+					<p class="meta-info"><a href="<?php the_permalink(); ?>"><?php the_custom_excerpt(75); ?></a></p>
 				</li>
 			<?php
 				$j++;
@@ -69,7 +66,7 @@
   /*Creates the form for the widget in the back-end. */
     function form($instance){
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array('title'=>'Notícias ••• ', 'posts_number'=>'7', 'blog_category'=>'') );
+		$instance = wp_parse_args( (array) $instance, array('title'=>'Notícias ••• ', 'posts_number'=>'3', 'blog_category'=>'') );
 
 		$title = esc_attr($instance['title']);
 		$posts_number = (int) $instance['posts_number'];

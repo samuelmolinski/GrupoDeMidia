@@ -10,35 +10,11 @@
 	<h1 class="title"><?php echo $event->subject; ?></h1>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix event'); ?>>
-		<?php
-			global $wp_embed;
-			$thumb = '';
-			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
-			$width = apply_filters('et_blog_image_width',630);
-				if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
-			$height = apply_filters('et_blog_image_height',250);
-			$classtext = '';
-			$titletext = get_the_title();
-			$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
-			$thumb = $thumbnail["thumb"];
-			
-			$et_video_url = get_post_meta( $post->ID, '_et_lucid_video_url', true );
-
-		?>
-		<?php if ( '' != $thumb && 'on' == et_get_option('lucid_thumbnails') ) { ?>
-			<div class="post-thumbnail">
-				<?php
-					d($thumb);
-					d($thumbnail["use_timthumb"]);
-					print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);					
-				?>
-			</div> 	<!-- end .post-thumbnail -->
-		<?php } ?>
 		
 		<div class="post_content clearfix">
 			<?php 
 				echo ('<div class="description" >'.wpautop($event->description).'</div>');
-				//the_content(); 
+				the_content(); 
 				//d($event);
 			 ?>
 			<div class="evento">
@@ -67,8 +43,12 @@
 				?>	
 			</div>
 			
+			<?php include_once('rede-social.php'); ?>
+
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+
 			<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
+			
 
 		</div> 	<!-- end .post_content -->
 

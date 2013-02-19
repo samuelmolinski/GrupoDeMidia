@@ -41,16 +41,13 @@
 <body <?php body_class(); ?>>		
 	
     <div id="fb-root"></div>
-    <!-- <script src="https://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/pt_BR" type="text/javascript"></script> -->
-	<script>
-		(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="container">
 			<header id="main-header">
 
@@ -66,14 +63,14 @@
 						<img src="<?php echo esc_url ( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')) ; ?>" id="logo"/>
 					</a> 
 						
-					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> &raquo;login do Mídia </a></div>
+					<div id="login"><a href="<?php echo get_option('Home'); ?>/wp-admin" target="_blank"> &raquo;login do mídia </a></div>
 
 					<?php
 						$social_icons = '';
 						$et_rss_url = '' != et_get_option('lucid_rss_url') ? et_get_option('lucid_rss_url') : get_bloginfo('rss2_url');
+						if ( 'on' == et_get_option('lucid_show_facebook_icon') ) $social_icons['facebook'] = array('image' => get_bloginfo('template_directory') . '/images/facebook.png', 'url' => et_get_option('lucid_facebook_url'), 'alt' => 'Facebook' );
 						if ( 'on' == et_get_option('lucid_show_twitter_icon') ) $social_icons['twitter'] = array('image' => get_bloginfo('template_directory') . '/images/twitter.png', 'url' => et_get_option('lucid_twitter_url'), 'alt' => 'Twitter' );
 						if ( 'on' == et_get_option('lucid_show_rss_icon') ) $social_icons['rss'] = array('image' => get_bloginfo('template_directory') . '/images/rss.png', 'url' => $et_rss_url, 'alt' => 'Rss' );
-						if ( 'on' == et_get_option('lucid_show_facebook_icon') ) $social_icons['facebook'] = array('image' => get_bloginfo('template_directory') . '/images/facebook.png', 'url' => et_get_option('lucid_facebook_url'), 'alt' => 'Facebook' );
 						$social_icons = apply_filters('et_social_icons', $social_icons);
 						if ( !empty($social_icons) ) {
 							echo '<div id="social-icons">';

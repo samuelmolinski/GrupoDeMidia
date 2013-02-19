@@ -2,12 +2,12 @@
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-		<h3 class="title"><?php the_title(); ?></h3>
+		
 		<?php
 			global $wp_embed;
 			$thumb = '';
 			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
-			$width = apply_filters('et_blog_image_width',285);
+			$width = apply_filters('et_blog_image_width',630);
 				if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
 			$height = apply_filters('et_blog_image_height',250);
 			$classtext = '';
@@ -37,8 +37,11 @@
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			
-			<?php the_content(); ?>				
+			<h3 class="title"><?php the_title(); ?></h3>
+			<?php the_content(); ?>
+
+			<?php include_once('rede-social.php'); ?>
+
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 

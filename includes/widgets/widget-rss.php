@@ -24,7 +24,7 @@ class rssPostWidget extends WP_Widget
     if ( $title )
       echo $before_title . $title . $after_title; ?>
     <!-- Alterar o link abaixo para o caminho correto -->
-    <a href="<?php echo esc_url('http://192.168.0.223/wordpress/?page_id=24'); ?>" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
+    <a href="<?php echo get_option('Home'); ?>/pulso/" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
     <div class="clearfix rssPulso category-box">
       <ul class="">
       <?php 
@@ -36,16 +36,16 @@ class rssPostWidget extends WP_Widget
           $title = (string)$posts[$i]->title;
           $link = (string)$posts[$i]->link;
           $description = (string)$posts[$i]->description;
-          $imgfile = ereg_replace(' ', '_', $author);
-          $img = "http://www.blogpulso.com.br/wp-content/authors/$imgfile.jpg";
+          $imgfile = ereg_replace(' ', '-', $author);
+          $imgfile = toASCII($imgfile);
+          $img = "http://www.blogpulso.com.br/wp-content/uploads/2013/02/$imgfile.jpg";
           ?>
         <li class="clearfix">
           <div class="thumb">
-            <a href="<?php echo $link ?>" target="_blank">
-            <img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60"></a>
+            <a href="<?php echo $link ?>" target="_blank"><img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60"></a>
           </div><!-- end .thumb -->
           <h3><a href="<?php echo $link ?>" target="_blank"><?php echo $title ?></a></h3>
-          <p class='meta-info'><?php the_custom_length($description, 100);?></p>
+          <p class='meta-info'><a href="<?php echo $link ?>" target="_blank"><?php the_custom_length($description, 100);?></a></p>
         </li>          
           <?php    
         }

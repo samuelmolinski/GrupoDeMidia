@@ -8,4 +8,5 @@
 	get_template_part('includes/widgets/widget-tabbed');
 	get_template_part('includes/widgets/widget-gallery');
 	get_template_part('includes/widgets/widget-rss');
+	get_template_part('includes/widgets/widget-from-video');
 ?>

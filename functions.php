@@ -69,6 +69,14 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 	}
 }
 
+function toASCII( $str ) 
+{ 
+    return strtr(utf8_decode($str),  
+        utf8_decode( 
+        'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'), 
+        'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy'); 
+}
+
 function et_register_main_menus() {
 	register_nav_menus(
 		array(

@@ -22,7 +22,11 @@ Template Name: Template Cursos e Eventos
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
 				<h1 class="title"><?php the_title(); ?></h1>
-				<?php $loop = new WP_Query( array( 'post_type' => 'curso', 'posts_per_page' => 5 ) ) ;?>
+				<?php $loop = new WP_Query( array(
+					'post_type'      => 'curso',
+					'posts_per_page' => '7'
+					));
+				?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 						
 					<?php 
@@ -53,7 +57,11 @@ Template Name: Template Cursos e Eventos
 					?>
 					
 					<!-- start of Loop -->
-					<?php query_posts( array( 'post_type' => 'curso' ) );?>
+					<?php query_posts( array(
+						'post_type'      => 'curso',
+						'posts_per_page' => '7'
+						 ));
+					?>
 					<?php 
 						global $mb_curso;
 
@@ -88,9 +96,9 @@ Template Name: Template Cursos e Eventos
 								<?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')) ?> 
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
-									<p><?php truncate_post(130);?></p>
-									<a href="<?php the_permalink(); ?>" class="readmore-curso"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a>
-									<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="readmore-curso"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
+									<p><a href="<?php the_permalink(); ?>"><?php truncate_post(130);?></a></p>
+									<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="readmore"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
+									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
 									global $more;

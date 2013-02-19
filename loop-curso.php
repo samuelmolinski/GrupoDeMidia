@@ -2,19 +2,14 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
-	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 
-		
 		<?php 
 			global $mb_curso;
 
 			$mb_curso->the_meta();
 			$meta = $mb_curso->meta;
 		 ?>
-
-		<h3 class="title"><?php the_title(); ?></h3> 
-		<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
 
 		<?php
 
@@ -51,8 +46,12 @@
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			
-			<?php the_content(); ?>		
+			<h3 class="title"><?php the_title(); ?></h3>
+			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+			<?php the_content(); ?>	
+			<?php include_once('rede-social.php'); ?>
+
+				
 					<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 						<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 
