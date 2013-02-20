@@ -25,13 +25,14 @@
 			$recent_from_query = new WP_Query( apply_filters( 'et_recent_from_args', array(
 				'post_type' => 'noticia',
 				'showposts' => (int) $posts_number,
-				'cat_ID' => array(23, 24, 28, 29, 30),
-				'tax_query' => array(array(
-											'taxonomy' => 'noticia_category',
-											'field'    => 'slug',
-											'terms'    => array('artigo', 'cases', 'contratacao', 'inovacao', 'mercado'),
-											)
-									    )
+				'tax_query' => array(
+									array(
+										'taxonomy' => 'noticia_category',
+										'field' => 'id',
+										'terms' => array(43),
+										'operator' => 'NOT IN'
+									)
+								    )
 			) ) );
 
 			if ($recent_from_query->have_posts()) : while ($recent_from_query->have_posts()) : $recent_from_query->the_post(); ?>
@@ -46,11 +47,13 @@
 						$thumb = $thumbnail["thumb"];
 					?>
 					<?php if ( '' != $thumb ){ ?>
+						<a href="<?php the_permalink(); ?>">
 						<div class="thumb">
-							<a href="<?php the_permalink(); ?>"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></a>
+							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
 						</div> 	<!-- end .thumb -->
+						</a>
 					<?php } ?>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 35); ?></a></h3>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 30); ?></a></h3>
 					<p class="meta-info"><a href="<?php the_permalink(); ?>"><?php the_custom_excerpt(75); ?></a></p>
 				</li>
 			<?php

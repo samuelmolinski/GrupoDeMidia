@@ -26,6 +26,7 @@
 				'post_type' => 'noticia',
 				'showposts' => (int) $posts_number,
 			) ) );
+
 			if ($recent_from_query->have_posts()) : while ($recent_from_query->have_posts()) : $recent_from_query->the_post(); ?>
 				<li class="clearfix<?php if ( $j % 2 == 0 ) echo ' recent_even'; ?>">
 					<?php
@@ -38,9 +39,11 @@
 						$thumb = $thumbnail["thumb"];
 					?>
 					<?php if ( '' != $thumb ){ ?>
+					<a href="<?php the_permalink(); ?>">
 						<div class="thumb">
-							<a href="<?php the_permalink(); ?>"><span class="overlay"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></span></a>
+							<span class="overlay"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></span>
 						</div> 	<!-- end .thumb -->
+					</a>
 					<?php } ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 30); ?></a></h3>
 					<p class="meta-info"><a href="<?php the_permalink(); ?>"><?php the_custom_excerpt(75); ?></a></p>

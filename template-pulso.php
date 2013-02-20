@@ -41,7 +41,10 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 								
 							<?php if ( '' != $thumb && 'on' == et_get_option('lucid_page_thumbnails') ) { ?>
 								<div class="post-thumbnail">
-									<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
+									<?php 
+										//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
+										the_crop_image($thumb, '&amp;w=170&amp;h=125&amp;zc=1');
+									?>
 								</div> 	<!-- end .post-thumbnail -->
 							<?php } ?>
 							<div class="post_content clearfix">

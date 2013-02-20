@@ -30,7 +30,8 @@
 				
 						echo $video_embed;
 					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
 					}
 				?>
 			</div> 	<!-- end .post-thumbnail -->
@@ -39,7 +40,7 @@
 		<div class="post_content clearfix">
 			<h3 class="title"><?php the_title(); ?></h3>
 			<?php the_content(); ?>
-
+			<br /><br /><br />
 			<?php include_once('rede-social.php'); ?>
 
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>

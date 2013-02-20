@@ -42,7 +42,7 @@
 					}
 				?>	
 			</div>
-			
+			<br /><br /><br />
 			<?php include_once('rede-social.php'); ?>
 
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>

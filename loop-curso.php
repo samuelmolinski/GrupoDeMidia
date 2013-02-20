@@ -1,9 +1,8 @@
-<?php query_posts( array('post_type' => 'curso')); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-
+	
+	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>		
 		<?php 
 			global $mb_curso;
 
@@ -16,7 +15,7 @@
 			global $wp_embed;
 			$thumb = '';
 			$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
-			$width = apply_filters('et_blog_image_width',285);
+			$width = apply_filters('et_blog_image_width',630);
 				if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
 			$height = apply_filters('et_blog_image_height',250);
 			$classtext = '';
@@ -39,18 +38,38 @@
 				
 						echo $video_embed;
 					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
 					}
 				?>
 			</div> 	<!-- end .post-thumbnail -->
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			<h3 class="title"><?php the_title(); ?></h3>
-			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+			<h3 class="title"><?php the_title(); ?></h3> 
 			<?php the_content(); ?>	
-			<?php include_once('rede-social.php'); ?>
 
+			<div class="evento">
+				<span>DATA:</span> <h4><?php echo $meta['data']; ?></h4>
+				<span>HORA:</span> <h4><?php echo $meta['hora']; ?></h4>
+				<span>LOCAL:</span> <h3><?php echo $meta['local']; ?></h3>
+			</div>
+
+			<?php 
+				/*if(isset($meta) == True){
+					echo "<div class="evento">";
+					echo "<span>DATA:</span> <h4>".$meta['data']."</h4>";
+					echo "<span>HORA:</span> <h4>".$meta['hora']."</h4>";
+					echo "<span>LOCAL:</span> <h4>".$meta['local']."</h4>";
+					echo "</div>";
+				}else{
+					
+				}*/
+			?>
+
+			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+			<br><br><br>
+			<?php include_once('rede-social.php'); ?>
 				
 					<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 						<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>

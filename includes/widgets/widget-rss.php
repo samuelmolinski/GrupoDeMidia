@@ -41,9 +41,13 @@ class rssPostWidget extends WP_Widget
           $img = "http://www.blogpulso.com.br/wp-content/uploads/2013/02/$imgfile.jpg";
           ?>
         <li class="clearfix">
-          <div class="thumb">
-            <a href="<?php echo $link ?>" target="_blank"><img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60"></a>
-          </div><!-- end .thumb -->
+          
+          <a href="<?php echo $link ?>" target="_blank">
+            <div class="thumb">
+              <img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60">
+            </div><!-- end .thumb -->
+          </a>
+
           <h3><a href="<?php echo $link ?>" target="_blank"><?php echo $title ?></a></h3>
           <p class='meta-info'><a href="<?php echo $link ?>" target="_blank"><?php the_custom_length($description, 100);?></a></p>
         </li>          
