@@ -31,7 +31,7 @@
 										'field' => 'id',
 										'terms' => array(43),
 										'operator' => 'NOT IN'
-									)
+										)
 								    )
 			) ) );
 
