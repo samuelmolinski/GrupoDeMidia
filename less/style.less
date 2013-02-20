@@ -285,8 +285,12 @@ li {
 
 .post_content { padding:15px 15px 20px 15px; text-align: justify; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; line-height: 100%;}
 
-/*.post_content ul > li{list-style: disc; margin: 10px 0 10px 50px}
-.post_content ol > li{list-style: decimal; margin: 10px 0 10px 50px}*/
+.post_content ul{
+	list-style-type: disc; padding: 10px 0 10px 40px; line-height: 100%;
+}
+.post_content ol{
+	list-style-type: decimal; padding: 10px 0 10px 40px; line-height: 100%;
+}
 
 .post_gallery{padding: 1em 0 0 1em; text-align: justify; font-family:"PT Sans", "PT Sans Caption", "PT Sans Narrow"; line-height: 100%; }
 
@@ -485,14 +489,11 @@ background: url(../images/more-arrow.png) no-repeat 42px 4px; text-decoration: n
 p#copyright { float: right; font-size:12px; color:#4b4b4b; margin-top: -4px; }	
 p#copyright a { color:#4b4b4b; font-weight: bold; }
 #footer-bottom .container { padding-bottom: 16px; text-align: center}
-#rede-menu{
+.rede-menu{
 	position: relative;
-	top: 52px;
-	right: 75px;
+	top: 311px;
+	right: 10px
 }
-	#rede-menu a{
-		padding:0 5px 0 0;
-	}
 
 
 
@@ -874,6 +875,21 @@ margin: 2em  0 0;
 	font-style: italic;
 }
 
+.evento-curso{
+	margin: 2em 0 0;
+}
+.evento-curso > h3{
+	font-family: "PT Sans";
+	color: #FFA500;
+	font-weight: 100;
+	display: inline-block;
+}
+.evento-curso > h4{
+	font-family: "PT Sans Capiton";
+	color:#FFA500;
+	font-style: italic;
+	display: inline-block;
+}
 
 
 /*------------------------------------------------*/
@@ -1014,7 +1030,7 @@ h3.main-title { font-size: 14px; }
 #bottom-menu { margin-bottom: 40px; }
 p#copyright { margin-bottom: 25px; }
 #video-switcher li.active_video:last-child { padding-right: 11px; }
-#rede-menu{	display: none;}
+.rede-menu{	display: none;}
 #et_pt_portfolio_gallery { margin-left: -35px !important; }
 .et_pt_portfolio_item { margin-left: 13px !important; width: 219px !important; }
 .et_portfolio_more_icon, .et_portfolio_zoom_icon { top: 50px !important; }
@@ -1044,7 +1060,7 @@ right: 215px;
 .container { width: 440px; }
 #social-icons { float: right; display: none; }
 #login{display: none}
-#rede-menu{display: none;}
+.rede-menu{display: none;}
 #search { border-left: none; float: left; padding: 11px 15px 11px 0; display: none }
 #top-menu, #second-menu, span.post-meta, #switcher .meta-info, #sidebar, #bottom-menu, #main-footer { display: none; }
 #featured_section { margin-bottom: 30px; }

@@ -7,49 +7,10 @@
 	<div id="preFooter" class="container clearfix">
 		<!-- <div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div> -->
 		<div id="twitter">
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
-				 
-			<!-- <a href="https://twitter.com/grupodemidia" class="twitter-follow-button" data-show-count="true">{l s='Siga'} @{l s='grupodemidia'}</a> -->
-			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-			<div class="twitterHeader">
-				<img src="<?php bloginfo('template_url'); ?>/images/twitter-layout-bird.png" />
-				<div class="title">siga-nos no twitter<a class=''>@grupodemidia</a></div>
-			</div>
-			<script>
-			new TWTR.Widget({
-			  version: 2,
-			  //type: 'faves',
-			  //type: 'search',
-			  type: 'profile',
-			  rpp: 3,
-			  interval: 8000,
-			  title: '',
-			  subject: '',
-			  //search: 'from:passeiorevest',
-			  width: 415,
-			  height: 235,
-			  theme: {
-			    shell: {
-			      background: 'transparent',
-			      color: '#696469'
-			    },
-			    tweets: {
-			      background: 'transparent',
-			      color: '#777777',
-			      links: '#000000'
-			    }
-			  },
-			  features: {
-			    scrollbar: false,
-			    loop: true,
-			    live: true,
-			    hashtags: true,
-			    timestamp: true,
-			    avatars: true,
-			    behavior: 'default'
-			  }
-			}).render().setUser('grupodemidia').start();
-			</script>				
+			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="303562539336335361">Tweets de @grupodemidia</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+				
 		</div>
 		<div id="facebook">
 			<!-- https://www.facebook.com/photo.php?fbid=270688569658996&set=a.127585053969349.19158.127584683969386&type=1 -->
@@ -57,7 +18,7 @@
 
 		    <!-- <script type="text/javascript">FB.init("270688569658996");</script>
 		    <fb:fan profile_id="270688569658996" connections="6" width="415" height="200" css="" stream="false"></fb:fan> -->
-		    <fb:like-box href="http://www.facebook.com/GrupoDeMidiaRJ" style="width:100%;" show_faces="true" stream="false" header="true"></fb:like-box>
+		    <fb:like-box href="http://www.facebook.com/GrupoDeMidiaRJ"  height="350" width="461" show_faces="true" stream="false" header="false"></fb:like-box>
 
 		</div>
 		<?php //d($footer_sidebars); ?>
@@ -112,7 +73,7 @@
 	
 	<div id="footer-bottom">
 		<div class="container clearfix">
-			<p>Grupo de Mídia do Rio de Janeiro  Tel: (21) 3392-1478 - endereço   XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXX   RIO DE JANEIRO - RJ </p>
+			<p>Copyright Grupo de Mídia do RJ - Tel 21 3392.1478 - <a href="mailto:contato@grupodemidiarj.com.br">contato@grupodemidiarj.com.br</a></p>
 		</div> <!-- end .container -->
 	</div> <!-- end #footer-bottom -->
 	

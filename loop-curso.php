@@ -49,9 +49,9 @@
 			<h3 class="title"><?php the_title(); ?></h3> 
 			<?php the_content(); ?>	
 
-			<div class="evento">
-				<span>DATA:</span> <h4><?php echo $meta['data']; ?></h4>
-				<span>HORA:</span> <h4><?php echo $meta['hora']; ?></h4>
+			<div class="evento-curso">
+				<span>DATA:</span> <h4><?php echo $meta['data']; ?></h4><br>
+				<span>HORA:</span> <h4><?php echo $meta['hora']; ?></h4><br>
 				<span>LOCAL:</span> <h3><?php echo $meta['local']; ?></h3>
 			</div>
 
