@@ -92,6 +92,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 								</div> <!-- end .thumb -->
 							<?php }; ?>
 							<div class="et_pt_blogentry clearfix">
+								<div class="box-post">
 								<h2 class="et_pt_title"><a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a></h2>
 
 									<p class="et_pt_blogmeta">
@@ -100,6 +101,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 											<a href="<?php echo $link; ?>" class="readmore" target="_blank"><span><?php esc_html_e('Ir para o Pulso &raquo;'); ?></span></a>
 										<?php } ?>
 							</div> <!-- end .et_pt_blogentry -->
+						</div>
 							<?php } ?><!-- end of loop -->
 							
 								<?php else : ?>

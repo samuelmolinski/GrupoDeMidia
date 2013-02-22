@@ -50,9 +50,9 @@
 			<?php the_content(); ?>	
 
 			<div class="evento">
-				<h3>LOCAL: <?php echo $meta['local']; ?></h3>
-				<h4>DATA: <?php echo $meta['data']; ?></h4>
-				<h4>HORA: <?php echo $meta['hora']; ?></h4>
+				<h3>Local: <?php echo $meta['local']; ?></h3>
+				<h4>Data: <?php echo $meta['data']; ?></h4>
+				<h4>Hora: <?php echo $meta['hora']; ?></h4>
 			</div>
 
 			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>

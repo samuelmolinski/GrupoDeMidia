@@ -76,9 +76,16 @@ Template Name: Template Notícias
 					?>
 							
 					<?php if ( $thumb <> '' && !$et_ptemplate_showthumb ) { ?>
+
 						<div class="et_pt_thumb alignleft">
-							<a href="<?php the_permalink(); ?>"><span class="overlay"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></span></a>
+							<a href="<?php the_permalink(); ?>">
+								<?php 
+									//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+									the_crop_image($thumb, '&amp;w=170&amp;h=125&amp;zc=1'); 
+								?>
+							</a>
 						</div> <!-- end .thumb -->
+
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">

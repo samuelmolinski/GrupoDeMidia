@@ -33,7 +33,7 @@
 
 		.et_pt_blogentry p.et_pt_blogmeta a { color:#4c4c4c; }		
 
-	div.et_pt_thumb { height:125px; margin:0 15px 30px 0; /*padding:8px 0 0 8px;*/ position:relative; width:170px; }
+	div.et_pt_thumb { height:125px; margin:0 15px 30px 0; /*padding:8px 0 0 8px;*/ position:relative; width:170px; z-index: 2; }
 
 		div.et_pt_thumb span.overlay { /*background:url("images/blog-image-overlay.png") no-repeat scroll 0 0 transparent;*/ display:block; height:140px; left:0; position:absolute; top:0; width:185px; }
 
