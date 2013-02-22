@@ -13,6 +13,9 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+	<?php the_OG(); ?>
+	
 	<title><?php elegant_titles(); ?></title>
 	<?php elegant_description(); ?>
 	<?php elegant_keywords(); ?>

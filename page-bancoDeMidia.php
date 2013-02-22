@@ -1,16 +1,16 @@
 <?php
 
 /*
-Template Name: Cadastro da Midia
+Template Name: Banco De Midia 
 */
 
-	d($_POST);
-	d($_FILEs);
+	//d($_POST);
+	//d($_FILEs);
 	//d(get_defined_vars());
 
 	//create user 
 	
-	$user_data = array(
+	/*$user_data = array(
         'ID' => '',
         'user_pass' => $_POST['cf3_field_9'],
         'user_login' => $_POST['cf3_field_5'],
@@ -26,7 +26,7 @@ Template Name: Cadastro da Midia
         'role' => get_option('default_role') // Use default role or another role, e.g. 'editor'
     );
     
-    $user_id = wp_insert_user( $user_data );
+    $user_id = wp_insert_user( $user_data );*/
 
 
 get_header(); ?>
@@ -35,6 +35,16 @@ get_header(); ?>
 	<div id="left-area">
 		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
 		<h1 class="title"><?php the_title(); ?></h1>
+
+		<div id="search" class="entry clearfix">
+			<div id="search-form">
+				<form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
+					<input type="text" value="<?php esc_attr_e('Busca no Banco de Midia', 'Lucid'); ?>" name="s" id="searchinput" />
+					<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
+				</form>
+			</div> 
+		</div>
+		
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 				<?php 

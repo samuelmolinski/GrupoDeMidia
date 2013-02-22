@@ -49,23 +49,11 @@
 			<h3 class="title"><?php the_title(); ?></h3> 
 			<?php the_content(); ?>	
 
-			<div class="evento-curso">
-				<span>DATA:</span> <h4><?php echo $meta['data']; ?></h4><br>
-				<span>HORA:</span> <h4><?php echo $meta['hora']; ?></h4><br>
-				<span>LOCAL:</span> <h3><?php echo $meta['local']; ?></h3>
+			<div class="evento">
+				<h3>LOCAL: <?php echo $meta['local']; ?></h3>
+				<h4>DATA: <?php echo $meta['data']; ?></h4>
+				<h4>HORA: <?php echo $meta['hora']; ?></h4>
 			</div>
-
-			<?php 
-				/*if(isset($meta) == True){
-					echo "<div class="evento">";
-					echo "<span>DATA:</span> <h4>".$meta['data']."</h4>";
-					echo "<span>HORA:</span> <h4>".$meta['hora']."</h4>";
-					echo "<span>LOCAL:</span> <h4>".$meta['local']."</h4>";
-					echo "</div>";
-				}else{
-					
-				}*/
-			?>
 
 			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
 			<br><br><br>
@@ -90,6 +78,7 @@
 	?>
 	
 	<?php 
-		if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

@@ -49,7 +49,10 @@
 					<?php if ( '' != $thumb ){ ?>
 						<a href="<?php the_permalink(); ?>">
 						<div class="thumb">
-							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
+							<?php 
+								//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
+								the_crop_image($thumb, '&amp;w=60&amp;h=60&amp;zc=1');
+							?>
 						</div> 	<!-- end .thumb -->
 						</a>
 					<?php } ?>

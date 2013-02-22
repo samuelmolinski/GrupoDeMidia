@@ -56,12 +56,13 @@
 		if ( et_get_option('lucid_468_enable') == 'on' ){
 			if ( et_get_option('lucid_468_adsense') <> '' ) echo( et_get_option('lucid_468_adsense') );
 			else { ?>
-			   <a href="<?php echo esc_url(et_get_option('lucid_468_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_468_image')); ?>" alt="468 ad" class="foursixeight" /></a>
+			   <!-- <a href="<?php echo esc_url(et_get_option('lucid_468_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_468_image')); ?>" alt="468 ad" class="foursixeight" /></a> -->
 	<?php 	}    
 		}
 	?>
 	
 	<?php 
-		if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

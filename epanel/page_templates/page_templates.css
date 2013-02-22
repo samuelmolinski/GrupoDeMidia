@@ -37,10 +37,11 @@
 
 		div.et_pt_thumb span.overlay { /*background:url("images/blog-image-overlay.png") no-repeat scroll 0 0 transparent;*/ display:block; height:140px; left:0; position:absolute; top:0; width:185px; }
 
-	.et_pt_blogentry a.readmore { display:block; float:right; font-size:16px; height: 16px; line-height: 30px;}
+	.et_pt_blogentry a.readmore, .et_pt_blogentry a.inscricao span { position: absolute; right: 0; bottom: 5px; font-size:16px; height: 16px; line-height: 30px;}
+	.et_pt_blogentry a.inscricao span { right: 120px; text-transform: uppercase;}
 
-		.et_pt_blogentry a.readmore span { display:block; height: 10px; margin:-55px 1em 0 0;}
-		
+		.et_pt_blogentry a.readmore span {height: 10px; }
+	.et_pt_blogentry span{ margin: 0;}		
 
 #et_pt_gallery { margin-left: -33px; }
 	.et_pt_gallery_entry { float:left; margin: 0 53px 50px 0; max-width: 260px;}

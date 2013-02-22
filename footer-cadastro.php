@@ -7,8 +7,9 @@
 	<div id="preFooter" class="container clearfix">
 		<!-- <div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div> -->
 		<div id="twitter">
-			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="303562539336335361">Tweets de @grupodemidia</a>
+			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="304590786358542337">Tweets de @grupodemidia</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
 				
 		</div>
@@ -23,7 +24,7 @@
 		</div>
 		<?php //d($footer_sidebars); ?>
 
-		<div class="container clearfix">
+		<div class="container-footer clearfix">
 			<?php
 				$menuID = 'bottom-menu';
 				$footerNav = '';
@@ -32,6 +33,23 @@
 				if ($footerNav == '') show_page_menu($menuID);
 				else echo($footerNav);
 			?>
+			<div class="rede-menu">
+				<?php
+					$social_icons = '';
+					$et_rss_url = '' != et_get_option('lucid_rss_url') ? et_get_option('lucid_rss_url') : get_bloginfo('rss2_url');
+					if ( 'on' == et_get_option('lucid_show_facebook_icon') ) $social_icons['facebook'] = array('image' => get_bloginfo('template_directory') . '/images/facebook.png', 'url' => et_get_option('lucid_facebook_url'), 'alt' => 'Facebook' );
+					if ( 'on' == et_get_option('lucid_show_twitter_icon') ) $social_icons['twitter'] = array('image' => get_bloginfo('template_directory') . '/images/twitter.png', 'url' => et_get_option('lucid_twitter_url'), 'alt' => 'Twitter' );
+					if ( 'on' == et_get_option('lucid_show_rss_icon') ) $social_icons['rss'] = array('image' => get_bloginfo('template_directory') . '/images/rss.png', 'url' => $et_rss_url, 'alt' => 'Rss' );
+					$social_icons = apply_filters('et_social_icons', $social_icons);
+					if ( !empty($social_icons) ) {
+						echo '<div id="social-icons">';
+						foreach ($social_icons as $icon) {
+							echo "<a href='" . esc_url( $icon['url'] ) . "' target='_blank'><img alt='" . esc_attr( $icon['alt'] ) . "' src='" . esc_url( $icon['image'] ) . "' /></a>";
+						}
+						
+					}
+				?>
+			</div>
 		</div> <!-- end .container -->
 	</div>
 	</div> <!-- end #main-area -->

@@ -7,8 +7,9 @@
 	<div id="preFooter" class="container clearfix">
 		<div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div>
 		<div id="twitter">
-			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="303562539336335361">Tweets de @grupodemidia</a>
+			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="304590786358542337">Tweets de @grupodemidia</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
 				
 		</div>
@@ -23,7 +24,7 @@
 		</div>
 		<?php //d($footer_sidebars); ?>
 
-		<div class="container clearfix">
+		<div class="container-footer clearfix">
 			<?php
 				$menuID = 'bottom-menu';
 				$footerNav = '';

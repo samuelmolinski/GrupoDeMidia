@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"max-width"
+			],
+			[
+				"li",
+				"list-style-type"
+			],
+			[
+				"bo",
+				"bottom-menu"
+			],
+			[
+				"is",
+				"is_object"
+			],
+			[
 				"post",
 				"post_type"
 			],
@@ -92,10 +108,6 @@
 				"padding"
 			],
 			[
-				"bo",
-				"border"
-			],
-			[
 				"F",
 				"float"
 			],
@@ -106,10 +118,6 @@
 			[
 				"cl",
 				"clear"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"mx",
@@ -336,98 +344,26 @@
 	"buffers":
 	[
 		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 15838,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 6129,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "less/style.less",
 			"settings":
 			{
-				"buffer_size": 53474,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "epanel/page_templates/page_templates.css",
-			"settings":
-			{
-				"buffer_size": 9251,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormEvent.php",
-			"settings":
-			{
-				"buffer_size": 14502,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendar.php",
-			"settings":
-			{
-				"buffer_size": 58869,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "template-cursos.php",
-			"settings":
-			{
-				"buffer_size": 5060,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "single-curso.php",
-			"settings":
-			{
-				"buffer_size": 482,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "loop-curso.php",
-			"settings":
-			{
-				"buffer_size": 3488,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
-			"settings":
-			{
-				"buffer_size": 1131,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "loop-agenda.php",
-			"settings":
-			{
-				"buffer_size": 2458,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarEvent.php",
-			"settings":
-			{
-				"buffer_size": 16299,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarAdmin.php",
-			"settings":
-			{
-				"buffer_size": 32810,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "custom_post/class.curso.php",
-			"settings":
-			{
-				"buffer_size": 3394,
+				"buffer_size": 54090,
 				"line_ending": "Windows"
 			}
 		}
@@ -464,31 +400,49 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/header.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-noticia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-agenda.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-anuncio.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-curso.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-grupo.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-page.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-single.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-video.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/m_post.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/generic/m_socialMedia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-noticia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-agenda.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-curso.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-video.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/less/style.less",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer-cadastro.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/page_templates/page_templates.css",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-fromblog.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-noticia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-frompage.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-rss.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.noticia.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormEvent.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendar.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-cursos.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarEvent.php",
+		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarAdmin.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.curso.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarSettings.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarFunctions.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/datacurso.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendar.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarAdmin.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarEvent.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormOverview.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-pulso.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-cursos.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-curso.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-grupo.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-grupo.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-frompage.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-fromblog.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-noticia.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-from-video.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/featured.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.noticia.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-gallery.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-not.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets.php",
@@ -499,18 +453,12 @@
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-2.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar2.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-anuncio.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-gallery.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/css/nggallery.css",
 		"/F/GrupoDeMidia/wp-content/themes/GrupoDeMidia/includes/widgets/widget-gallery.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-rss.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/header.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/pagina-pulso.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-full.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/functions.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-page.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/page_templates/page_templates.css",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/rede-social.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/options_lucid.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/custom_functions.php",
@@ -520,14 +468,11 @@
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/post_thumbnails_lucid.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.video.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-agendapage.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-ads-300x250.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-ads.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-single.php",
 		"/C/Users/conta_000/AppData/Local/Temp/fz3temp-1/loop-agenda.php",
 		"/C/Users/conta_000/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/conta_000/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
@@ -535,7 +480,6 @@
 		"/C/Users/conta_000/AppData/Local/Temp/fz3temp-1/single-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/timthumb/timthumb.php",
 		"/C/Users/conta_000/AppData/Local/Temp/Rar$DIa0.535/searchreplacedb2.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer-cadastro.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-contact.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-ads-300x100.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/additional_functions.php",
@@ -548,14 +492,10 @@
 		"/C/wamp/www/wordpress/wp-includes/widgets.php",
 		"/C/wamp/www/wordpress/wp-admin/includes/widgets.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-propaganda.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-curso.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-tabbed.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-noticia.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/index.html",
 		"/C/wamp/www/wordpress/wp-config.php",
 		"/C/Users/conta_000/AppData/Local/Temp/fz3temp-1/wp-config.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/less/style.less",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/index.php",
 		"/C/wamp/www/m_toolbox/_test/function.php",
 		"/C/wamp/www/m_toolbox/_test/slider.php",
@@ -567,7 +507,6 @@
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/entry.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/_test/widgets_mgs.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/html.html",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.curso.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.galeria.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/fullcalendar.css",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/js/custom.js",
@@ -579,7 +518,6 @@
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/ui.tab.css",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/wpcalendar.css",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/js/helper.js",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormEvent.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-agensa.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-agenda.php",
@@ -588,10 +526,8 @@
 		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/ngg-config.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/nggallery.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/css/style.css",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/m_post.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.gallery.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/hupso-share-buttons-for-twitter-facebook-google/share-buttons-hupso.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/hupso-share-buttons-for-twitter-facebook-google/share-buttons-hupso-widget.php"
+		"/C/wamp/www/wordpress/wp-content/plugins/hupso-share-buttons-for-twitter-facebook-google/share-buttons-hupso.php"
 	],
 	"find":
 	{
@@ -611,6 +547,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"entry",
+			"FB_OG",
+			"evento-curso",
+			"curso-evento",
+			"#newsletter",
+			"#newsletter .cform",
+			"#newsletter",
+			"post_content",
+			"post-content",
+			"rede-menu",
+			"evento",
 			"post",
 			"post_type",
 			"post",
@@ -727,21 +674,10 @@
 			"#newsletter",
 			"#newsletter .cform input[type=\"submit\"]",
 			"#commentform #submit",
-			"#player",
-			"player",
-			".player-container",
-			"player-container",
-			".ngg-widget",
-			"fancybox",
-			".ngg-widget",
-			".ngg-widget a",
-			".ngg-widget img",
-			".ngg-widget a",
-			".ngg-widget a ",
-			".ngg-widget img"
+			"#player"
 		],
 		"highlight": false,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -758,23 +694,85 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "less/style.less",
+					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 53474,
+						"buffer_size": 15838,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13571,
-								13571
+								1250,
+								1203
+							],
+							[
+								1759,
+								1705
+							],
+							[
+								2165,
+								2093
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "header.php",
+					"settings":
+					{
+						"buffer_size": 6129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4165,
+								4293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "less/style.less",
+					"settings":
+					{
+						"buffer_size": 54090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4972,
+								4972
 							]
 						],
 						"settings":
@@ -783,301 +781,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3509.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "epanel/page_templates/page_templates.css",
-					"settings":
-					{
-						"buffer_size": 9251,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2141,
-								2141
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 210.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormEvent.php",
-					"settings":
-					{
-						"buffer_size": 14502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2173,
-								2177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendar.php",
-					"settings":
-					{
-						"buffer_size": 58869,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11054,
-								11058
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 15949.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "template-cursos.php",
-					"settings":
-					{
-						"buffer_size": 5060,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "single-curso.php",
-					"settings":
-					{
-						"buffer_size": 482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "loop-curso.php",
-					"settings":
-					{
-						"buffer_size": 3488,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2222,
-								2222
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
-					"settings":
-					{
-						"buffer_size": 1131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1061,
-								1061
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 42.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "loop-agenda.php",
-					"settings":
-					{
-						"buffer_size": 2458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarEvent.php",
-					"settings":
-					{
-						"buffer_size": 16299,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1697,
-								1697
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarAdmin.php",
-					"settings":
-					{
-						"buffer_size": 32810,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16771,
-								16771
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6678.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "custom_post/class.curso.php",
-					"settings":
-					{
-						"buffer_size": 3394,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2044,
-								2030
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2104.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1141,6 +845,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 231.0,
+	"side_bar_width": 273.0,
 	"status_bar_visible": true
 }

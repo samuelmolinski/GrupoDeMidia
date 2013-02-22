@@ -81,6 +81,7 @@ Template Name: Template Vídeo
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">
+						<div class="box-post">
 						<h2 class="et_pt_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 							<p class="et_pt_blogmeta">
@@ -97,6 +98,7 @@ Template Name: Template Vídeo
 								?>
 								<?php the_content(); ?>
 								<?php } ?>
+						</div>
 					</div> <!-- end .et_pt_blogentry -->
 							
 					<?php endwhile; ?><!-- end of loop -->

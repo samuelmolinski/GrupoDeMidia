@@ -44,7 +44,8 @@ class rssPostWidget extends WP_Widget
           
           <a href="<?php echo $link ?>" target="_blank">
             <div class="thumb">
-              <img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60">
+             <?php the_crop_image($img, '&amp;w=60&amp;h=60&amp;zc=1'); ?> 
+              <!-- <img src="<?php echo $img ?>" class="category-image" alt="Post com Vídeo" width="60" height="60"> -->
             </div><!-- end .thumb -->
           </a>
 

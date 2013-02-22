@@ -62,6 +62,7 @@
 	?>
 	
 	<?php 
-		if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

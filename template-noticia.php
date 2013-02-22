@@ -77,13 +77,13 @@ Template Name: Template Notícias
 							
 					<?php if ( $thumb <> '' && !$et_ptemplate_showthumb ) { ?>
 						<div class="et_pt_thumb alignleft">
-							
 							<a href="<?php the_permalink(); ?>"><span class="overlay"><?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?></span></a>
 						</div> <!-- end .thumb -->
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">
-						<h2 class="et_pt_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="box-post">
+							<h2 class="et_pt_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 							<p class="et_pt_blogmeta">
 								<?php esc_html_e('Postado'); ?> <?php esc_html_e('por:'); ?> <?php the_author_posts_link(); ?> 
@@ -99,6 +99,7 @@ Template Name: Template Notícias
 								?>
 								<?php the_content(); ?>
 								<?php } ?>
+						</div>
 					</div> <!-- end .et_pt_blogentry -->
 							
 					<?php endwhile; ?><!-- end of loop -->

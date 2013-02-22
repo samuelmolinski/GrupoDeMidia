@@ -31,8 +31,8 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 
 							<?php 
 								$thumb = '';
-								$width = apply_filters('et_blog_image_width',630);
-								$height = apply_filters('et_blog_image_height',210);
+								$width = apply_filters('et_blog_image_width',170);
+								$height = apply_filters('et_blog_image_height',125);
 								$classtext = '';
 								$titletext = get_the_title();
 								$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
@@ -82,8 +82,13 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 									
 							<?php if ( $img <> '' && !$et_ptemplate_showthumb ) { ?>
 								<div class="et_pt_thumb alignleft">
-									
-									<a href="<?php echo $link; ?>" target="_blank"><span class="overlay"><img src="<?php echo $img ?>" alt="" width="<?php echo $width ?>" height="<?php echo $height ?>"></span></a>
+									<a href="<?php echo $link; ?>" target="_blank"><span class="overlay">
+									<?php 
+									//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
+									the_crop_image($img, '&amp;w=170&amp;h=125&amp;zc=1');
+									?>
+									</span></a>
+									<!-- <a href="<?php echo $link; ?>" target="_blank"><span class="overlay"><img src="<?php echo $img ?>" alt="" width="<?php echo $width ?>" height="<?php echo $height ?>"></span></a> -->
 								</div> <!-- end .thumb -->
 							<?php }; ?>
 							<div class="et_pt_blogentry clearfix">

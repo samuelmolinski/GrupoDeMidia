@@ -89,6 +89,7 @@ Template Name: Template Cursos e Eventos
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">
+						<div class="box-post">
 						<h2 class="et_pt_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 							<p class="et_pt_blogmeta">
@@ -97,8 +98,8 @@ Template Name: Template Cursos e Eventos
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><a href="<?php the_permalink(); ?>"><?php truncate_post(130);?></a></p>
-									<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="readmore"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a>
-									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a>
+									<span><a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="inscricao"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a></span>
+									<span><a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a></span>
 								<?php } else { ?>
 								<?php
 									global $more;
@@ -106,6 +107,7 @@ Template Name: Template Cursos e Eventos
 								?>
 								<?php the_content(); ?>
 								<?php } ?>
+						</div>
 					</div> <!-- end .et_pt_blogentry -->
 							
 					<?php endwhile; ?><!-- end of loop -->
