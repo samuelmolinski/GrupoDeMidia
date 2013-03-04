@@ -59,9 +59,9 @@
 	<?php 	}    
 		}
 	?>
-	
+	<div class="fb-comments" data-href="http://grupodemidiarj.com.br" data-width="500" data-num-posts="5"></div>
 	<?php 
 		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
-		echo do_shortcode('[fbcomments]');
+		//echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

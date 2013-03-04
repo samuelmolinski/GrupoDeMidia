@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Template Agenda
+Template Name: Template Evento
 */
  ?>
 
@@ -13,7 +13,7 @@ Template Name: Template Agenda
 
 				<?php //barra superior da página get_template_part('includes/breadcrumbs', 'grupo'); ?>
 
-				<?php get_template_part('loop', 'page'); ?>
+				<?php get_template_part('loop', 'evento'); ?>
 			</div> <!-- end #left_area -->
 			<?php if ( 'on' != $et_full_post ) get_sidebar(); ?>
 		</div> 	<!-- end #content-area -->

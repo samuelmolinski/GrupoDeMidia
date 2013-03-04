@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isNumber"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"$thu",
+				"$thumb"
+			],
+			[
 				"ma",
 				"max-width"
+			],
+			[
+				"te",
+				"text-transform"
 			],
 			[
 				"li",
@@ -14,10 +38,6 @@
 			[
 				"bo",
 				"bottom-menu"
-			],
-			[
-				"is",
-				"is_object"
 			],
 			[
 				"post",
@@ -36,10 +56,6 @@
 				"widget"
 			],
 			[
-				"$thu",
-				"$thumbnail"
-			],
-			[
 				"end",
 				"endif"
 			],
@@ -54,14 +70,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"margin",
-				"margin-left"
-			],
-			[
-				"te",
-				"text-decoration"
 			],
 			[
 				"f",
@@ -110,10 +118,6 @@
 			[
 				"F",
 				"float"
-			],
-			[
-				"pa",
-				"padding"
 			],
 			[
 				"cl",
@@ -170,10 +174,6 @@
 			[
 				"mar",
 				"margin"
-			],
-			[
-				"b",
-				"background"
 			],
 			[
 				"templa",
@@ -343,30 +343,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 15838,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "header.php",
-			"settings":
-			{
-				"buffer_size": 6129,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "less/style.less",
-			"settings":
-			{
-				"buffer_size": 54090,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -400,65 +376,82 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/less/style.less",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/functions.php",
+		"/C/Users/conta_000/Downloads/jquery.validate/index.php",
+		"/C/Users/conta_000/Downloads/index.php",
+		"/C/Users/conta_000/Downloads/jquery.validate.js",
+		"/C/Users/conta_000/Downloads/maior-e-menor.php",
+		"/C/Users/conta_000/Downloads/slide.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-fromblog.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-noticia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/featured.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/additional_functions.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/header.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-agenda.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-anuncio.php",
+		"/C/Users/conta_000/Downloads/Doc Tools/nivo-slider/demo/demo.html",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-cursos.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-curso.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-grupo.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-page.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-single.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/home.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-pulso.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-video.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-noticia.php",
+		"/C/Users/conta_000/Downloads/destaques/documentacao.php",
+		"/C/Users/conta_000/AppData/Local/Temp/Rar$DIa0.525/ewp-custom-post-types-guide-part1-attach1.php",
+		"/C/Users/conta_000/AppData/Local/Temp/Rar$DIa0.559/searchreplacedb2.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/page_templates/page_templates.css",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-agenda.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-evento.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-evento.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-video.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-single.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-page.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-search.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-grupo.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-agenda.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer-cadastro.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/search-gm.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-gallery.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-rss.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-from-video.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-frompage.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/timthumb/timthumb.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-noticia.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/index.html",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-anuncio.php",
+		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/loop-grupo.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/m_post.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/generic/m_socialMedia.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-noticia.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-curso.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/single-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/less/style.less",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/footer-cadastro.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/page_templates/page_templates.css",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/inc/wp/metaboxes/meta/curso-meta.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-fromblog.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/breadcrumbs-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-frompage.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-rss.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.noticia.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormEvent.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendar.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-cursos.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarEvent.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarAdmin.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.curso.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarSettings.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarFunctions.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-agenda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/datacurso.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/FormOverview.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-pulso.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-grupo.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-from-video.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/featured.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-video.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-gallery.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-not.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/functions/sidebars.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-noticia.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/home.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-home.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar-2.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/sidebar2.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-gallery.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/css/nggallery.css",
 		"/F/GrupoDeMidia/wp-content/themes/GrupoDeMidia/includes/widgets/widget-gallery.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/pagina-pulso.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-full.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/functions.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/rede-social.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/options_lucid.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/epanel/custom_functions.php",
@@ -478,11 +471,9 @@
 		"/C/Users/conta_000/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/conta_000/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/conta_000/AppData/Local/Temp/fz3temp-1/single-agenda.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/m_toolbox/timthumb/timthumb.php",
 		"/C/Users/conta_000/AppData/Local/Temp/Rar$DIa0.535/searchreplacedb2.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-contact.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-ads-300x100.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/additional_functions.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/js/fullcalendar.js",
 		"/C/wamp/www/wordpress/wp-includes/functions.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-about.php",
@@ -493,7 +484,6 @@
 		"/C/wamp/www/wordpress/wp-admin/includes/widgets.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-propaganda.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/includes/widgets/widget-tabbed.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/index.html",
 		"/C/wamp/www/wordpress/wp-config.php",
 		"/C/Users/conta_000/AppData/Local/Temp/fz3temp-1/wp-config.php",
 		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/index.php",
@@ -513,21 +503,7 @@
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/Widgets.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/fsCalendarWidgets.php",
 		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/js/fullcalendar.min.js",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/default.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/ui.datepicker.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/ui.tab.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/wpcalendar.css",
-		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/js/helper.js",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.agenda.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page-agensa.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/template-agenda.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/page.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/nggshow.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/ngg-config.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/nextgen-gallery/nggallery.php",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/css/style.css",
-		"/C/wamp/www/wordpress/wp-content/themes/GrupoDeMidia/custom_post/class.gallery.php",
-		"/C/wamp/www/wordpress/wp-content/plugins/hupso-share-buttons-for-twitter-facebook-google/share-buttons-hupso.php"
+		"/C/wamp/www/wordpress/wp-content/plugins/wp-calendar/css/default.css"
 	],
 	"find":
 	{
@@ -547,6 +523,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"wp_pagenavi",
+			");\n",
+			".et_pt_blogentry span",
+			".et_pt_blogentry a",
+			"article.post p, .comment-content p, article.page p",
+			".et_pt_blogentry p.et_pt_blogmeta",
+			"h2.et_cat_title",
+			"					<",
+			"et_pt_thumb",
+			"box-post",
+			"container",
+			".et_pt_blogentry a.readmore",
+			"post_content",
+			"$img",
+			"#second-menu a",
+			"menu-header",
+			"secondary-menu",
 			"entry",
 			"FB_OG",
 			"evento-curso",
@@ -657,27 +650,10 @@
 			"#twitter .twitterHeader .title",
 			"#bottom-menu",
 			"#recent-videos .more",
-			"blog pulso",
-			"a.more",
-			".noticaPost",
-			".noticaPost li",
-			"#search-form #searchsubmit",
-			".noticaPos",
-			".noticaPosi",
-			".noticaPost li",
-			".category-box",
-			".category-box li:first-child",
-			"category-box p.meta-info",
-			"#bottom-menu",
-			"login",
-			".category-box .thumb",
-			"#newsletter",
-			"#newsletter .cform input[type=\"submit\"]",
-			"#commentform #submit",
-			"#player"
+			"blog pulso"
 		],
 		"highlight": false,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -694,98 +670,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "functions.php",
-					"settings":
-					{
-						"buffer_size": 15838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1250,
-								1203
-							],
-							[
-								1759,
-								1705
-							],
-							[
-								2165,
-								2093
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "header.php",
-					"settings":
-					{
-						"buffer_size": 6129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4165,
-								4293
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 675.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "less/style.less",
-					"settings":
-					{
-						"buffer_size": 54090,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4972,
-								4972
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2104.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -838,6 +724,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/C/wamp/www/BlogPulso/BlogPulso.sublime-project"
+			]
 		],
 		"width": 380.0
 	},

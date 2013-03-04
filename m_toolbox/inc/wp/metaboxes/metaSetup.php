@@ -6,7 +6,7 @@ require_once('MediaAccess.php');
 $wpalchemy_media_access = new WPAlchemy_MediaAccess();
 
 // global styles for the meta boxes
-if (is_admin()) wp_enqueue_style('wpalchemy-metabox', get_stylesheet_directory_uri() . '/library/css/metaboxes.css');
+//if (is_admin()) wp_enqueue_style('wpalchemy-metabox', get_stylesheet_directory_uri() . '/library/css/metaboxes.css');
 
 
 $mb_curso = new WPAlchemy_MetaBox(array

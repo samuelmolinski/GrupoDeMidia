@@ -1,4 +1,8 @@
 <?php 
+/* Disable WordPress Admin Bar for all users but admins. */
+if (current_user_can('subscriber')):
+  show_admin_bar(false);
+endif;
 
 require_once(TEMPLATEPATH . '/m_toolbox/m_toolbox.php');
 
@@ -339,3 +343,11 @@ if ( ! function_exists( 'et_postinfo_meta' ) ){
 		echo $postinfo_meta;
 	}
 }
+
+/*function add_query_vars($aVars) {
+    $aVars[] = "gm_search"; // represents the name of the product category as shown in the URL
+    return $aVars;
+}
+ 
+// hook add_query_vars function into query_vars
+add_filter('query_vars', 'add_query_vars');*/

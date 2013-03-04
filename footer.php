@@ -53,6 +53,14 @@
 		</div> <!-- end .container -->
 	</div>
 	</div> <!-- end #main-area -->
+
+	<script type="text/javascript">
+		   window.console.log('ready1');
+		   jQuery('.cpf input[type=text]').keyup(function () { 
+			    this.value = this.value.replace(/[^0-9\.]/g,'');
+			});
+	</script>
+
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.jqtransform.js"></script>
 	<script type="text/javascript">jQuery('#li--4').jqTransform({imgPath:'<?php bloginfo('template_url'); ?>/jqtransformplugin/img/'});</script>
 	<footer id="main-footer">
@@ -92,7 +100,7 @@
 	
 	<div id="footer-bottom">
 		<div class="container clearfix">
-			<p>Copyright Grupo de Mídia do RJ - Tel 21 3392.1478 - <a href="mailto:contato@grupodemidiarj.com.br">contato@grupodemidiarj.com.br</a></p>
+			<p>Copyright Grupo de Mídia do RJ - Tel 21 3392.1478 - <a href="mailto:contato@grupodemidiarj.com.br" target="_blank">contato@grupodemidiarj.com.br</a></p>
 		</div> <!-- end .container -->
 	</div> <!-- end #footer-bottom -->
 	

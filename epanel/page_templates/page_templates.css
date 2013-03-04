@@ -17,7 +17,7 @@
 
 	h2.et_pt_title { font-size:20px; padding-bottom:0; padding-left:2px;}
 
-	h2.et_cat_title { font-size:20px; padding-bottom:0; padding-left:2px; padding-top: 1em }
+	h2.et_cat_title { font-size:20px; padding-bottom:0; padding-left:20px; padding-top: 1em }
 
 	h2.et_pt_title { font-size:20px; padding-bottom:0; padding-left:2px; }
 
@@ -29,9 +29,11 @@
 
 		h2.et_cat_title a:hover { color: #ffa500; text-decoration: none; }
 
-	.et_pt_blogentry  p.et_pt_blogmeta {color:#9E9E9E; font-size:11px; font-style:italic; padding-bottom:0.1em }
+	.et_pt_blogentry  p.et_pt_blogmeta {color:#9E9E9E; font-size:11px; font-style:italic; padding-bottom:0.1em; padding-left: 20px }
 
-		.et_pt_blogentry p.et_pt_blogmeta a { color:#4c4c4c; }		
+		.et_pt_blogentry p.et_pt_blogmeta a { color:#4c4c4c; }	
+
+		.et_pt_blogentry span{ margin: 0}
 
 	div.et_pt_thumb { height:125px; margin:0 15px 30px 0; /*padding:8px 0 0 8px;*/ position:relative; width:170px; z-index: 2; }
 
@@ -41,6 +43,7 @@
 	.et_pt_blogentry a.inscricao span { right: 120px; text-transform: uppercase;}
 
 		.et_pt_blogentry a.readmore span {height: 10px; }
+		.search-results .et_pt_blogentry a.readmore span { position: relative; right: 15px; bottom: 35px;}
 	.et_pt_blogentry span{ margin: 0;}		
 
 #et_pt_gallery { margin-left: -33px; }

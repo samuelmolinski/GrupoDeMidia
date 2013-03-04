@@ -91,7 +91,7 @@
 	
 	<div id="footer-bottom">
 		<div class="container clearfix">
-			<p>Copyright Grupo de Mídia do RJ - Tel 21 3392.1478 - <a href="mailto:contato@grupodemidiarj.com.br">contato@grupodemidiarj.com.br</a></p>
+			<p>Copyright Grupo de Mídia do RJ - Tel 21 3392.1478 - <a href="mailto:contato@grupodemidiarj.com.br" target="_blank">contato@grupodemidiarj.com.br</a></p>
 		</div> <!-- end .container -->
 	</div> <!-- end #footer-bottom -->
 	
