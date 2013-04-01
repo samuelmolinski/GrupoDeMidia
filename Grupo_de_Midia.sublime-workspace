@@ -343,6 +343,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 6592,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -670,8 +678,36 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "header.php",
+					"settings":
+					{
+						"buffer_size": 6592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								920,
+								622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -726,7 +762,7 @@
 		[
 			[
 				"",
-				"/C/wamp/www/BlogPulso/BlogPulso.sublime-project"
+				"/C/wamp/www/FeiraoCury/FeiraoCury.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -24,7 +24,8 @@ Template Name: Template Notícias
 				<h1 class="title"><?php the_title(); ?></h1>
 				<?php $loop = new WP_Query( array( 
 					'post_type'      => 'noticia',
-					'posts_per_page' => '7'
+					'posts_per_page' => '7',
+					'paged' => $paged
 					 ));
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
