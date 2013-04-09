@@ -267,7 +267,20 @@ li {
 
 #main-area  { padding-top: 58px; }
 
-.entry { border: 1px solid #e5e5e5; background-color: #fff; position: relative; margin-bottom: 30px; width: 100%; margin-top: 20px }		
+.single-noticia{
+	#left-area{
+		margin-top: 20px;
+		.entry{
+		border: none;
+		position: relative;
+		margin-bottom: 30px;
+		width: 100%;
+		margin-top: 22px;
+		}
+	}
+}
+
+.entry { border: 1px solid transparent; background-color: #fff; position: relative; margin-bottom: 30px; width: 100%; margin-top: 20px }		
 
 .entry:before { content: ''; position: absolute; height: 8px; bottom: -8px; left: 0; background: url(../images/middle-shadow.png) no-repeat top center; width: 100%; }
 
@@ -644,6 +657,9 @@ input[type=submit], .qq-upload-button {
 			padding: 5px 15px 1px;
 			cursor: pointer;
 			width: 90px;
+		}
+		p.um_description{
+			margin-bottom: 20px;
 		}
 		label {
 			display: inline-block;
