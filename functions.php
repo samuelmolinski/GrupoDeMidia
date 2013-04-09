@@ -1,4 +1,8 @@
 <?php 
+/* Disable WordPress Admin Bar for all users but admins. */
+if (current_user_can('subscriber')):
+  show_admin_bar(false);
+endif;
 
 require_once(TEMPLATEPATH . '/m_toolbox/m_toolbox.php');
 
@@ -67,6 +71,14 @@ if ( ! function_exists( 'et_setup_theme' ) ){
 		
 		add_action( 'wp_enqueue_scripts', 'et_add_responsive_shortcodes_css', 11 );
 	}
+}
+
+function toASCII( $str ) 
+{ 
+    return strtr(utf8_decode($str),  
+        utf8_decode( 
+        'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'), 
+        'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy'); 
 }
 
 function et_register_main_menus() {
@@ -331,3 +343,11 @@ if ( ! function_exists( 'et_postinfo_meta' ) ){
 		echo $postinfo_meta;
 	}
 }
+
+/*function add_query_vars($aVars) {
+    $aVars[] = "gm_search"; // represents the name of the product category as shown in the URL
+    return $aVars;
+}
+ 
+// hook add_query_vars function into query_vars
+add_filter('query_vars', 'add_query_vars');*/

@@ -41,7 +41,8 @@ echo '</p>';
 				
 						echo $video_embed;
 					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
 					}
 				?>
 			</div> 	<!-- end .post-thumbnail -->

@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php 
+	setOG();
+	get_header(); 
+?>
 
 <?php $et_full_post = get_post_meta( $post->ID, '_et_full_post', true ); ?>
 
@@ -10,7 +13,7 @@
 
 	</div> <!-- end #left_area -->
 
-	<?php if ( 'on' != $et_full_post ) get_sidebar(); ?>
+	<?php get_sidebar('noticia'); ?>
 </div> 	<!-- end #content-area -->
 	
 <?php get_footer(); ?>

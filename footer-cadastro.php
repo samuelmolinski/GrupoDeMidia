@@ -5,7 +5,7 @@
 		
 		</div> <!-- end .container -->
 	<div id="preFooter" class="container clearfix">
-		<div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div>
+		<!-- <div id="newsletter" class="container clearfix"><?php insert_cform('Newsletter'); ?></div> -->
 		<div id="twitter">
 			<a class="twitter-timeline" href="https://twitter.com/grupodemidia" data-widget-id="304590786358542337">Tweets de @grupodemidia</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -53,14 +53,6 @@
 		</div> <!-- end .container -->
 	</div>
 	</div> <!-- end #main-area -->
-
-	<script type="text/javascript">
-		   window.console.log('ready1');
-		   jQuery('.cpf input[type=text]').keyup(function () { 
-			    this.value = this.value.replace(/[^0-9\.]/g,'');
-			});
-	</script>
-
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.jqtransform.js"></script>
 	<script type="text/javascript">jQuery('#li--4').jqTransform({imgPath:'<?php bloginfo('template_url'); ?>/jqtransformplugin/img/'});</script>
 	<footer id="main-footer">
@@ -92,7 +84,6 @@
 						else { ?>
 						   <a href="<?php echo esc_url(et_get_option('lucid_728_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_728_image')); ?>" /></a>
 					<?php } ?>
-
 				</div> <!-- end .container -->
 			</div>
 		<?php } ?>

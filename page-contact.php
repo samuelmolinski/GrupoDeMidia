@@ -14,4 +14,4 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 </div> 	<!-- end #content-area -->
 	
-<?php get_footer(); ?>
+<?php get_footer('cadastro'); ?>

@@ -12,9 +12,9 @@ Template Name: Search Page
 
 <?php get_header(); ?>
 
-<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
+<div id="content-area" class="clearfix search-results<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 	<div id="left-area">
-		<?php get_template_part('includes/breadcrumbs', 'page'); ?>
+		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
 		
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
@@ -34,10 +34,11 @@ Template Name: Search Page
 				<?php } ?>
 				
 				<div class="post_content clearfix">
+					<div class="et_pt_blogentry clearfix">
 					<h1 class="title"><?php the_title(); ?></h1>
 					
 					<?php the_content(); ?>
-					
+					</div>
 					<div id="et-search" class="responsive">
 						<div id="et-search-inner" class="clearfix">
 							<p id="et-search-title"><span><?php esc_html_e('search this website','Lucid'); ?></span></p>

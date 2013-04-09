@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+
+<?php 
+setOG();
+
+get_header(); ?>
 
 <?php $et_full_post = get_post_meta( $post->ID, '_et_full_post', true ); ?>
 

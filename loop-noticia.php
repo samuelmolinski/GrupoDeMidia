@@ -2,7 +2,7 @@
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-		<h3 class="title"><?php the_title(); ?></h3>
+		
 		<?php
 			global $wp_embed;
 			$thumb = '';
@@ -30,15 +30,19 @@
 				
 						echo $video_embed;
 					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
 					}
 				?>
 			</div> 	<!-- end .post-thumbnail -->
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			
-			<?php the_content(); ?>				
+			<h3 class="title"><?php the_title(); ?></h3>
+			<?php the_content(); ?>
+			<br /><br /><br />
+			<?php include_once('rede-social.php'); ?>
+
 			<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 
@@ -52,12 +56,13 @@
 		if ( et_get_option('lucid_468_enable') == 'on' ){
 			if ( et_get_option('lucid_468_adsense') <> '' ) echo( et_get_option('lucid_468_adsense') );
 			else { ?>
-			   <a href="<?php echo esc_url(et_get_option('lucid_468_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_468_image')); ?>" alt="468 ad" class="foursixeight" /></a>
+			   <!-- <a href="<?php echo esc_url(et_get_option('lucid_468_url')); ?>"><img src="<?php echo esc_url(et_get_option('lucid_468_image')); ?>" alt="468 ad" class="foursixeight" /></a> -->
 	<?php 	}    
 		}
 	?>
-	
+	<div class="fb-comments" data-href="http://grupodemidiarj.com.br" data-width="500" data-num-posts="5"></div>
 	<?php 
-		if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

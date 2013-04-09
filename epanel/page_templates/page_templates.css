@@ -12,17 +12,15 @@
 	ul#sitemap-tags li a { background: url(images/sitemap-tag.png) no-repeat left center; }
 	ul#sitemap-authors li a { background: url(images/sitemap-author.png) no-repeat left center; }	
 
-<<<<<<< HEAD
-.et_pt_blogentry {padding:0;}
+
+.et_pt_blogentry {padding-bottom: 1.5em;}
 
 	h2.et_pt_title { font-size:20px; padding-bottom:0; padding-left:2px;}
 
-	h2.et_cat_title { font-size:20px; padding-bottom:0; padding-left:2px; padding-top: 1em }
-
-=======
+	h2.et_cat_title { font-size:20px; padding-bottom:0; padding-left:20px; padding-top: 1em }
 
 	h2.et_pt_title { font-size:20px; padding-bottom:0; padding-left:2px; }
->>>>>>> 33053fbb24d993d542fa478e5baab6ccf21b6dde
+
 		h2.et_pt_title a { color: #7c7777; }
 
 		h2.et_cat_title a { color: #7c7777; }
@@ -31,29 +29,42 @@
 
 		h2.et_cat_title a:hover { color: #ffa500; text-decoration: none; }
 
-	.et_pt_blogentry  p.et_pt_blogmeta {color:#9E9E9E; font-size:11px; font-style:italic; padding-bottom:0.1em }
+	.et_pt_blogentry  p.et_pt_blogmeta {color:#9E9E9E; font-size:11px; font-style:italic; padding-bottom:0.1em; padding-left: 20px }
 
-		p.et_pt_blogmeta a { color:#4c4c4c; }		
+		.et_pt_blogentry p.et_pt_blogmeta a { color:#4c4c4c; }	
 
-	div.et_pt_thumb { height:125px; margin:0 15px 30px 0; /*padding:8px 0 0 8px;*/ position:relative; width:170px; }
+		.et_pt_blogentry span{ margin: 0}
+
+	div.et_pt_thumb { height:125px; margin:0 15px 30px 0; /*padding:8px 0 0 8px;*/ position:relative; width:170px; z-index: 2; }
 
 		div.et_pt_thumb span.overlay { /*background:url("images/blog-image-overlay.png") no-repeat scroll 0 0 transparent;*/ display:block; height:140px; left:0; position:absolute; top:0; width:185px; }
 
-	.et_pt_blogentry a.readmore { display:block; float:right; font-size:16px; height: 16px; line-height: 30px;}
+	.et_pt_blogentry a.readmore, .et_pt_blogentry a.inscricao span { position: absolute; right: 0; bottom: 5px; font-size:16px; height: 16px; line-height: 30px;}
+	.et_pt_blogentry a.inscricao span { right: 120px; text-transform: uppercase;}
 
-		.et_pt_blogentry a.readmore span { display:block; height: 10px; margin:-10px 1em 0 0;}
-		
+		.et_pt_blogentry a.readmore span {height: 10px; }
+		.search-results .et_pt_blogentry a.readmore span { position: relative; right: 15px; bottom: 35px;}
+	.et_pt_blogentry span{ margin: 0;}		
 
 #et_pt_gallery { margin-left: -33px; }
 	.et_pt_gallery_entry { float:left; margin: 0 53px 50px 0; max-width: 260px;}
-		.et_pt_item_image { position:relative;}
+		.et_pt_item_image { position:relative; background: #FFF;}
 			.et_pt_item_image img.portfolio {width: 260px; height: 195px; display: block;}
 			.et_pt_item_image span.overlay { }
 			.title-foto{font-size: 20px; padding: .5em 0}
 			.et_pt_item_image a.zoom-icon, .et_pt_item_image a.more-icon { display:block; height:61px; position:absolute; text-indent:-9999px; top:41px; width:61px; visibility: hidden; }
 			.et_pt_item_image a.zoom-icon { background:url("images/zoom-icon.png") no-repeat; left:31px; }
-			.et_pt_item_image a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }''
+			.et_pt_item_image a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }
 	#et_pt_gallery .page-nav { clear: both; }
+
+	.et_pt_widget_gallery_entry {float: left; margin: 0; display: block;}
+	.et_pt_item_image_widget { position:relative; background: #FFF; width: 120px; height: 120px; padding: 0.8em}
+	.et_pt_item_image_widget img.portfolio {width: 120px; height: 120px; display: block;}
+	.et_pt_item_image_widget span.overlay { }
+	.et_pt_item_image_widget a.zoom-icon, .et_pt_item_image_widget a.more-icon { display:block; height:61px; position:absolute; text-indent:-9999px; top:41px; width:61px; visibility: hidden; }
+	.et_pt_item_image_widget a.zoom-icon { background:url("images/zoom-icon.png") no-repeat; left:31px; }
+	.et_pt_item_image_widget a.more-icon { background:url("images/readmore-icon.png") no-repeat; left:128px; }
+
 
 .input { border: 1px solid #d4d2d2 !important; border-radius: 8px  !important; -webkit-border-radius: 8px !important; -moz-border-radius: 8px !important; color: #303030 !important; padding: 7px !important; margin: 0px !important; }
 input.input { width: 300px; }

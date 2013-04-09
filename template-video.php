@@ -21,7 +21,11 @@ Template Name: Template Vídeo
 	<h1 class="title"><?php the_title(); ?></h1>
 	<div id="content-area" class="clearfix<?php if ( $fullwidth ) echo ' fullwidth'; ?>">
 			<div id="left-area">
-				<?php $loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => 5 ) ) ;?>
+				<?php $loop = new WP_Query( array(
+					'post_type'      => 'video',
+					'posts_per_page' => '7' 
+					) );
+				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 					<?php 
 						$thumb = '';
@@ -51,7 +55,11 @@ Template Name: Template Vídeo
 					?>
 					
 					<!-- start of Loop -->
-					<?php query_posts( array( 'post_type' => 'video' ) );?>
+					<?php query_posts( array(
+						'post_type'      => 'video',
+						'psots_per_page' => '7'
+						));
+					?>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<?php 
@@ -66,13 +74,20 @@ Template Name: Template Vídeo
 					?>
 							
 					<?php if ( $thumb <> '' && !$et_ptemplate_showthumb ) { ?>
+						
 						<div class="et_pt_thumb alignleft">
-							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); ?>
-							<a href="<?php the_permalink(); ?>"><span class="overlay"></span></a>
+							<a href="<?php the_permalink(); ?>">
+								<?php 
+									//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
+									the_crop_image($thumb, '&amp;w=170&amp;h=125&amp;zc=1');
+								?>
+							</a>
 						</div> <!-- end .thumb -->
+
 					<?php }; ?>
 
 					<div class="et_pt_blogentry clearfix">
+						<div class="box-post">
 						<h2 class="et_pt_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 							<p class="et_pt_blogmeta">
@@ -80,7 +95,7 @@ Template Name: Template Vídeo
 								<?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')) ?> 
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
-									<p><?php truncate_post(130);?></p>
+									<p><a href="<?php the_permalink(); ?>"><?php truncate_post(130);?></a></p>
 									<a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Saiba mais &raquo;'); ?></span></a>
 								<?php } else { ?>
 								<?php
@@ -89,6 +104,7 @@ Template Name: Template Vídeo
 								?>
 								<?php the_content(); ?>
 								<?php } ?>
+						</div>
 					</div> <!-- end .et_pt_blogentry -->
 							
 					<?php endwhile; ?><!-- end of loop -->

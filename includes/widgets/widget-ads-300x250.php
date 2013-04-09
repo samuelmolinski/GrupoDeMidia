@@ -1,8 +1,9 @@
 <?php class AdsWidget extends WP_Widget
-{
+{	
+
     function AdsWidget(){
 		$widget_ops = array('description' => 'Widget Publicidade 300x250');
-		$control_ops = array('width' => 400, 'height' => 250);
+		$control_ops = array('width' => 300, 'height' => 250);
 		parent::WP_Widget(false,$name='ET Publicidade - 300x250',$widget_ops,$control_ops);
 	}
 
@@ -20,7 +21,8 @@
 
 		if ( $title )
 		echo $before_title . $title . $after_title;
-?>	
+?>
+
 <div class="adswrap">
 <?php $i = 1; 
 while ($i <= 1):

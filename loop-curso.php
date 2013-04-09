@@ -1,20 +1,14 @@
-<?php query_posts( array('post_type' => 'curso')); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<?php if (et_get_option('lucid_integration_single_top') <> '' && et_get_option('lucid_integrate_singletop_enable') == 'on') echo (et_get_option('lucid_integration_single_top')); ?>
 	
-	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
-
-		
+	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>		
 		<?php 
 			global $mb_curso;
 
 			$mb_curso->the_meta();
 			$meta = $mb_curso->meta;
 		 ?>
-
-		<h3 class="title"><?php the_title(); ?></h3> 
-		<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
 
 		<?php
 
@@ -44,15 +38,27 @@
 				
 						echo $video_embed;
 					} else {
-						print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+						the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
 					}
 				?>
 			</div> 	<!-- end .post-thumbnail -->
 		<?php } ?>
 		
 		<div class="post_content clearfix">
-			
-			<?php the_content(); ?>		
+			<h3 class="title"><?php the_title(); ?></h3> 
+			<?php the_content(); ?>	
+
+			<div class="evento">
+				<h3>Local: <?php echo $meta['local']; ?></h3>
+				<h4>Data: <?php echo $meta['data']; ?></h4>
+				<h4>Hora: <?php echo $meta['hora']; ?></h4>
+			</div>
+
+			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+			<br><br><br>
+			<?php include_once('rede-social.php'); ?>
+				
 					<?php wp_link_pages(array('before' => '<p><strong>'.esc_attr__('Pages','Lucid').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 						<?php edit_post_link(esc_attr__('Editar está página','Lucid')); ?>
 
@@ -70,8 +76,9 @@
 	<?php 	}    
 		}
 	?>
-	
+	<div class="fb-comments" data-href="http://grupodemidiarj.com.br" data-width="500" data-num-posts="5"></div>
 	<?php 
-		if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
+		//echo do_shortcode('[fbcomments]');
 	?>
 <?php endwhile; // end of the loop. ?>

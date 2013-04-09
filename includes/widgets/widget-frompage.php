@@ -1,9 +1,9 @@
-<?php class ETRecentFromWidget extends WP_Widget
+<?php class ETRecentFromWidget2 extends WP_Widget
 {
-    function ETRecentFromWidget(){
+    function ETRecentFromWidget2(){
 		$widget_ops = array('description' => 'Displays recent posts from any category');
 		$control_ops = array('width' => 400, 'height' => 300);
-		parent::WP_Widget(false,$name='ET Notícias Widget',$widget_ops,$control_ops);
+		parent::WP_Widget(false,$name='ET Notícias Widget 2',$widget_ops,$control_ops);
     }
 
   /* Displays the Widget in the front-end */
@@ -18,21 +18,13 @@
 		if ( $title )
 		echo $before_title . $title . $after_title;
 ?>		<!-- Alterar o link abaixo para o caminho correto -->
-		<a href="<?php echo get_option('Home'); ?>/noticia/" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
+		<a href="<?php echo get_option('Home'); ?>/noticia" class="more"><?php _e( 'Mais', 'Lucid' ); ?></a>
 		<ul class="category-box noticaPost">
 			<?php
 			$j = 1;
 			$recent_from_query = new WP_Query( apply_filters( 'et_recent_from_args', array(
 				'post_type' => 'noticia',
 				'showposts' => (int) $posts_number,
-				'tax_query' => array(
-									array(
-										'taxonomy' => 'noticia_category',
-										'field' => 'id',
-										'terms' => array(43),
-										'operator' => 'NOT IN'
-										)
-								    )
 			) ) );
 
 			if ($recent_from_query->have_posts()) : while ($recent_from_query->have_posts()) : $recent_from_query->the_post(); ?>
@@ -47,14 +39,16 @@
 						$thumb = $thumbnail["thumb"];
 					?>
 					<?php if ( '' != $thumb ){ ?>
-						<a href="<?php the_permalink(); ?>">
+					<a href="<?php the_permalink(); ?>">
 						<div class="thumb">
-							<?php 
-								//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
-								the_crop_image($thumb, '&amp;w=60&amp;h=60&amp;zc=1');
-							?>
+							<span class="overlay">
+								<?php 
+									//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext); 
+									the_crop_image($thumb, '&amp;w=60&amp;h=60&amp;zc=1');
+								?>
+							</span>
 						</div> 	<!-- end .thumb -->
-						</a>
+					</a>
 					<?php } ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_custom_length(get_the_title(), 30); ?></a></h3>
 					<p class="meta-info"><a href="<?php the_permalink(); ?>"><?php the_custom_excerpt(75); ?></a></p>
@@ -95,7 +89,7 @@
 			$cats_array = get_categories('hide_empty=0');
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('blog_category'); ?>">Categoria</label>
+			<label for="<?php echo $this->get_field_id('blog_category'); ?>">Category</label>
 			<select name="<?php echo $this->get_field_name('blog_category'); ?>" id="<?php echo $this->get_field_id('blog_category'); ?>" class="widefat">
 				<?php foreach( $cats_array as $category ) { ?>
 					<option value="<?php echo $category->cat_ID; ?>"<?php selected( $instance['blog_category'], $category->cat_ID ); ?>><?php echo $category->cat_name; ?></option>
@@ -107,8 +101,8 @@
 
 }// end ETRecentFromWidget class
 
-function ETRecentFromWidgetInit() {
-  register_widget('ETRecentFromWidget');
+function ETRecentFromWidget2Init() {
+  register_widget('ETRecentFromWidget2');
 }
 
-add_action('widgets_init', 'ETRecentFromWidgetInit');
+add_action('widgets_init', 'ETRecentFromWidget2Init');
