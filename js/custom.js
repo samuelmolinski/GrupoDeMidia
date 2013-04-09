@@ -83,8 +83,21 @@
 		}, function(){
 			$(this).removeClass( 'switcher_hover' );
 		} );
-		
+
+		jQuery('.flex-direction-nav li').click(function(){
+			//pause all videos  that are playing on change
+			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
+				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			});
+		});
+
 		$featured_controls.click( function(){
+
+			//pause all videos  that are playing on change
+			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
+				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			});
+
 			var $this_control = $(this),
 				order = $this_control.prevAll('li').length;
 			
@@ -123,6 +136,12 @@
 		} );
 		
 		$video_control_item.click( function(){
+
+			//pause all videos  that are playing on change
+			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
+				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			});
+
 			var $this_link = $(this),
 				order = $this_link.prevAll('li').length;
 			

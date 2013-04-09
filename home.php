@@ -69,6 +69,8 @@
 									$video_info[$i]['height'] = $height;
 									
 									$et_video_url = get_post_meta( $post->ID, '_et_lucid_video_url', true );
+
+									$et_video_url = addParamToURL($et_video_url, "enablejsapi=1")
 								?>
 								<li>
 								<?php 
