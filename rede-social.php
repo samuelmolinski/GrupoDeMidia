@@ -13,7 +13,7 @@
 		</div>
 
 		<div class="face">
-			<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
+			<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
 		</div>
 
 		<div class="google-plus">
