@@ -83,8 +83,21 @@
 		}, function(){
 			$(this).removeClass( 'switcher_hover' );
 		} );
+
+		jQuery('.flex-direction-nav li').click(function(){
+			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
+				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
+			});
+		});
 		
 		$featured_controls.click( function(){
+
+		jQuery('.flex-direction-nav li').click(function(){
+			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
+				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
+			});
+		});
+
 			var $this_control = $(this),
 				order = $this_control.prevAll('li').length;
 			
@@ -117,12 +130,26 @@
 		}
 		
 		$video_control_item.hover( function(){
+
+		jQuery('.flex-direction-nav li').click(function(){
+			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
+				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
+			});
+		});
+
 			$(this).find('.et_video_play').css( { 'display' : 'block', 'opacity' : 0 } ).stop(true,true).animate( { opacity : 1 }, video_hover_play_speed );
 		}, function(){
 			$(this).find('.et_video_play').stop(true,true).animate( { opacity : 0 }, video_hover_play_speed );
 		} );
 		
 		$video_control_item.click( function(){
+
+			jQuery('.flex-direction-nav li').click(function(){
+				jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
+					domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
+				});
+			});
+
 			var $this_link = $(this),
 				order = $this_link.prevAll('li').length;
 			
