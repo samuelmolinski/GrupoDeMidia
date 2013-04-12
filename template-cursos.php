@@ -106,8 +106,13 @@ Template Name: Template Cursos e Eventos
 
 								<?php if (!$et_ptemplate_blogstyle) { ?>
 									<p><a href="<?php the_permalink(); ?>"><?php truncate_post(130);?></a></p>
+									<?php if($meta['cursoURL'] == ''){ ?>
+										<span style="display:none;"><a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="inscricao"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a></span>
+									<?php }else{ ?>
 									<span><a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="inscricao"><span><?php esc_html_e('Inscrição &raquo;'); ?></span></a></span>
+									<?php } ?>
 									<span><a href="<?php the_permalink(); ?>" class="readmore"><span><?php esc_html_e('Detalhes &raquo;'); ?></span></a></span>
+
 								<?php } else { ?>
 								<?php
 									global $more;

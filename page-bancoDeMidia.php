@@ -88,15 +88,52 @@ get_header(); ?>
 		<?php //get_template_part('includes/breadcrumbs', 'page'); ?>
 		<h1 class="title"><?php the_title(); ?></h1>
 
-		<div class="contentBox clearfix">
-			<div class="post_content">
-				<div id="et_pt_blog" class="responsive">
+	<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
+		<!-- <div class="contentBox clearfix"> -->
+			
+				<!-- <div id="et_pt_blog" class="responsive"> -->
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+					<?php
+						global $wp_embed;
+						$thumb = '';
+						$et_full_post = get_post_meta( $post->ID, '_et_full_post', true );
+						$width = apply_filters('et_blog_image_width',285);
+						if ( 'on' == $et_full_post ) $width = apply_filters( 'et_single_fullwidth_image_width', 960 );
+						$height = apply_filters('et_blog_image_height',215);
+						$classtext = '';
+						$titletext = get_the_title();
+						$thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext,false,'Singleimage');
+						$thumb = $thumbnail["thumb"];
+						
+						$et_video_url = get_post_meta( $post->ID, '_et_lucid_video_url', true );
+					?>
+					<?php if ( '' != $thumb && 'on' == et_get_option('lucid_thumbnails') ) { ?>
+						<div class="post-thumbnail">
+							<?php
+								if ( 'video' == get_post_format( $post->ID ) && '' != $et_video_url ){
+									$video_embed = $wp_embed->shortcode( '', $et_video_url );
+
+									$video_embed = preg_replace('/<embed /','<embed wmode="transparent" ',$video_embed);
+									$video_embed = preg_replace('/<\/object>/','<param name="wmode" value="transparent" /></object>',$video_embed); 
+									$video_embed = preg_replace("/height=\"[0-9]*\"/", "height=350", $video_embed);
+									$video_embed = preg_replace("/width=\"[0-9]*\"/", "width={$width}", $video_embed);
+							
+									echo $video_embed;
+								} else {
+									//print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, $classtext);
+									the_crop_image($thumb, '&amp;w=630&amp;h=250&amp;zc=1');
+								}
+							?>
+						</div> 	<!-- end .post-thumbnail -->
+					<?php } ?>
+				<div class="post_content clearfix">
 					<?php the_content(); ?>
 					<?php endwhile; // end of the loop. ?>
-				</div>
+				<!-- </div> -->
 			</div>
-		</div>
+		<!-- </div> -->
+	</article>
 		<div id="search" class="clearfix">
 			<div id="search-form">
 				<!-- <form method="post" id="searchform" action="http://192.168.0.223/wordpress/?page_id=15"> -->

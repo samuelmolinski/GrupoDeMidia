@@ -344,6 +344,20 @@ if ( ! function_exists( 'et_postinfo_meta' ) ){
 	}
 }
 
+/*add_filter( 'gettext', 'wpse17709_gettext', 10, 2 );
+function wpse17709_gettext( $translation, $textos_login ) {
+    if ( 'Username' == $textos_login ) {
+        return 'CPF';
+    }
+    if ( 'Password' == $textos_login ) {
+        return 'Senha';
+    }
+    if ( 'Log In' == $textos_login ) {
+        return 'Login';
+    }
+	return $translation;
+}*/
+
 /*function add_query_vars($aVars) {
     $aVars[] = "gm_search"; // represents the name of the product category as shown in the URL
     return $aVars;

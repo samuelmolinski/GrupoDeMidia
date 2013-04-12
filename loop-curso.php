@@ -54,8 +54,11 @@
 				<h4>Data: <?php echo $meta['data']; ?></h4>
 				<h4>Hora: <?php echo $meta['hora']; ?></h4>
 			</div>
-
+			<?php if($meta['cursoURL'] == ''){ ?>
+			<span style="display:none;"><a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a></span>
+			<?php }else{ ?>
 			<a href="<?php echo $meta['cursoURL']; ?>" target="_blank" class="title-curso"><span><?php esc_html_e('Fazer Inscrição'); ?></span></a>
+			<?php } ?>
 			<br><br><br>
 			<?php include_once('rede-social.php'); ?>
 				
@@ -76,7 +79,7 @@
 	<?php 	}    
 		}
 	?>
-	<div class="fb-comments" data-href="http://grupodemidiarj.com.br" data-width="500" data-num-posts="5"></div>
+	<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-width="500" data-num-posts="5"></div>
 	<?php 
 		//if ( 'on' == et_get_option('lucid_show_postcomments') ) comments_template('', true);
 		//echo do_shortcode('[fbcomments]');

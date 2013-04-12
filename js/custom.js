@@ -1,6 +1,6 @@
 (function($){
 	var $main_menu = $('ul.nav'),
-		$featured_section = $('#featured_section'),
+		$featured_section = $('#featured_section'),   
 		$featured = $('#featured'),
 		et_slider,
 		et_video_slider,

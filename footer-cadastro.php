@@ -19,7 +19,7 @@
 
 		    <!-- <script type="text/javascript">FB.init("270688569658996");</script>
 		    <fb:fan profile_id="270688569658996" connections="6" width="415" height="200" css="" stream="false"></fb:fan> -->
-		    <fb:like-box href="http://www.facebook.com/GrupoDeMidiaRJ"  height="350" width="461" show_faces="true" stream="false" header="false"></fb:like-box>
+		    <fb:like-box href="http://www.facebook.com/GrupoDeMidiaRJ"  height="349" width="461" show_faces="true" stream="false" header="false"></fb:like-box>
 
 		</div>
 		<?php //d($footer_sidebars); ?>

@@ -23,7 +23,8 @@ Template Name: Template Vídeo
 			<div id="left-area">
 				<?php $loop = new WP_Query( array(
 					'post_type'      => 'video',
-					'posts_per_page' => '7' 
+					'posts_per_page' => '7',
+					'paged' => $paged,
 					) );
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
@@ -57,7 +58,8 @@ Template Name: Template Vídeo
 					<!-- start of Loop -->
 					<?php query_posts( array(
 						'post_type'      => 'video',
-						'psots_per_page' => '7'
+						'posts_per_page' => '7',
+						'paged' => $paged
 						));
 					?>
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
