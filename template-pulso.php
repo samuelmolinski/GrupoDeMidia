@@ -51,6 +51,7 @@ $et_ptemplate_blog_perpage = isset( $et_ptemplate_settings['et_ptemplate_blog_pe
 
 						    <div id="et_pt_blog" class="responsive">
 						    	<?php the_content(); ?>
+						    	<div class="clearPage"></div>
 							<?php $cat_query = ''; 
 								if ( !empty($blog_cats) ) $cat_query = '&cat=' . implode(",", $blog_cats);
 								else echo '<!-- blog category is not selected -->'; ?>

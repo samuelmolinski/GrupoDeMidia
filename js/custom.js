@@ -85,7 +85,6 @@
 		} );
 
 		jQuery('.flex-direction-nav li').click(function(){
-<<<<<<< HEAD
 			//pause all videos  that are playing on change
 			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
 				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
@@ -98,20 +97,6 @@
 			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
 				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 			});
-=======
-			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
-				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
-			});
-		});
-		
-		$featured_controls.click( function(){
-
-		jQuery('.flex-direction-nav li').click(function(){
-			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
-				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
-			});
-		});
->>>>>>> 6e04e642801be518e0a2740fcebb6e53a497de3a
 
 			var $this_control = $(this),
 				order = $this_control.prevAll('li').length;
@@ -145,13 +130,6 @@
 		}
 		
 		$video_control_item.hover( function(){
-
-		jQuery('.flex-direction-nav li').click(function(){
-			jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
-				domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
-			});
-		});
-
 			$(this).find('.et_video_play').css( { 'display' : 'block', 'opacity' : 0 } ).stop(true,true).animate( { opacity : 1 }, video_hover_play_speed );
 		}, function(){
 			$(this).find('.et_video_play').stop(true,true).animate( { opacity : 0 }, video_hover_play_speed );
@@ -159,16 +137,9 @@
 		
 		$video_control_item.click( function(){
 
-<<<<<<< HEAD
 			//pause all videos  that are playing on change
 			jQuery('.fluid-width-video-wrapper iframe').each(function(index,domEle){
 				domEle.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-=======
-			jQuery('.flex-direction-nav li').click(function(){
-				jQuery('fluid-width-video-wrapper iframe').each(function(index, domEle){
-					domEle.contentWindow.postMessage('{"event":"command", "func":"pauseVideo", "args":""}', '*');
-				});
->>>>>>> 6e04e642801be518e0a2740fcebb6e53a497de3a
 			});
 
 			var $this_link = $(this),

@@ -344,7 +344,7 @@ if ( ! function_exists( 'et_postinfo_meta' ) ){
 	}
 }
 
-/*add_filter( 'gettext', 'wpse17709_gettext', 10, 2 );
+add_filter( 'gettext', 'wpse17709_gettext', 10, 2 );
 function wpse17709_gettext( $translation, $textos_login ) {
     if ( 'Username' == $textos_login ) {
         return 'CPF';
@@ -356,12 +356,12 @@ function wpse17709_gettext( $translation, $textos_login ) {
         return 'Login';
     }
 	return $translation;
-}*/
+}
 
-/*function add_query_vars($aVars) {
+function add_query_vars($aVars) {
     $aVars[] = "gm_search"; // represents the name of the product category as shown in the URL
     return $aVars;
 }
  
 // hook add_query_vars function into query_vars
-add_filter('query_vars', 'add_query_vars');*/
+add_filter('query_vars', 'add_query_vars');

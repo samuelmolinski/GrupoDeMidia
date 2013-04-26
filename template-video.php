@@ -24,7 +24,7 @@ Template Name: Template Vídeo
 				<?php $loop = new WP_Query( array(
 					'post_type'      => 'video',
 					'posts_per_page' => '7',
-					'paged' => $paged,
+					'paged' => $paged 
 					) );
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
@@ -58,7 +58,7 @@ Template Name: Template Vídeo
 					<!-- start of Loop -->
 					<?php query_posts( array(
 						'post_type'      => 'video',
-						'posts_per_page' => '7',
+						'psots_per_page' => '7',
 						'paged' => $paged
 						));
 					?>

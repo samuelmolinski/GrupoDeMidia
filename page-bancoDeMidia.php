@@ -28,12 +28,16 @@ Template Name: Banco De Midia
     
     $user_id = wp_insert_user( $user_data );*/
 
-    if(isset($_POST['gm_search'])&&!empty($_POST['gm_search'])){
+    //if(isset($_POST['gm_cargo']) && !empty($_POST['gm_cargo'])){
+    if(isset($_POST['gm_cargo']) && !empty($_POST['gm_cargo'])){
+    //if(isset($_POST['search'])){
+
     	//d($_POST['gm_search']);
 
 		global $wpdb;
 		$query = "SELECT * FROM wp_usermeta WHERE meta_value";
-		$prepared = $wpdb->prepare("SELECT * FROM wp_usermeta WHERE meta_value LIKE  '%%%s%%';", $_POST['gm_search']);
+		//$prepared = $wpdb->prepare("SELECT * FROM wp_usermeta WHERE meta_value LIKE  '%%%s%%';", $_POST['gm_search']);
+		$prepared = $wpdb->prepare("SELECT * FROM  wp_usermeta WHERE meta_value LIKE  '%%%s%%';", $_POST['gm_cargo']);
 		//$prepared = $wpdb->prepare("SELECT * FROM `wp_usermeta` WHERE `meta_value` LIKE  '%Silvio%' LIMIT '", $_POST['gm_search']);
 
 		//d($prepared);
@@ -51,7 +55,61 @@ Template Name: Banco De Midia
 				}				
 			}			
 		}
+		$prepared = "SELECT * FROM wp_usermeta WHERE user_id IN ($user_id) AND meta_key IN ('first_name','last_name','nickname','description','cargo','gm_image', 'agencia');";
+		$query = $wpdb->get_results($prepared);
 
+		$postsMG = array();
+		$postsMG_F = array();
+
+		//organize data
+		foreach ($ids as $key => $id) {
+			foreach ($query as $k => $v) {
+				if(($v->user_id == $id)) {
+					$postsMG[$id][$v->meta_key] = $v->meta_value;
+				}				
+			}
+		}
+
+		foreach ($postsMG as $k => $post) {
+			// filter to remove any user that is not a subscriber and/or has incomplete data
+			$userInfo = get_userdata($k);
+			if(!$userInfo->caps['subscriber']) {continue;}
+			if(empty($post['first_name'])||empty($post['last_name'])||empty($post['agencia'])||empty($post['cargo'])||empty($post['description'])) {continue;}
+			$postsMG_F[$k] = $post;
+		}
+		$numResults = count($postsMG_F);
+		if($numResults == 0) {
+			$noResults = true;
+		}
+	}
+	
+	 //if(isset($_POST['gm_cargo']) && !empty($_POST['gm_cargo'])){
+    if(isset($_POST['gm_search']) && !empty($_POST['gm_search'])){
+    //if(isset($_POST['search'])){
+
+    	//d($_POST['gm_search']);
+
+		global $wpdb;
+		$query = "SELECT * FROM wp_usermeta WHERE meta_value";
+		//$prepared = $wpdb->prepare("SELECT * FROM wp_usermeta WHERE meta_value LIKE  '%%%s%%';", $_POST['gm_search']);
+		$prepared = $wpdb->prepare("SELECT * FROM  wp_usermeta WHERE meta_value LIKE  '%%%s%%';", $_POST['gm_search']);
+		//$prepared = $wpdb->prepare("SELECT * FROM `wp_usermeta` WHERE `meta_value` LIKE  '%Silvio%' LIMIT '", $_POST['gm_search']);
+
+		//d($prepared);
+		$query = $wpdb->get_results($prepared);
+		//d($query);
+		$ids = array();
+		$user_id = '';
+		foreach ($query as $key => $item) {
+			if(!in_array($item->user_id, $ids)){
+				$ids[] = $item->user_id;
+				if(strlen($user_id) <= 0) {
+					$user_id .= $item->user_id;
+				} else {
+					$user_id .= ','.$item->user_id;
+				}				
+			}			
+		}
 		$prepared = "SELECT * FROM wp_usermeta WHERE user_id IN ($user_id) AND meta_key IN ('first_name','last_name','nickname','description','cargo','gm_image', 'agencia');";
 		$query = $wpdb->get_results($prepared);
 
@@ -135,11 +193,23 @@ get_header(); ?>
 		<!-- </div> -->
 	</article>
 		<div id="search" class="clearfix">
-			<div id="search-form">
+			<form method="post" id="searchform" name="gm_form" action="http://grupodemidiarj.com.br/banco-de-midia/">
+
+				<select name="gm_cargo" id="gm_cargo" class="gm_cargo" label_id="gm_cargo">
+					<option value="" selected="selected">Filtrar pelo campo Cargo</option>
+					<option value="Estagiário"  name="1" id="1">Estagiário</option>
+					<option value="Assistente"  name="2" id="2">Assistente</option>
+					<option value="Coordenador" name="3" id="3">Coordenador</option>
+					<option value="Supervisor"  name="4" id="4">Supervisor</option>
+					<option value="Gerente"     name="5" id="5">Gerente</option>
+					<option value="Diretor"     name="6" id="6">Diretor</option>
+					<option value="Todos"       name="gm_cargo" id="gm_cargo">Todos</option>
+				</select>
+
+				<div id="search-form">
 				<!-- <form method="post" id="searchform" action="http://192.168.0.223/wordpress/?page_id=15"> -->
-				<form method="post" id="searchform" action="http://grupodemidiarj.com.br/banco-de-midia/">
 					<input type="text" placeholder="<?php esc_attr_e('Busca no Banco de Midia', 'Lucid'); ?>" name="gm_search" id="gm_search" />
-					<input type="image" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
+					<input type="image" name="search" src="<?php echo esc_url( get_template_directory_uri() . '/images/search_btn.png' ); ?>" id="searchsubmit" />
 				</form>
 			</div> 
 		</div>
@@ -166,10 +236,14 @@ get_header(); ?>
 					foreach ($postsMG_F as $k => $post) {
 				?>			
 					<div class="et_pt_thumb alignleft">
-						<?php 
-							$img = get_bloginfo('wpurl').'/wp-content/uploads'.$post['gm_image'];
-							the_crop_image( $img, '&amp;w=170&amp;h=125&amp;zc=1'); 
-						?>
+						<div class="et_pt_item_image">
+							<?php 
+								$img = get_bloginfo('wpurl').'/wp-content/uploads'.$post['gm_image'];
+								the_crop_image( $img, '&amp;w=170&amp;h=125&amp;zc=1');
+							?>
+							<span class="overlay"></span>
+							<a class="zoom-icon fancybox" title="<?php echo $post['first_name'].' '.$post['last_name']; ?>" rel="gallery" href="<?php echo $img; ?>"><?php esc_html_e('Zoom in','Lucid'); ?></a>
+						</div>
 					</div> <!-- end .thumb -->
 
 					<div class="et_pt_blogentry clearfix">

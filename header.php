@@ -47,6 +47,8 @@
 			    this.value = this.value.replace(/[^0-9\.]/g,'');
 			});
 	</script>
+	
+
 </head>
 <body <?php body_class(); ?>>		
 	
